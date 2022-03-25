@@ -1,12 +1,14 @@
 import React from "react";
 import BlockInfo from "../BlockInfo/BlockInfo";
 import Button from "../Button/Button";
+import PreviewText from "../PreviewText/PreviewText";
 
 const Jobs = () => {
   return (
     <section id="jobs">
       <div className="container">
         <div className="jobs__inside">
+          <PreviewText value="Вакансии" />
           <div className="colum">
             <BlockInfo
               title="Присоединяйтесь к команде"

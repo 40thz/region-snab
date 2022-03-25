@@ -30,20 +30,17 @@ const About = ({ offsetY }) => {
           <div className="colum">
             <AboutPreviewText offsetY={offsetY} />
             <div className="about__inside-statistics">
+              <StatItem title="11" subTitle="опыт трейдерской деятельности " />
               <StatItem
-                title="11 лет"
-                subTitle="опыт трейдерской деятельности "
-              />
-              <StatItem
-                title="> 400 000"
+                title="400000"
                 subTitle="тонн нефтепродуктов перевозим в год "
               />
               <StatItem
-                title="> 180 000"
+                title="180000"
                 subTitle="тонн нефтепродуктов продаем в год "
               />
               <StatItem
-                title="45 тягачей"
+                title="45"
                 subTitle="с полуприцепом-цистерной в собственности"
               />
               <Button />
