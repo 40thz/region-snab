@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../assets/fonts/PTsans.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../assets/fonts/GothamPro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Pro Medium";
+  src: url("../assets/fonts/GothamPro-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Halvar Breitschrift";
+  src: url("../assets/fonts/HalvarBreit-Bd.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin s400 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+}
+
+@mixin g300 {
+  font-family: "Gotham Pro", sans-serif;
+  font-weight: 400;
+}
+
+@mixin g400 {
+  font-family: "Gotham Pro Medium", sans-serif;
+  font-weight: 400;
+}
+
+@mixin h700 {
+  font-family: "Halvar Breitschrift", sans-serif;
+  font-weight: 700;
+}

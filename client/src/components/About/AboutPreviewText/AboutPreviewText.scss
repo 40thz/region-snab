@@ -1,0 +1,10 @@
+.about__inside-prevText {
+  @include h700;
+  font-size: 20px;
+  line-height: 150%;
+  color: $dark;
+  padding-top: 50px;
+  span {
+    color: $red;
+  }
+}

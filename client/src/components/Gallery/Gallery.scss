@@ -1,0 +1,20 @@
+#gallery {
+  padding: 100px 0;
+  background: url("../../assets/images/Gallery/bg.png") no-repeat center center
+    $gray;
+}
+
+.gallery__inside {
+  display: flex;
+  justify-content: space-between;
+  &-item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.gallery__inside-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}

@@ -1,0 +1,13 @@
+#advantages {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+  z-index: 4;
+}
+.advantages__car {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  left: -2100%;
+}

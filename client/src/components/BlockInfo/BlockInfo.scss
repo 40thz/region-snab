@@ -1,0 +1,29 @@
+.block__info {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  &-title {
+    @include h700;
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 150%;
+    margin-bottom: 30px;
+    span {
+      color: $red;
+    }
+  }
+  &-subtitle {
+    @include s400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $dark;
+    margin-bottom: 60px;
+  }
+  .button {
+    background: $red;
+    width: 240px;
+  }
+}
+.preview__text {
+  margin-bottom: 60px;
+}

@@ -1,0 +1,24 @@
+@import "~normalize-css/normalize.css";
+
+@import "fonts";
+@import "vars";
+@import "global";
+
+//Components
+@import "@components/Header/Header.scss";
+@import "@components/Logo/Logo.scss";
+@import "@components/Intro/Intro.scss";
+@import "@components/Pattern/Pattern.scss";
+@import "@components/HamburgerBtn/HamburgerBtn.scss";
+@import "@components/AdvantageItem/AdvantageItem.scss";
+@import "@components/Advantages/Advantages.scss";
+@import "@components/Advantages/AdvantageTitle/AdvantageTitle.scss";
+@import "@components/PreviewText/PreviewText.scss";
+@import "@components/About/About.scss";
+@import "@components/About/AboutText/AboutText.scss";
+@import "@components/About/AboutPreviewText/AboutPreviewText.scss";
+@import "@components/StatItem/StatItem.scss";
+@import "@components/Button/Button.scss";
+@import "@components/Gallery/Gallery.scss";
+@import "@components/BlockInfo/BlockInfo.scss";
+@import "@components/Jobs/Jobs.scss";

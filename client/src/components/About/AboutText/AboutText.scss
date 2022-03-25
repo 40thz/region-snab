@@ -1,0 +1,6 @@
+.about__inside-value {
+  @include s400;
+  color: $dark;
+  line-height: 150%;
+  margin-bottom: 80px;
+}

@@ -1,0 +1,16 @@
+.about__inside-status {
+  width: 50%;
+  margin-bottom: 60px;
+  &-title {
+    @include h700;
+    color: $red;
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  &-subTitle {
+    @include g300;
+    color: $dark;
+    font-size: 16px;
+    padding-right: 35px;
+  }
+}

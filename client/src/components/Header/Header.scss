@@ -1,0 +1,35 @@
+header {
+  position: relative;
+  z-index: 3;
+  color: $white;
+  @include s400;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  ul {
+    display: flex;
+    padding-inline-start: 0px;
+  }
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    cursor: pointer;
+    margin: 0 30px;
+    &:hover {
+      color: $red;
+    }
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
+  &-contacts {
+    display: flex;
+    align-items: center;
+  }
+}

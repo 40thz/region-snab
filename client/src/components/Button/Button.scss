@@ -1,0 +1,20 @@
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  align-items: center;
+  color: $white;
+  background: $dark;
+  padding: 18px 22px;
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__value {
+    @include g400;
+    font-size: 14px;
+    color: $white;
+  }
+}
