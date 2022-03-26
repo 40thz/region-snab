@@ -1,4 +1,6 @@
 @import "~normalize-css/normalize.css";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 @import "fonts";
 @import "vars";
@@ -22,3 +24,5 @@
 @import "@components/Gallery/Gallery.scss";
 @import "@components/BlockInfo/BlockInfo.scss";
 @import "@components/Jobs/Jobs.scss";
+@import "@components/Jobs/VacancyItem/VacancyItem.scss";
+@import "@components/Footer/Footer.scss";

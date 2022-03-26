@@ -1,5 +1,11 @@
 #about {
   background: $whiteBg;
+  .button {
+    background: $red;
+    &::before {
+      background: $dark;
+    }
+  }
 }
 .about__call {
   position: relative;
@@ -17,12 +23,16 @@
 }
 
 .about__title {
+  display: flex;
   @include h700;
   font-size: 24px;
   text-transform: uppercase;
   color: $white;
   span {
     text-decoration: underline;
+  }
+  .button {
+    width: 100px;
   }
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Jobs from "./components/Jobs/Jobs";
 import { useRoutes } from "./routes";
 
 const App = () => {

@@ -2,7 +2,7 @@ const AboutPreviewText = ({ offsetY }) => {
   return (
     <div
       style={{
-        transform: `translate(-${offsetY / 18}px, -${offsetY / 2270}px)`,
+        transform: `translateX(-${offsetY / 18}px)`,
       }}
       className="about__inside-prevText"
     >

@@ -1,6 +1,6 @@
 import React from "react";
 import AdvantageTitle from "./AdvantageTitle/AdvantageTitle";
-import car from "@images/Advantage/car.png";
+import carImage from "@images/Advantage/car.png";
 import AdvantageItem from "../AdvantageItem/AdvantageItem";
 import ScrollTrigger from "react-scroll-trigger";
 
@@ -11,24 +11,22 @@ import gearIcon from "@images/AdvantageItem/gear.svg";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
 
 const Advantages = ({ offsetY }) => {
+  const parallax = {
+    car: { left: `${offsetY - 2400 / 2}px` },
+    section: { transform: `translateY(-${offsetY * 1.3}px)`, }
+  }
+
   return (
     <ScrollTrigger>
       <div
-        style={{
-          transform: `translateY(-${offsetY * 1.3}px)`,
-        }}
+        style={parallax.section}
         id="advantages"
         className="container"
       >
         <div className="colum">
           <AdvantageTitle />
-          <div
-            style={{
-              left: `${offsetY - 2400 / 2}px`,
-            }}
-            className="advantages__car"
-          >
-            <img src={car} alt="car" />
+          <div style={parallax.car} className="advantages__car">
+            <img src={carImage} alt="car" />
           </div>
         </div>
         <div className="colum">

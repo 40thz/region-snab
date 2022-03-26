@@ -1,16 +1,58 @@
 .button {
+  transition: all 0.5s;
+  position: relative;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  width: 370px;
   align-items: center;
   color: $white;
   background: $dark;
   padding: 18px 22px;
+  z-index: 1;
+  overflow: hidden;
+  &::before,
+  &::after {
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
 
+  &::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $red;
+  }
+  &::after {
+    left: 0;
+    top: 50%;
+    transform: translate(-350px, -50%);
+    width: 30px;
+    height: 30px;
+    background: url(../../assets/images/button-icon.png);
+    background-size: cover;
+  }
+  &:hover {
+    &::before {
+      transform: translateX(101%);
+    }
+    &::after {
+      transform: translate(22px, -50%);
+    }
+    .button__icon img {
+      transform: translateX(470px);
+    }
+  }
   &__icon {
     width: 30px;
     height: 30px;
+    margin-right: 60px;
+    img {
+      transition: all 0.7s;
+      width: 100%;
+    }
   }
   &__value {
     @include g400;

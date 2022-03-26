@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../components/About/About";
 import Advantages from "../components/Advantages/Advantages";
+import Footer from "../components/Footer/Footer";
 import Gallery from "../components/Gallery/Gallery";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro/Intro";
@@ -21,11 +22,10 @@ const Homepage = () => {
       <Header />
       <Intro />
       <Advantages offsetY={offsetY} />
-      <div className="center">
-        <About offsetY={offsetY} />
-        <Gallery />
-        <Jobs />
-      </div>
+      <About offsetY={offsetY} />
+      <Gallery />
+      <Jobs />
+      <Footer />
     </>
   );
 };

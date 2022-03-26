@@ -18,3 +18,15 @@
   flex-wrap: wrap;
   justify-content: end;
 }
+
+.gallery__inside-item {
+  transition: all 0.5s;
+  max-width: 370px;
+  img{
+    max-width: 100%;
+  }
+  &:hover{
+    transform: translate(-15px, -10px);
+    box-shadow: 11px 16px 21px 0px rgba(34, 60, 80, 0.2);
+  }
+}

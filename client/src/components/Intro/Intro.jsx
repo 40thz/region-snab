@@ -2,6 +2,7 @@ import React from "react";
 import Pattern from "../Pattern/Pattern";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
 import AdvantageItem from "../AdvantageItem/AdvantageItem";
+import Button from "../Button/Button";
 
 const Intro = () => {
   return (
@@ -17,13 +18,16 @@ const Intro = () => {
             </>
           }
         />
-        <div className="intro__title">
-          Ваш&nbsp;
-          <span>
-            надежный
-            <br /> поставщик&nbsp;
-          </span>
-          нефтепродуктов
+        <div className="intro">
+          <div className="intro__title">
+            Ваш&nbsp;
+            <span>
+              надежный
+              <br /> поставщик&nbsp;
+            </span>
+            нефтепродуктов
+          </div>
+          <Button value="Узнать подробнее"/>
         </div>
       </div>
       <Pattern />
