@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-scroll";
+
 import Logo from '../Logo/Logo'
 import gangImg from '@images/gang.png'
 
@@ -6,7 +8,7 @@ import RS from '../RS'
 
 const Footer = () => {
     return (
-        <footer>
+        <footer id='footer'>
             <div className="container">
                 <div className="footer__header">
                     <RS color='#262C36' />
@@ -27,7 +29,7 @@ const Footer = () => {
                             <a href="tel:83912191597">
                                 <li>8 391 219-15-97 (отдел кадров)</li>
                             </a>
-                            <a className='footer-link' href="mailto:regionsnab24@mail.ru">
+                            <a href="mailto:regionsnab24@mail.ru">
                                 <li>regionsnab24@mail.ru</li>
                             </a>
                         </ul>
@@ -41,16 +43,29 @@ const Footer = () => {
                     <div className="colum">
                         <div className="footer__title">Картка сайта</div>
                         <ul>
-                            <a href="#" target='_blank'>
+                            <Link
+                                to="header"
+                                smooth
+                                duration={500}
+                            >
                                 <li>Главная</li>
-                            </a>
-                            <a href="#" target='_blank'>
+                            </Link>
+                            <Link
+                                to="about"
+                                smooth
+                                duration={1000}
+                            >
                                 <li>О компании</li>
-                            </a>
-                            <a href="#" target='_blank'>
+                            </Link>
+                            <Link
+                                to="advantages"
+                                smooth
+                                duration={1000}
+                                offset={250}
+                            >
                                 <li>Направления деятельности</li>
-                            </a>
-                            <a href="#" target='_blank'>
+                            </Link>
+                            <a>
                                 <li>Контакты</li>
                             </a>
                         </ul>
@@ -58,7 +73,7 @@ const Footer = () => {
                 </div>
                 <div className="footer__bottom">
                     <p>Все права защищены</p>
-                    <a href="#" target='_blank' className='footer-link'>
+                    <a href="#" target='_blank'>
                         <p>Политика конфиденциальности</p>
                     </a>
                     <p>Разработка сайта:</p>

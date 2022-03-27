@@ -11,19 +11,15 @@
   position: relative;
   width: 100%;
   background: $red;
-  padding: 80px 0px 150px 100px;
+  padding: 80px 100px;
   transform: translateY(-50%);
   overflow: hidden;
   box-sizing: border-box;
-  img {
-    position: absolute;
-    bottom: -10px;
-    right: -15px;
-  }
 }
 
 .about__title {
   display: flex;
+  flex-direction: column;
   @include h700;
   font-size: 24px;
   text-transform: uppercase;
@@ -33,6 +29,21 @@
   }
   .button {
     width: 100px;
+  }
+  .about-btn {
+    cursor: pointer;
+    font-size: 16px;
+    @include g400;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    margin-top: 60px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 

@@ -6,6 +6,7 @@ import Gallery from "../components/Gallery/Gallery";
 import Header from "../components/Header/Header";
 import Intro from "../components/Intro/Intro";
 import Jobs from "../components/Jobs/Jobs";
+import ArrowUp from "../components/ArrowUp/ArrowUp";
 
 const Homepage = () => {
   const [offsetY, setOffsetY] = React.useState(0);
@@ -17,8 +18,10 @@ const Homepage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   return (
     <>
+      <ArrowUp show={offsetY >= 500}/>
       <Header />
       <Intro />
       <Advantages offsetY={offsetY} />

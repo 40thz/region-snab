@@ -24,6 +24,10 @@ const About = ({ offsetY }) => {
               <span>Позвоните</span>
             </div>
             <div>
+              <div className="about-btn">
+                <img src={buttonIcon} alt="Кнопка" />
+                Позвонить
+              </div>
             </div>
           </div>
         </div>

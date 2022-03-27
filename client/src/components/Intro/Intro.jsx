@@ -4,9 +4,11 @@ import virifyIcon from "@images/AdvantageItem/verify.svg";
 import AdvantageItem from "../AdvantageItem/AdvantageItem";
 import Button from "../Button/Button";
 
+import { Link } from "react-scroll";
+
 const Intro = () => {
   return (
-    <main>
+    <main id="home">
       <div className="container">
         <AdvantageItem
           icon={virifyIcon}
@@ -17,6 +19,7 @@ const Intro = () => {
               за доверенный груз
             </>
           }
+          intro
         />
         <div className="intro">
           <div className="intro__title">
@@ -27,7 +30,14 @@ const Intro = () => {
             </span>
             нефтепродуктов
           </div>
-          <Button value="Узнать подробнее"/>
+          <Link
+            to="about"
+            smooth
+            duration={1000}
+            offset={250}
+          >
+            <Button value="Узнать подробнее" />
+          </Link>
         </div>
       </div>
       <Pattern />

@@ -1,0 +1,21 @@
+.arrowUp{
+    cursor: pointer;
+    transition: all 0.5s;
+    position: fixed;
+    bottom: 10%; right: 10%;
+    width: 60px; height: 60px;
+    background: $red;
+    display: flex;
+    justify-content: center; align-items: center;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    svg {
+        transform: rotate(270deg);
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}

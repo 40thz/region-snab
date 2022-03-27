@@ -9,11 +9,12 @@
   }
   
   .slick-slider {
-    width: 35vw;
     background: $dark;
-    padding: 35px;
+    padding: 35px 35px 35px 35px;
     box-sizing: border-box;
+    height: 100%;
   }
+
   .slider-btn {
     transition: all 0.5s;
     width: 60px;
@@ -48,13 +49,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px 35px 35px;
+  padding: 0 80px 35px 35px;
   box-sizing: border-box;
 }
 .vacancy__slider-buttons {
   display: flex;
 }
 .vacancy__slider-readmore {
+  cursor: pointer;
   font-size: 14px;
   text-decoration-line: underline;
   color: $white;

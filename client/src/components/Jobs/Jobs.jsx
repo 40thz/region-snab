@@ -8,6 +8,7 @@ import VacancyItem from "./VacancyItem/VacancyItem";
 
 const Jobs = () => {
   const [slider, setSlider] = React.useState()
+  
   const settings = {
     ref: slider => setSlider(slider),
     dots: false,
@@ -18,12 +19,12 @@ const Jobs = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  console.log(slider)
+
   return (
     <section id="jobs">
       <div className="container">
         <div className="jobs__inside">
-          <div className="colum">
+          <div className="colum half">
             <PreviewText value="Вакансии" />
             <BlockInfo
               nameBtn="Все вакансии"
@@ -32,7 +33,7 @@ const Jobs = () => {
               subTitle="Нас больше 2700 человек. Мы профессионалы разных областей — технологи, инженеры, аналитики и многие другие. Наша команда распределена по всей России – мы эффективно работаем удаленно и в гибридном формате."
             />
           </div>
-          <div className="colum">
+          <div className="colum half">
             <Slider {...settings}>
               <VacancyItem
                 image={vacancyImage}
@@ -64,12 +65,12 @@ const Jobs = () => {
               <div className="vacancy__slider-buttons">
                 <div className="slider-btn prev" onClick={slider?.slickPrev}>
                   <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" stroke-width="2" />
+                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" strokeWidth="2" />
                   </svg>
                 </div>
                 <div className="slider-btn next" onClick={slider?.slickNext}>
                   <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" stroke-width="2" />
+                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" strokeWidth="2" />
                   </svg>
                 </div>
               </div>

@@ -21,9 +21,12 @@ footer {
     .rs {
         bottom: -5px; right: 0;
     }
-
+    a{
+        cursor: pointer;
+    }
     a:hover {
         color: $red;
+        text-decoration: underline
     }
 }
 
@@ -53,11 +56,6 @@ footer {
             margin-bottom: 15px;
         }
     }
-}
-
-.footer-link {
-    color: $red;
-    text-decoration: underline
 }
 
 .footer__title{
