@@ -8,7 +8,7 @@ const BlockInfo = ({ title, titleRed, subTitle, onClick, nameBtn }) => {
         {title} <br /> <span>{titleRed}</span>
       </div>
       <div className="block__info-subtitle">{subTitle}</div>
-      <Button value={nameBtn} onClick={onClick}/>
+      <Button value={nameBtn} onClick={onClick} />
     </div>
   );
 };

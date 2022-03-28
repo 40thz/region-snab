@@ -11,16 +11,20 @@ import proIcon from "@images/AdvantageItem/pro.svg";
 import gearIcon from "@images/AdvantageItem/gear.svg";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
 
+import { useMobile } from "../../hooks/useMobile";
+
 const Advantages = ({ offsetY }) => {
-  const [animate, setAnimate] = React.useState(false)
+  const [animate, setAnimate] = React.useState(false);
+  const isMobile = useMobile();
+
   const parallax = {
     car: { left: `${offsetY - 2400 / 2}px` },
-    section: { transform: `translateY(-${offsetY * 1.3}px)`, }
-  }
+    section: { transform: `translateY(-${offsetY * 1.3}px)` },
+  };
 
   return (
     <div style={parallax.section} id="advantages" className="container">
-      <div className="colum">
+      <div className="colum half">
         <AdvantageTitle />
         <div style={parallax.car} className="advantages__car">
           <img src={carImage} alt="car" />
@@ -54,9 +58,8 @@ const Advantages = ({ offsetY }) => {
               value="Обладает всей необходимой инфраструктурой и финансовыми средствами для выполнения своих обязательств и полного соответствия ожиданиям потребителей"
               index={4}
             />
-
           </AnimateGroup>
-        </ScrollTrigger >
+        </ScrollTrigger>
       </div>
     </div>
   );

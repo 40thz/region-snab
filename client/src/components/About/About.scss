@@ -59,3 +59,15 @@
     padding: 100px 0px 0px 100px;
   }
 }
+
+@media (max-width: $mobile-width) {
+  .about__call {
+    padding: 0;
+    height: 350px;
+    padding: 30px;
+    transform: translateY(-25%);
+  }
+  .about__title {
+    font-size: 18px;
+  }
+}

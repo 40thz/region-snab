@@ -10,18 +10,19 @@ import ArrowUp from "../components/ArrowUp/ArrowUp";
 
 const Homepage = () => {
   const [offsetY, setOffsetY] = React.useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  const handleScroll = () => {
+    console.log("123");
+    setOffsetY(window.pageYOffset);
+  };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <>
-      <ArrowUp show={offsetY >= 500}/>
+      <ArrowUp show={offsetY >= 500} />
       <Header />
       <Intro />
       <Advantages offsetY={offsetY} />

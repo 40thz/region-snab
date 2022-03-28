@@ -15,21 +15,33 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  li, a {
+  li,
+  a {
     cursor: pointer;
     margin: 0 30px;
     &:hover {
       color: $red;
     }
   }
-  li, a:first-child {
+  li,
+  a:first-child {
     margin-left: 0;
   }
-  li, a:last-child {
+  li,
+  a:last-child {
     margin-right: 0;
   }
   &-contacts {
     display: flex;
     align-items: center;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__menu {
+    &-navigation,
+    &-contacts {
+      display: none;
+    }
   }
 }
