@@ -19,3 +19,13 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .advantage__item {
+    margin-bottom: 50px;
+    padding: 0;
+    &-title {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import React from "react";
 
-const HamburgerBtn = () => {
+const HamburgerBtn = ({ onClick, active }) => {
   return (
-    <div className="hamburger__btn">
+    <div onClick={onClick} className={`hamburger__btn ${active && "active"}`}>
       <div></div>
     </div>
   );

@@ -18,7 +18,8 @@ const Advantages = ({ offsetY }) => {
   const isMobile = useMobile();
 
   const parallax = {
-    car: { left: `${offsetY - 2400 / 2}px` },
+    carDefault: { left: `${offsetY - 2400 / 2}px` },
+    carMobile: { left: `${offsetY * 2 - 2400 / 2}px` },
     section: { transform: `translateY(-${offsetY * 1.3}px)` },
   };
 
@@ -26,7 +27,10 @@ const Advantages = ({ offsetY }) => {
     <div style={parallax.section} id="advantages" className="container">
       <div className="colum half">
         <AdvantageTitle />
-        <div style={parallax.car} className="advantages__car">
+        <div
+          style={isMobile ? parallax.carMobile : parallax.carDefault}
+          className="advantages__car"
+        >
           <img src={carImage} alt="car" />
         </div>
       </div>

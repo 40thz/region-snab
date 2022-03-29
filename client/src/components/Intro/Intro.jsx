@@ -26,7 +26,7 @@ const Intro = () => {
           </Link>
         </div>
       </div>
-      <Pattern />
+      <Pattern active />
     </main>
   );
 };

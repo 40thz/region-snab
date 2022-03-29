@@ -5,13 +5,22 @@ import Logo from "../Logo/Logo";
 import FullsizeMenu from "../FullsizeMenu/FullsizeMenu";
 import { useMobile } from "../../hooks/useMobile";
 import CallBtn from "../CallBtn/CallBtn";
+import cn from "classnames";
 
 const Header = () => {
   const isMobile = useMobile();
+  const [menuActive, setMenuActive] = React.useState(false);
 
+  const showMenu = () => {
+    setMenuActive(!menuActive);
+    document.body.style.overflow = menuActive ? "auto" : "hidden";
+  };
   return (
     <>
-      <header id="header">
+      <header
+        id="header"
+        className={cn({ bgRed: menuActive, delay: !menuActive })}
+      >
         <div className="container">
           <nav className="header__menu">
             {isMobile && <CallBtn />}
@@ -35,11 +44,13 @@ const Header = () => {
                 <li>+7 (391) 219-15-97</li>
               </a>
             </ul>
-            {isMobile && <HamburgerBtn />}
+            {isMobile && (
+              <HamburgerBtn active={menuActive} onClick={showMenu} />
+            )}
           </nav>
         </div>
       </header>
-      {/* <FullsizeMenu /> */}
+      <FullsizeMenu active={menuActive} />
     </>
   );
 };

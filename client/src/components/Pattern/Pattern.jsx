@@ -1,8 +1,8 @@
 import React from "react";
 
-const Pattern = () => {
+const Pattern = ({ active }) => {
   return (
-    <div className="pattern">
+    <div className={`pattern ${active && "active"}`}>
       <svg
         viewBox="0 0 1868 655"
         fill="none"

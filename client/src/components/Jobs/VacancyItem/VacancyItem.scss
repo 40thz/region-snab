@@ -1,25 +1,25 @@
-.vacancy{
-    display: flex;
-    justify-content: space-between;
-    color: $white;
+.vacancy {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
 
-    &-icon {
-        max-width: 254px;
-        margin-right: 50px;
-        img {
-            max-width: 254px;
-        }
+  &-icon {
+    width: 454px;
+    margin-right: 50px;
+    img {
+      max-width: 100%;
     }
+  }
 
-    &-title {
-        @include g400;
-        font-size: 18px;
-        margin-bottom: 20px;
-        line-height: 150%;
-    }
-    &-description {
-        @include s400;
-        line-height: 150%;
-        font-size: 14px;
-    }
+  &-title {
+    @include g400;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 150%;
+  }
+  &-description {
+    @include s400;
+    line-height: 150%;
+    font-size: 14px;
+  }
 }

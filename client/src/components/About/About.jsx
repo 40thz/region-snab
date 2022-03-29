@@ -1,4 +1,5 @@
 import React from "react";
+import { useMobile } from "@hooks/useMobile";
 import aboutImg from "@images/About/about-image.jpg";
 import PreviewText from "../PreviewText/PreviewText";
 import AboutText from "./AboutText/AboutText";
@@ -11,6 +12,7 @@ import RS from "../RS";
 
 const About = ({ offsetY }) => {
   const [startCounter, setStartCounter] = React.useState(false);
+  const isMobile = useMobile();
 
   return (
     <section className="center" id="about">
@@ -34,6 +36,7 @@ const About = ({ offsetY }) => {
         <div className="about__inside">
           <div className="colum">
             <PreviewText value="Направления деятельности" />
+            {isMobile && <AboutPreviewText />}
             <div className="about__inside-logo">
               <img src={aboutImg} alt="" />
             </div>
@@ -41,7 +44,7 @@ const About = ({ offsetY }) => {
           </div>
 
           <div className="colum">
-            <AboutPreviewText offsetY={offsetY} />
+            {!isMobile && <AboutPreviewText offsetY={offsetY} />}
             <ScrollTrigger onEnter={() => setStartCounter(true)}>
               <div className="about__inside-statistics">
                 {startCounter && (

@@ -1,9 +1,7 @@
 const AboutPreviewText = ({ offsetY }) => {
   return (
     <div
-      style={{
-        transform: `translateX(-${offsetY / 18}px)`,
-      }}
+      style={{ transform: `translateX(-${offsetY / 18}px)` }}
       className="about__inside-prevText"
     >
       <span>ООО “РегионСнаб” </span> с 2011 года ежегодно увеличивает свое

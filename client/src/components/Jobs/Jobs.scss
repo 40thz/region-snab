@@ -7,7 +7,7 @@
       padding-right: 20px;
     }
   }
-  
+
   .slick-slider {
     background: $dark;
     padding: 35px 35px 35px 35px;
@@ -65,4 +65,45 @@
 .jobs__inside {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 869px) {
+  .jobs__inside {
+    flex-direction: column;
+    .block__info {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .jobs__inside {
+    flex-direction: column;
+    .vacancy {
+      flex-direction: column;
+      &-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      &-title {
+        font-size: 14px;
+      }
+      &-description {
+        font-size: 12px;
+      }
+    }
+    .block__info {
+      margin-bottom: 45px;
+    }
+  }
+  .vacancy__slider-footer {
+    flex-direction: column-reverse;
+    padding: 0;
+    align-items: flex-start;
+    padding: 0px 35px 35px 35px;
+    margin-top: -1px;
+    .vacancy__slider-readmore {
+      margin-bottom: 45px;
+    }
+  }
 }

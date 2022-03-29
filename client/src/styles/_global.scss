@@ -84,22 +84,33 @@ img {
   bottom: -10px;
   right: -15px;
 }
+.bgRed {
+  background: $red;
+  border: none;
+}
+.delay {
+  transition-delay: 2s;
+}
 
+@media (max-width: $tablet-width) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 869px) {
+  .container {
+    padding: 0 20px;
+  }
+  .colum {
+    width: 100%;
+  }
+}
 @media (max-width: $mobile-width) {
   .container {
     padding: 0 10px;
     box-sizing: border-box;
   }
-  .colum {
-    width: 100%;
-  }
   .center {
-    padding: 0;
-  }
-  .rs {
-    position: absolute;
-    width: 200px;
-    right: 12%;
-    top: 50%;
+    margin-top: -210%;
   }
 }

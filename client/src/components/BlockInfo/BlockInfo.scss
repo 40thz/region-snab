@@ -26,3 +26,19 @@
 .preview__text {
   margin-bottom: 60px;
 }
+
+@media (max-width: $mobile-width) {
+  .preview__text {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .preview__text {
+    margin-bottom: 40px;
+  }
+  .block__info-subtitle,
+  .block__info-title {
+    font-size: 14px;
+  }
+}

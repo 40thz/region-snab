@@ -7,19 +7,37 @@
 }
 .advantages__car {
   position: absolute;
-  bottom: -70px;
+  bottom: -20px;
   left: 0;
   left: -2100%;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: 869px) {
   #advantages {
     flex-direction: column;
+    overflow: hidden;
   }
   .advantages__car {
     position: relative;
     bottom: 0px;
     left: 0;
     left: 0%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  #advantages {
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 90%;
+  }
+  .advantages__car {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    left: 0%;
+    img {
+      width: 500px;
+    }
   }
 }

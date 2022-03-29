@@ -13,7 +13,7 @@ main {
 }
 .intro__title {
   @include h700;
-  color: #404c58;
+  color: $white;
   font-size: 36px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -22,8 +22,24 @@ main {
   }
 }
 
+@media (max-width: $tablet-width) {
+  main {
+    padding-top: 35%;
+  }
+}
+
+@media (max-width: 869px) {
+  main {
+    padding-top: 10%;
+  }
+  .intro__title {
+    font-size: 24px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   main {
+    padding-top: 45%;
   }
   .intro {
     flex-direction: column;
