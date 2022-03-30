@@ -1,0 +1,29 @@
+section#aboutIntro {
+  box-sizing: border-box;
+  height: 100vh;
+  padding-top: 90px;
+  background: url("../../assets/images/about.png") no-repeat center center $dark;
+}
+.aboutIntro__inside {
+  display: flex;
+  justify-content: space-between;
+  &-title {
+    @include h700;
+    font-size: 36px;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  &-text {
+    @include s400;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .colum {
+    width: 50%;
+  }
+  .colum:first-child {
+    margin-right: 60px;
+  }
+}

@@ -1,0 +1,53 @@
+section#geography {
+  position: relative;
+  background: $white;
+}
+.geography {
+  &__inside {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__adress,
+  &__map {
+    box-sizing: border-box;
+    padding: 120px 0;
+    width: 50%;
+    z-index: 1;
+  }
+  &__map {
+    transform: translateX(-40%);
+  }
+  &__title {
+    max-width: 277px;
+    @include h700;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    span {
+      color: $red;
+    }
+  }
+  &__location-title {
+    @include s400;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 150%;
+    margin-top: 15px;
+    color: #000;
+    span {
+      color: $dark-blue;
+    }
+  }
+}
+
+.galleryBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../../assets/images/Geography/bgGeography.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+}

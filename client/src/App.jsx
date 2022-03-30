@@ -6,7 +6,6 @@ const App = () => {
 
   return (
     <div>
-      <div className="overlay"></div>
       <div className="App">{routes}</div>
     </div>
   );

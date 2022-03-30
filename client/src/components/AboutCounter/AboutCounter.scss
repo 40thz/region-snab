@@ -1,0 +1,23 @@
+.counter {
+  display: flex;
+  justify-content: space-between;
+  background: $red;
+  width: 80vw;
+
+  .colum:first-child {
+    padding: 100px 0px 0px 100px;
+    box-sizing: border-box;
+  }
+  &-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    .about__inside-status-title,
+    .about__inside-status-subTitle {
+      color: $white;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}

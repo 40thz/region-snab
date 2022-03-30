@@ -1,0 +1,59 @@
+section#advantageslider {
+  display: flex;
+  justify-content: space-between;
+  .vacancy__slider-footer {
+    padding: 0 0 120px 0;
+  }
+}
+
+.advantageslider {
+  &-bg,
+  &-content {
+    position: relative;
+    width: 50%;
+    height: 20%;
+  }
+  &-content {
+    box-sizing: border-box;
+    padding: 120px 120px 0px 100px;
+    position: relative;
+    background: $dark;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .pattern {
+      position: absolute;
+      bottom: -30%;
+      right: -55%;
+      svg {
+        width: 200%;
+      }
+    }
+  }
+}
+
+.advantageSliderBg {
+  max-height: 730px;
+  img {
+    width: 100%;
+  }
+}
+
+.slider__counter {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
+  display: flex;
+  color: $white;
+  z-index: 12312;
+  @include h700;
+  &-current {
+    font-size: 36px;
+  }
+  &-length {
+    font-size: 270px;
+    line-height: 180px;
+  }
+}

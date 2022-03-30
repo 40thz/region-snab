@@ -1,0 +1,80 @@
+section#company {
+  padding: 120px 0;
+  background: $whiteBg;
+  .logo {
+    &_title {
+      font-size: 18px;
+    }
+    &_subtitle {
+      font-size: 11px;
+    }
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+    &__icon {
+      margin-right: 20px;
+    }
+  }
+  .about__call {
+    margin: 0;
+    transform: translateY(0%);
+    margin-top: 120px;
+  }
+}
+
+.company {
+  &__inside {
+    display: flex;
+    justify-content: space-between;
+    .colum:nth-child(2) {
+      position: relative;
+      width: 50%;
+      display: flex;
+      align-items: flex-end;
+      svg {
+        position: absolute;
+        left: -73%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__title {
+    max-width: 450px;
+    @include h700;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 200px;
+    span {
+      color: $red;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 470px;
+    border: 1px solid rgba(29, 35, 46, 0.1);
+    box-sizing: border-box;
+    padding: 30px 0;
+    &-line {
+      position: absolute;
+      top: 50%;
+
+      left: -542px;
+    }
+  }
+}
+
+.company__logo {
+  max-width: 370px;
+  height: 198px;
+  background: $dark;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

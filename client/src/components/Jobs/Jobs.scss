@@ -7,61 +7,14 @@
       padding-right: 20px;
     }
   }
-
   .slick-slider {
     background: $dark;
     padding: 35px 35px 35px 35px;
     box-sizing: border-box;
     height: 100%;
   }
+}
 
-  .slider-btn {
-    transition: all 0.5s;
-    width: 60px;
-    height: 60px;
-    background: $white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    svg {
-      path {
-        transition: all 0.5s;
-        stroke: $red;
-      }
-    }
-    &.prev {
-      transform: rotate(180deg);
-      margin-right: 15px;
-    }
-    &:hover {
-      background: $red;
-      svg {
-        path {
-          stroke: $white;
-        }
-      }
-    }
-  }
-}
-.vacancy__slider-footer {
-  width: 100%;
-  background: $dark;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 80px 35px 35px;
-  box-sizing: border-box;
-}
-.vacancy__slider-buttons {
-  display: flex;
-}
-.vacancy__slider-readmore {
-  cursor: pointer;
-  font-size: 14px;
-  text-decoration-line: underline;
-  color: $white;
-  @include g400;
-}
 .jobs__inside {
   display: flex;
   justify-content: space-between;

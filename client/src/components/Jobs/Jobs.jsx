@@ -5,12 +5,13 @@ import PreviewText from "../PreviewText/PreviewText";
 
 import vacancyImage from "@images/Jobs/vacancy.png";
 import VacancyItem from "./VacancyItem/VacancyItem";
+import SliderFooter from "../SliderFooter/SliderFooter";
 
 const Jobs = () => {
-  const [slider, setSlider] = React.useState()
-  
+  const [slider, setSlider] = React.useState();
+
   const settings = {
-    ref: slider => setSlider(slider),
+    ref: (slider) => setSlider(slider),
     dots: false,
     infinite: false,
     fade: true,
@@ -19,7 +20,6 @@ const Jobs = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
   return (
     <section id="jobs">
       <div className="container">
@@ -37,45 +37,31 @@ const Jobs = () => {
             <Slider {...settings}>
               <VacancyItem
                 image={vacancyImage}
-                title='Водитель категории «Е» с ДОПОГ'
-                description='Сменный график, описание вакансии описание вакансии описание ваканси'
+                title="Водитель категории «Е» с ДОПОГ"
+                description="Сменный график, описание вакансии описание вакансии описание ваканси"
               />
               <VacancyItem
                 image={vacancyImage}
-                title='Водитель категории «Е» с ДОПОГ1'
-                description='Сменный график, описание вакансии описание вакансии описание ваканси'
+                title="Водитель категории «Е» с ДОПОГ1"
+                description="Сменный график, описание вакансии описание вакансии описание ваканси"
               />
               <VacancyItem
                 image={vacancyImage}
-                title='Водитель категории «Е» с ДОПОГ2'
-                description='Сменный график, описание вакансии описание вакансии описание ваканси'
+                title="Водитель категории «Е» с ДОПОГ2"
+                description="Сменный график, описание вакансии описание вакансии описание ваканси"
               />
               <VacancyItem
                 image={vacancyImage}
-                title='Водитель категории «Е» с ДОПОГ3'
-                description='Сменный график, описание вакансии описание вакансии описание ваканси'
+                title="Водитель категории «Е» с ДОПОГ3"
+                description="Сменный график, описание вакансии описание вакансии описание ваканси"
               />
               <VacancyItem
                 image={vacancyImage}
-                title='Водитель категории «Е» с ДОПОГ4'
-                description='Сменный график, описание вакансии описание вакансии описание ваканси'
+                title="Водитель категории «Е» с ДОПОГ4"
+                description="Сменный график, описание вакансии описание вакансии описание ваканси"
               />
             </Slider>
-            <div className="vacancy__slider-footer">
-              <div className="vacancy__slider-buttons">
-                <div className="slider-btn prev" onClick={slider?.slickPrev}>
-                  <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" strokeWidth="2" />
-                  </svg>
-                </div>
-                <div className="slider-btn next" onClick={slider?.slickNext}>
-                  <svg width="9" height="13" viewBox="0 0 9 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 12.02L7 6.52002L0.999999 1.02002" stroke="#F0F1F1" strokeWidth="2" />
-                  </svg>
-                </div>
-              </div>
-              <div className="vacancy__slider-readmore">Подробнее о вакансии</div>
-            </div>
+            <SliderFooter slider={slider} />
           </div>
         </div>
       </div>
