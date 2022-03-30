@@ -38,16 +38,8 @@
     }
   }
   &.active {
-    transform: rotate(50deg);
     div {
-      &::before {
-        transform: rotate(85deg);
-        width: 100%;
-        top: 9px;
-      }
-      &::after {
-        opacity: 0;
-      }
+      display: none;
     }
   }
 }
