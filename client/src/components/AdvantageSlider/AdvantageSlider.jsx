@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import sliderImg from "@images/AdvantageSlider/1.jpg";
 import SliderFooter from "../SliderFooter/SliderFooter";
 import Pattern from "../Pattern/Pattern";
 import PreviewText from "../PreviewText/PreviewText";
@@ -46,6 +45,7 @@ const AdvantageSlider = () => {
       setcurrentSlider(contentSlider?.innerSlider?.asNavForIndex + 1);
     },
   };
+
   return (
     <section id="advantageslider">
       <div className="advantageslider-bg">

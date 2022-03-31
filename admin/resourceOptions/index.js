@@ -1,7 +1,7 @@
-const Admin = require('./admin')
-const Reactor = require("./Reactor");
+const Admin = require("./admin");
+const Vacancy = require("./Vacancy");
 
 module.exports = {
   Admin,
-  Reactor,
+  Vacancy,
 };

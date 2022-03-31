@@ -1,4 +1,6 @@
 .counter {
+  position: relative;
+  z-index: 22;
   display: flex;
   justify-content: space-between;
   background: $red;

@@ -3,15 +3,24 @@ import Slider from "react-slick";
 import BlockInfo from "../BlockInfo/BlockInfo";
 import PreviewText from "../PreviewText/PreviewText";
 
-import vacancyImage from "@images/Jobs/vacancy.png";
 import VacancyItem from "./VacancyItem/VacancyItem";
 import SliderFooter from "../SliderFooter/SliderFooter";
 
+import { useGetVacancyQuery } from "../../store";
+
 const Jobs = () => {
   const [slider, setSlider] = React.useState();
+  const { data, isLoading } = useGetVacancyQuery();
+
+  const [currentItemId, setCurrentItemId] = React.useState();
+
+  React.useEffect(() => {
+    !isLoading && setCurrentItemId(data[0]._id);
+  }, [data]);
 
   const settings = {
     ref: (slider) => setSlider(slider),
+    asNavFor: slider,
     dots: false,
     infinite: false,
     fade: true,
@@ -19,7 +28,12 @@ const Jobs = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    afterChange: () => {
+      const id = data[slider?.innerSlider?.asNavForIndex]._id;
+      setCurrentItemId(id);
+    },
   };
+
   return (
     <section id="jobs">
       <div className="container">
@@ -34,34 +48,27 @@ const Jobs = () => {
             />
           </div>
           <div className="colum half">
-            <Slider {...settings}>
-              <VacancyItem
-                image={vacancyImage}
-                title="Водитель категории «Е» с ДОПОГ"
-                description="Сменный график, описание вакансии описание вакансии описание ваканси"
-              />
-              <VacancyItem
-                image={vacancyImage}
-                title="Водитель категории «Е» с ДОПОГ1"
-                description="Сменный график, описание вакансии описание вакансии описание ваканси"
-              />
-              <VacancyItem
-                image={vacancyImage}
-                title="Водитель категории «Е» с ДОПОГ2"
-                description="Сменный график, описание вакансии описание вакансии описание ваканси"
-              />
-              <VacancyItem
-                image={vacancyImage}
-                title="Водитель категории «Е» с ДОПОГ3"
-                description="Сменный график, описание вакансии описание вакансии описание ваканси"
-              />
-              <VacancyItem
-                image={vacancyImage}
-                title="Водитель категории «Е» с ДОПОГ4"
-                description="Сменный график, описание вакансии описание вакансии описание ваканси"
-              />
-            </Slider>
-            <SliderFooter slider={slider} />
+            {isLoading ? (
+              "loading"
+            ) : (
+              <Slider {...settings}>
+                {data.map((vacancy) => {
+                  let string = vacancy.description
+                    .replace(/<(\/?)([a-z]+)[^>]*(>|$)/gi, "")
+                    .replace(/&nbsp;/g, " ")
+                    .trim();
+                  string = string.slice(0, 100);
+                  return (
+                    <VacancyItem
+                      image={vacancy.uploadedFile.path}
+                      title={vacancy.name}
+                      description={string}
+                    />
+                  );
+                })}
+              </Slider>
+            )}
+            <SliderFooter slider={slider} currentItemId={currentItemId} />
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
-const { default: AdminJS } = require('adminjs')
-const AdminJSMongoose = require('@adminjs/mongoose')
+const { default: AdminJS } = require("adminjs");
+const AdminJSMongoose = require("@adminjs/mongoose");
 
-const { Admin, Reactor } = require("./resourceOptions");
+const { Admin, Vacancy } = require("./resourceOptions");
 
-AdminJS.registerAdapter(AdminJSMongoose)
+AdminJS.registerAdapter(AdminJSMongoose);
 
 /** @type {import('adminjs').AdminJSOptions} */
 const options = {
@@ -22,6 +22,7 @@ const options = {
       },
       labels: {
         Admin: "Администраторы",
+        Vacancy: "Вакансии",
       },
       buttons: {
         filter: "Фильтр",
@@ -210,18 +211,18 @@ const options = {
             text: "Текст",
           },
         },
-        Rector: {
+        Vacancy: {
           properties: {
-            uploadedFile: "Фото",
+            uploadedFile: "Изображение",
             name: "Имя",
-            post: "Должность",
-            text: "Текст",
+            description: "Описание",
+            date: "Дата",
           },
         },
       },
     },
   },
-  resources: [Admin, Reactor],
+  resources: [Admin, Vacancy],
   branding: {
     companyName: "Админ панель",
     logo: "",
@@ -229,4 +230,4 @@ const options = {
   },
 };
 
-module.exports = options
+module.exports = options;

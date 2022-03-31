@@ -1,11 +1,10 @@
 import React from "react";
 import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import FullsizeMenu from "../FullsizeMenu/FullsizeMenu";
 import { useMobile } from "../../hooks/useMobile";
 import CallBtn from "../CallBtn/CallBtn";
-import cn from "classnames";
 
 const Header = () => {
   const isMobile = useMobile();
@@ -15,27 +14,27 @@ const Header = () => {
     setMenuActive(!menuActive);
     document.body.style.overflow = menuActive ? "auto" : "hidden";
   };
+
   return (
     <>
-      <header
-        id="header"
-        className={cn({ bgRed: menuActive, delay: !menuActive })}
-      >
+      <header id="header">
         <div className="container">
           <nav className="header__menu">
             {isMobile && <CallBtn />}
             <ul className="header__menu-navigation">
-              <Link to="advantages" smooth duration={1000} offset={-750}>
+              <Link to="/about">
                 <li>О компании</li>
               </Link>
-              <Link to="about" smooth duration={1000} offset={250}>
+              <Link to="/directions">
                 <li>Направления</li>
               </Link>
-              <Link to="footer" smooth duration={1000}>
+              <Link to="/contacts">
                 <li>Контакты</li>
               </Link>
             </ul>
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
             <ul className="header__menu-contacts">
               <a href="mailto:regionsnab24@mail.ru">
                 <li>regionsnab24@mail.ru</li>

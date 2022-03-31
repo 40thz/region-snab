@@ -11,6 +11,8 @@ const Homepage = () => {
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   React.useEffect(() => {
+    document.body.style.background = "#1d232e";
+    document.querySelector("header").style.background = "";
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);

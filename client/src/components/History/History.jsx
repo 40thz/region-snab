@@ -2,9 +2,12 @@ import React from "react";
 import HistoryItem from "../HistoryItem/HistoryItem";
 import PreviewText from "../PreviewText/PreviewText";
 
-const History = () => {
+const History = ({ offsetY }) => {
+  const parallax = {
+    history: { transform: `translateY(-${offsetY / 2}px)` },
+  };
   return (
-    <section id="history">
+    <section style={parallax.history} id="history">
       <div className="container">
         <div className="history__inside">
           <PreviewText value="История" />

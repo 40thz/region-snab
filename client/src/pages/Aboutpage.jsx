@@ -5,17 +5,28 @@ import AboutCounter from "../components/AboutCounter/AboutCounter";
 import Geography from "../components/Geography/Geography";
 import AdvantageSlider from "../components/AdvantageSlider/AdvantageSlider";
 import Company from "../components/Company/Company";
+import ArrowUp from "../components/ArrowUp/ArrowUp";
 
 const About = () => {
+  const [offsetY, setOffsetY] = React.useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  React.useEffect(() => {
+    document.body.style.background = "#f8f8f8";
+    document.querySelector("header").style.background = "#1d232e";
+    document.addEventListener("scroll", handleScroll);
+    return () => document.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div>
+    <>
       <AboutIntro />
-      <AboutCounter />
-      <History />
-      <Geography />
+      <ArrowUp show={offsetY >= 500} />
+      <AboutCounter offsetY={offsetY} />
+      <History offsetY={offsetY} />
+      <Geography offsetY={offsetY} />
       <AdvantageSlider />
       <Company />
-    </div>
+    </>
   );
 };
 

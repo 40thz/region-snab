@@ -1,24 +1,24 @@
 const AdminJS = require("adminjs");
-const ReactorModel = require("../../models/Reactor");
+const VacancyModel = require("../../models/Vacancy");
 const features = require("../features");
 
 /** @type {AdminJS.ResourceOptions} */
 const options = {
-  listProperties: ["uploadedFile", "name", "post", "text"],
-  editProperties: ["uploadedFile", "name", "post", "text"],
+  listProperties: ["uploadedFile", "name", "description", "date"],
+  editProperties: ["uploadedFile", "name", "description", "date"],
   navigation: {
     icon: "UserCertification",
   },
   properties: {
     mimeType: { isVisible: false },
-    text: {
+    description: {
       type: "richtext",
     },
   },
 };
 
 module.exports = {
-  resource: ReactorModel,
+  resource: VacancyModel,
   options,
   features,
 };

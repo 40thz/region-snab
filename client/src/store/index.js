@@ -1,2 +1,2 @@
 export * from "./store";
-//export * from "../services/vacancyApi";
+export * from "../services/vacancyApi";

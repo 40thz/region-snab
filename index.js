@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const cors = require("cors");
 const { default: AdminJS } = require("adminjs");
 const options = require("./admin/admin.options");
 require("dotenv").config();
@@ -9,18 +10,19 @@ require("dotenv").config();
 const app = express();
 
 // ==== Routes ====
-const { buildAdminRouter } = require("./routes");
+const { buildAdminRouter, vacancyRouter } = require("./routes");
 
 // ==== Admin options ====
 const admin = new AdminJS(options);
 const adminRouter = buildAdminRouter(admin);
 
 // ==== Middlewares ====
+app.use(cors());
 app.use(express.json({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-
 // ==== API ====
 app.use(admin.options.rootPath, adminRouter);
+app.use("/api/vacancy", vacancyRouter);
 
 // ==== App Start On Production ====
 if (process.env.NODE_ENV === "production") {
