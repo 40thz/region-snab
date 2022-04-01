@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import FullsizeMenu from "../FullsizeMenu/FullsizeMenu";
 import { useMobile } from "../../hooks/useMobile";
 import CallBtn from "../CallBtn/CallBtn";
+import cn from "classnames";
 
 const Header = () => {
   const isMobile = useMobile();
@@ -17,7 +18,10 @@ const Header = () => {
 
   return (
     <>
-      <header id="header">
+      <header
+        id="header"
+        className={cn({ delay: !menuActive, bgRed: menuActive })}
+      >
         <div className="container">
           <nav className="header__menu">
             {isMobile && <CallBtn />}

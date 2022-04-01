@@ -1,4 +1,5 @@
-.hamburger__btn {
+.menu__btn {
+  transition: all 0.5s;
   cursor: pointer;
   position: relative;
   width: 24px;
@@ -6,41 +7,50 @@
   display: flex;
   align-items: center;
   margin-left: 30px;
-  div {
-    width: 24px;
-    height: 2px;
-    background: $white;
-    &::before,
-    &::after {
-      transition: all 0.3s;
-      content: "";
-      position: absolute;
-      width: 12px;
-      height: 2px;
-      background: $white;
-    }
-    &::before {
-      top: 0;
-      left: 0;
-    }
-    &::after {
-      bottom: 0;
-      right: 0;
-    }
-  }
-
   &:hover {
-    div {
-      &::before,
-      &::after {
-        width: 100%;
-      }
+    .menu__btn-burger::before,
+    .menu__btn-burger::after {
+      width: 100%;
     }
   }
   &.active {
-    div {
-      display: none;
+    .menu__btn-burger {
+      background: transparent;
+      &::after,
+      &::before {
+        width: 100%;
+      }
+      &::before {
+        transform: rotate(45deg) translateX(1px);
+      }
+      &::after {
+        transform: rotate(-45deg) translate(11px, -10px);
+      }
     }
+  }
+}
+
+.menu__btn-burger {
+  transition: all 0.5s;
+  width: 100%;
+  height: 2px;
+  background: $white;
+  &::before,
+  &::after {
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: $white;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
   }
 }
 

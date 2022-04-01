@@ -16,6 +16,12 @@ section#company {
       margin-right: 20px;
     }
   }
+  .rs {
+    background: linear-gradient(-60deg, #a83f3f, #bc4949, #bc4949, #bc4949);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .company {
@@ -29,7 +35,7 @@ section#company {
       align-items: flex-end;
       svg {
         position: absolute;
-        left: -73%;
+        right: 470px;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -108,27 +114,39 @@ section#company {
   }
 }
 #companyline1 {
-  animation: show 1s 1s linear forwards;
+  animation: show 2s linear forwards;
+  stroke-dasharray: 150%;
 }
 #companyline2 {
-  animation: show 1s 2s linear forwards;
+  animation: show 2s 0.5s linear forwards;
+  stroke-dasharray: 150%;
 }
 #companyline3 {
-  animation: show 1s 3s linear forwards;
+  animation: show 2s 1s linear forwards;
+  stroke-dasharray: 150%;
 }
 #companyline4 {
-  animation: show 1s 4s linear forwards;
+  animation: show 2s 1.5s linear forwards;
+  stroke-dasharray: 150%;
+  transform: rotate(180deg);
+  transform-box: fill-box;
+  transform-origin: center;
 }
-#companyline5 {
-  animation: show 1s 5s linear forwards;
-}
+
 @keyframes show {
   0% {
     stroke: #1d232e;
-    stroke-opacity: 0.22;
+    stroke-opacity: 0;
+    stroke-dasharray: 150%;
+  }
+  50% {
+    stroke: #1d232e;
+    stroke-opacity: 0;
+    stroke-dasharray: 80%;
   }
   100% {
     stroke: $red;
     stroke-opacity: 1;
+    stroke-dasharray: 5px;
   }
 }

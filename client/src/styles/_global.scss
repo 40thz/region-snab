@@ -72,13 +72,13 @@ img {
   z-index: 2;
   background: linear-gradient(
     0deg,
-    rgba(29, 35, 46, 1) 40%,
+    rgba(29, 35, 46, 1) 20%,
     rgba(253, 187, 45, 0) 100%
   );
 }
 .center {
   position: relative;
-  margin-top: -20%;
+  margin-top: -30%;
   z-index: 4;
 }
 .container {
@@ -88,7 +88,14 @@ img {
 .rs {
   position: absolute;
   bottom: -10px;
-  right: -15px;
+  right: -25px;
+  @include h700;
+  font-size: 350px;
+  color: #fff;
+  line-height: 230px;
+}
+.rsAnimation {
+  animation: rsAnim 3s ease-in-out infinite;
 }
 .bgRed {
   background: $red;
@@ -109,6 +116,17 @@ img {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+@keyframes rsAnim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @media (max-width: $tablet-width) {
   .container {

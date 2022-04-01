@@ -45,8 +45,18 @@
 #cylinder7 {
   animation: startUpCylinder 1s linear infinite;
 }
-#cylinder15 {
+#cylinder15,
+#cylinder25 {
   animation: startUpCylinder 1s 0.4s linear infinite;
+}
+#cylinder35 {
+  animation: start 1.5s 0.8s linear infinite;
+}
+#cylinder33 {
+  animation: start 1.3s 0.2s linear infinite;
+}
+#cylinder19 {
+  animation: startUpCylinder 2s 0.2s linear infinite;
 }
 #cylinder13 {
   animation: startSecond 1s 0.4s linear infinite;
@@ -57,6 +67,45 @@
 #cylinder30 {
   animation: start 0.9s 0.4s linear infinite;
 }
+#cylinder4 {
+  animation: startUpCylinder 1.5s linear infinite;
+}
+#cylinder3 {
+  animation: startUpCylinder 1.3s linear infinite;
+}
+#cylinder {
+  animation: startUpCylinder 1.6s linear infinite;
+}
+#cylinder5 {
+  animation: startSecond 1.4s 0.3s linear infinite;
+}
+#cylinder14 {
+  animation: startSecond 1.2s 0.2s linear infinite;
+}
+#cylinder18 {
+  animation: startSecond 1s 0.8s linear infinite;
+}
+#cylinder16 {
+  animation: startSecond 1s 0.2s linear infinite;
+}
+#cylinder24,
+#cylinder27 {
+  animation: startSecond 1.4s linear infinite;
+}
+#cylinder34 {
+  animation: startSecond 2s linear infinite;
+}
+#cylinder29 {
+  animation: startSecond 2s 0.5s linear infinite;
+}
+#cylinder36 {
+  animation: startSecond 1.4s 0.3s linear infinite;
+}
+#cylinder31,
+#cylinder32 {
+  animation: startSecond 1.4s 0.8s linear infinite;
+}
+
 @keyframes start {
   0%,
   100% {

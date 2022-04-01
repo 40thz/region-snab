@@ -53,11 +53,7 @@ const Jobs = () => {
             ) : (
               <Slider {...settings}>
                 {data.map((vacancy) => {
-                  let string = vacancy.description
-                    .replace(/<(\/?)([a-z]+)[^>]*(>|$)/gi, "")
-                    .replace(/&nbsp;/g, " ")
-                    .trim();
-                  string = string.slice(0, 100);
+                  let string = vacancy.description.slice(0, 150);
                   return (
                     <VacancyItem
                       image={vacancy.uploadedFile.path}

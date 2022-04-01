@@ -11,7 +11,7 @@ const Footer = () => {
     <footer id="footer">
       <div className="container">
         <div className="footer__header">
-          <RS color="#262C36" />
+          <RS color="#262C36" animateText />
           <div className="colum">
             <Logo row bgColor="#B63A3A" />
             <ul className="footer-leftside">

@@ -9,8 +9,10 @@ const HistoryItem = ({ year, items }) => {
         <img src={historyImg} alt="Регионснаб" />
       </div>
       <div className="historyitem-chronology">
-        {items.map((item) => (
-          <li className="chronology-event">{item}</li>
+        {items.map((item, i) => (
+          <li key={i} className="chronology-event">
+            {item}
+          </li>
         ))}
       </div>
     </div>

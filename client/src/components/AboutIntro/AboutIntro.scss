@@ -1,7 +1,6 @@
 section#aboutIntro {
   box-sizing: border-box;
   height: 100vh;
-  padding-top: 90px;
   background: url("../../assets/images/about.png") no-repeat center center $dark;
 }
 .aboutIntro__inside {
@@ -13,6 +12,7 @@ section#aboutIntro {
     color: $white;
     text-transform: uppercase;
     margin-bottom: 60px;
+    margin-top: 90px;
   }
   &-text {
     @include s400;

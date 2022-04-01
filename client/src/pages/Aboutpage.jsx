@@ -13,7 +13,6 @@ const About = () => {
 
   React.useEffect(() => {
     document.body.style.background = "#f8f8f8";
-    document.querySelector("header").style.background = "#1d232e";
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);

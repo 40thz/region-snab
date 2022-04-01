@@ -1,7 +1,9 @@
 import React from "react";
+import Header from "../Header/Header";
 const AboutIntro = () => {
   return (
     <section id="aboutIntro">
+      <Header />
       <div className="container">
         <div className="aboutIntro__inside-title">О компании</div>
         <div className="aboutIntro__inside">

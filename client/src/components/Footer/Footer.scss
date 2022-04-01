@@ -20,8 +20,13 @@ footer {
     }
   }
   .rs {
+    transition: all 0.5s;
     bottom: -5px;
     right: 0;
+    background: linear-gradient(-60deg, #404752, #262c36, #262c36, #262c36);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   a {
     cursor: pointer;
