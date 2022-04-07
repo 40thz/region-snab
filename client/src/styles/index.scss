@@ -7,6 +7,7 @@
 @import "global";
 
 //Components
+@import "@components/Preloader/Preloader.scss";
 @import "@components/Header/Header.scss";
 @import "@components/Logo/Logo.scss";
 @import "@components/Intro/Intro.scss";
@@ -37,3 +38,4 @@
 @import "@components/SliderFooter/SliderFooter.scss";
 @import "@components/AdvantageSlider/AdvantageSliderItem/AdvantageSliderItem.scss";
 @import "@components/Company/Company.scss";
+@import "@components/NotFound/NotFound.scss";

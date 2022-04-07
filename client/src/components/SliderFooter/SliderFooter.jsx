@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SliderFooter = ({ slider, currentItemId = "" }) => {
+const SliderFooter = ({
+  slider,
+  currentItemId = "",
+  currentSlider,
+  counter,
+}) => {
+  console.log(slider);
   return (
     <div className="vacancy__slider-footer">
       <div className="vacancy__slider-buttons">
@@ -35,6 +41,11 @@ const SliderFooter = ({ slider, currentItemId = "" }) => {
             />
           </svg>
         </div>
+        {counter && (
+          <div className="vacancy__slider-footer-counter">
+            {currentSlider} из {slider?.props.children.length}
+          </div>
+        )}
       </div>
       <Link to={currentItemId}>
         <div className="vacancy__slider-readmore">Подробнее о вакансии</div>

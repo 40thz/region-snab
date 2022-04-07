@@ -1,0 +1,85 @@
+section#notfound {
+  background: $whiteBg;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  .pattern {
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    svg {
+      path {
+        fill: $whiteBg;
+        stroke: $dark;
+      }
+    }
+  }
+}
+
+.notfound__intro {
+  position: relative;
+  z-index: 123;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 50px;
+  @include h700;
+  &-title {
+    color: $red;
+    font-size: 240px;
+    width: 50%;
+  }
+  &-car {
+    width: 50%;
+    img {
+      position: relative;
+      transform: translateX(-200%);
+      animation: carAnim 3s forwards;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 951px;
+      height: 281px;
+      background: url(../../assets/images/Advantage/car.png) no-repeat;
+      animation: carAnimTwo 2s 2s forwards;
+      transform: translateX(-200%);
+    }
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    &:first-child {
+      margin-bottom: 100px;
+    }
+  }
+  &-subtitle {
+    max-width: 452px;
+    font-size: 36px;
+    text-transform: uppercase;
+    span {
+      color: $red;
+    }
+  }
+}
+
+@keyframes carAnim {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes carAnimTwo {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-40%);
+  }
+}

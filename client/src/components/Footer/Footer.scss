@@ -21,8 +21,9 @@ footer {
   }
   .rs {
     transition: all 0.5s;
-    bottom: -5px;
-    right: 0;
+    bottom: -25px;
+    left: -27px;
+    font-size: 277px;
     background: linear-gradient(-60deg, #404752, #262c36, #262c36, #262c36);
     background-size: 300%;
     -webkit-background-clip: text;
@@ -93,6 +94,15 @@ footer {
   }
 }
 
+@media (max-width: $tablet-width) {
+  #footer {
+    .rs {
+      font-size: 266px;
+      bottom: -7%;
+    }
+  }
+}
+
 @media (max-width: $mobile-width) {
   .footer__header {
     flex-direction: column;
@@ -105,6 +115,7 @@ footer {
       order: 3;
       margin-top: 40px;
     }
+
     .rs {
       display: none;
     }

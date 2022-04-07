@@ -14,13 +14,15 @@ const Geography = ({ offsetY }) => {
   });
 
   const showMap = () => {
-    setRegion({ krsk: true, irkutsk: true, hakasia: true });
+    setRegion({ krsk: true, irkutsk: true, hakasia: true, tyva: true });
   };
 
   const showRegion = {
     krsk: () => setRegion({ krsk: true, irkutsk: false, hakasia: false }),
     irkutsk: () => setRegion({ krsk: false, irkutsk: true, hakasia: false }),
     hakasia: () => setRegion({ krsk: false, irkutsk: false, hakasia: true }),
+    tyva: () =>
+      setRegion({ krsk: false, irkutsk: false, hakasia: false, tyva: true }),
   };
 
   const parallax = {
@@ -57,6 +59,13 @@ const Geography = ({ offsetY }) => {
                     className={cn("hakasia", { textRed: regions.hakasia })}
                   >
                     Республика хакасия
+                  </div>
+                  <div
+                    onMouseEnter={showRegion.tyva}
+                    onMouseLeave={showMap}
+                    className={cn("tyva", { textRed: regions.tyva })}
+                  >
+                    Республика тыва
                   </div>
                 </div>
                 <div className="geography__location">

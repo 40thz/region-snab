@@ -20,23 +20,34 @@ const AboutCounter = ({ offsetY }) => {
             {startCounter && (
               <>
                 <StatItem
+                  after="лет"
                   title={11}
-                  subTitle="опыт трейдерской деятельности "
+                  subTitle="лет опыта оптовой реализации и перевозки нефтепродуктов"
                 />
                 <StatItem
                   before=">"
-                  title={400000}
-                  subTitle="тонн нефтепродуктов перевозим в год "
+                  title={600000}
+                  subTitle="тонн плановый объем перевалки нефтепродуктов в год через склад ГСМ"
                 />
                 <StatItem
-                  before=">"
-                  title={180000}
-                  subTitle="тонн нефтепродуктов продаем в год "
+                  after="м3"
+                  title={19800}
+                  subTitle="емкость собственного склада ГСМ"
                 />
                 <StatItem
                   after="тягачей"
                   title={45}
                   subTitle="с полуприцепом-цистерной в собственности"
+                />
+                <StatItem
+                  before=">"
+                  title={180000}
+                  subTitle="тонн нефтепродуктов продаем в год"
+                />
+                <StatItem
+                  before=">"
+                  title={400000}
+                  subTitle="тонн нефтепродуктов перевозим в год"
                 />
               </>
             )}

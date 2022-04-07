@@ -56,6 +56,7 @@ const Jobs = () => {
                   let string = vacancy.description.slice(0, 150);
                   return (
                     <VacancyItem
+                      key={vacancy._id}
                       image={vacancy.uploadedFile.path}
                       title={vacancy.name}
                       description={string}

@@ -7,7 +7,7 @@ import { useMobile } from "../../hooks/useMobile";
 import CallBtn from "../CallBtn/CallBtn";
 import cn from "classnames";
 
-const Header = () => {
+const Header = ({ dark }) => {
   const isMobile = useMobile();
   const [menuActive, setMenuActive] = React.useState(false);
 
@@ -15,12 +15,11 @@ const Header = () => {
     setMenuActive(!menuActive);
     document.body.style.overflow = menuActive ? "auto" : "hidden";
   };
-
   return (
     <>
       <header
         id="header"
-        className={cn({ delay: !menuActive, bgRed: menuActive })}
+        className={cn({ delay: !menuActive, bgRed: menuActive, dark: dark })}
       >
         <div className="container">
           <nav className="header__menu">

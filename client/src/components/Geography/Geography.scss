@@ -2,13 +2,13 @@ section#geography {
   position: relative;
   background: $white;
   margin-top: -40%;
-  svg {
-    path {
-      transition: all 1s;
-    }
-  }
   .krsk:hover ~ .geography__map {
     opacity: 0;
+  }
+  svg {
+    path {
+      transition: all 0.5s;
+    }
   }
 }
 .geography {
@@ -38,6 +38,7 @@ section#geography {
       color: $red;
     }
   }
+
   &__location-title {
     @include s400;
     display: flex;

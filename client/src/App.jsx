@@ -3,7 +3,6 @@ import { useRoutes } from "./routes";
 
 const App = () => {
   const routes = useRoutes();
-
   return (
     <div>
       <div className="App">{routes}</div>

@@ -10,6 +10,7 @@ import fileIcon from "@images/AdvantageItem/file.svg";
 import proIcon from "@images/AdvantageItem/pro.svg";
 import gearIcon from "@images/AdvantageItem/gear.svg";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
+import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "../../hooks/useMobile";
 
@@ -39,17 +40,17 @@ const Advantages = ({ offsetY }) => {
           <AnimateGroup play={animate}>
             <AdvantageItem
               icon={portfolioIcon}
-              value="Обладает огромным и ценным опытом трейдерской деятельности"
+              value="Обладает огромным опытом оптовой реализации нефтепродуктов"
               index={0}
             />
             <AdvantageItem
               icon={fileIcon}
-              value="Работает с крупнейшими производителями по прямым долгосрочным договорам"
+              value="Работает с крупнейшими производителями нефтепродуктов напрямую"
               index={1}
             />
             <AdvantageItem
               icon={proIcon}
-              value="Зарекомендовала себя как исключительно стабильный, надежный и профессиональный партнер"
+              value="Зарекомендовала себя как исключительно стабильный, надежный и профессиональный поставщик"
               index={2}
             />
             <AdvantageItem
@@ -61,6 +62,11 @@ const Advantages = ({ offsetY }) => {
               icon={gearIcon}
               value="Обладает всей необходимой инфраструктурой и финансовыми средствами для выполнения своих обязательств и полного соответствия ожиданиям потребителей"
               index={4}
+            />
+            <AdvantageItem
+              icon={locationIcon}
+              value="Является крупнейшим «независимым» поставщиком (без государственного участия) на рынке нефтепродуктов  Красноярского края "
+              index={5}
             />
           </AnimateGroup>
         </ScrollTrigger>

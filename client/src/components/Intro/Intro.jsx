@@ -8,7 +8,7 @@ import { Link } from "react-scroll";
 
 const Intro = () => {
   return (
-    <main id="home">
+    <main>
       <div className="container">
         <AdvantageItem
           icon={virifyIcon}

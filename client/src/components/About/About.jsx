@@ -4,14 +4,11 @@ import aboutImg from "@images/About/about-image.jpg";
 import PreviewText from "../PreviewText/PreviewText";
 import AboutText from "./AboutText/AboutText";
 import AboutPreviewText from "./AboutPreviewText/AboutPreviewText";
-import StatItem from "../StatItem/StatItem";
 import Button from "../Button/Button";
-import ScrollTrigger from "react-scroll-trigger";
 import buttonIcon from "@images/button-icon.png";
 import RS from "../RS";
 
 const About = ({ offsetY }) => {
-  const [startCounter, setStartCounter] = React.useState(false);
   const isMobile = useMobile();
 
   return (
@@ -35,44 +32,18 @@ const About = ({ offsetY }) => {
         </div>
         <div className="about__inside">
           <div className="colum">
-            <PreviewText value="Направления деятельности" />
-            {isMobile && <AboutPreviewText />}
+            <PreviewText value="Основные направления деятельности" />
             <div className="about__inside-logo">
               <img src={aboutImg} alt="" />
             </div>
-            <AboutText />
           </div>
 
           <div className="colum">
             {!isMobile && <AboutPreviewText offsetY={offsetY} />}
-            <ScrollTrigger onEnter={() => setStartCounter(true)}>
-              <div className="about__inside-statistics">
-                {startCounter && (
-                  <>
-                    <StatItem
-                      title={11}
-                      subTitle="опыт трейдерской деятельности "
-                    />
-                    <StatItem
-                      before=">"
-                      title={400000}
-                      subTitle="тонн нефтепродуктов перевозим в год "
-                    />
-                    <StatItem
-                      before=">"
-                      title={180000}
-                      subTitle="тонн нефтепродуктов продаем в год "
-                    />
-                    <StatItem
-                      after="тягачей"
-                      title={45}
-                      subTitle="с полуприцепом-цистерной в собственности"
-                    />
-                    <Button value="Подробнее о видах деятельности" />
-                  </>
-                )}
-              </div>
-            </ScrollTrigger>
+            <div className="about__inside-content">
+              <AboutText />
+              <Button value="Подробнее о видах деятельности" />
+            </div>
           </div>
         </div>
       </div>

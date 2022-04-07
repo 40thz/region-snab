@@ -40,20 +40,3 @@ section#advantageslider {
     width: 100%;
   }
 }
-
-.slider__counter {
-  position: absolute;
-  bottom: 0;
-  right: -40px;
-  display: flex;
-  color: $white;
-  z-index: 12312;
-  @include h700;
-  &-current {
-    font-size: 36px;
-  }
-  &-length {
-    font-size: 270px;
-    line-height: 180px;
-  }
-}

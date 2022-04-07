@@ -36,6 +36,11 @@
 }
 .vacancy__slider-buttons {
   display: flex;
+  align-items: center;
+}
+.vacancy__slider-footer-counter {
+  color: $white;
+  margin-left: 30px;
 }
 .vacancy__slider-readmore {
   cursor: pointer;

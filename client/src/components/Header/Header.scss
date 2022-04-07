@@ -9,6 +9,7 @@ header {
   ul {
     display: flex;
     padding-inline-start: 0px;
+    gap: 60px;
   }
 }
 
@@ -19,7 +20,7 @@ header {
   li,
   a {
     cursor: pointer;
-    margin: 0 30px;
+
     &:hover {
       color: $red;
     }
@@ -37,7 +38,23 @@ header {
     align-items: center;
   }
 }
-
+.dark {
+  li,
+  a {
+    color: $dark;
+  }
+  .logo {
+    svg {
+      path {
+        fill: $red;
+      }
+    }
+    &__bottom {
+      color: $dark;
+    }
+  }
+  border-bottom: 1px solid rgba(29, 35, 46, 0.1);
+}
 @media (max-width: $tablet-width) {
   header {
     font-size: 14px;

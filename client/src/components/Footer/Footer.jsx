@@ -32,6 +32,7 @@ const Footer = () => {
               <a href="mailto:regionsnab24@mail.ru">
                 <li>regionsnab24@mail.ru</li>
               </a>
+              <li>Красноярск, Краснодарская, 40Д</li>
             </ul>
 
             <div style={{ marginTop: "80px" }} className="footer__title">
@@ -57,6 +58,13 @@ const Footer = () => {
               <a>
                 <li>Контакты</li>
               </a>
+            </ul>
+            <div style={{ marginTop: "80px" }} className="footer__title">
+              Время работы (отдел логистики и транспорта)
+            </div>
+            <ul>
+              <li>Пн-Вс</li>
+              <li>0:00 - 24:00</li>
             </ul>
           </div>
         </div>

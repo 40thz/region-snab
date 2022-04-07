@@ -1,26 +1,35 @@
 section#company {
   padding: 120px 0;
   background: $whiteBg;
-  .logo {
-    &_title {
-      font-size: 18px;
-    }
-    &_subtitle {
-      font-size: 11px;
-    }
-    svg {
-      width: 60px;
-      height: 60px;
-    }
-    &__icon {
-      margin-right: 20px;
-    }
-  }
   .rs {
     background: linear-gradient(-60deg, #a83f3f, #bc4949, #bc4949, #bc4949);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .bgRs {
+    position: relative;
+    background: $red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    &-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      animation: teststart 2s linear infinite;
+    }
+    .rs {
+      position: relative;
+      font-size: 370px;
+      line-height: 270px;
+      right: 27px;
+      bottom: 0;
+    }
   }
 }
 
@@ -28,17 +37,9 @@ section#company {
   &__inside {
     display: flex;
     justify-content: space-between;
+    .colum:nth-child(1),
     .colum:nth-child(2) {
-      position: relative;
       width: 50%;
-      display: flex;
-      align-items: flex-end;
-      svg {
-        position: absolute;
-        right: 470px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
     }
   }
   &__title {
@@ -52,32 +53,6 @@ section#company {
       color: $red;
     }
   }
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 470px;
-    border: 1px solid rgba(29, 35, 46, 0.1);
-    box-sizing: border-box;
-    padding: 30px 0;
-    &-line {
-      position: absolute;
-      top: 50%;
-
-      left: -542px;
-    }
-  }
-}
-
-.company__logo {
-  max-width: 370px;
-  height: 198px;
-  background: $dark;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .company__call {
@@ -85,6 +60,7 @@ section#company {
   margin: 0;
   transform: translateY(0%);
   margin-top: 120px;
+  width: 100%;
   &-inside {
     max-width: 450px;
     color: $white;
@@ -113,40 +89,12 @@ section#company {
     }
   }
 }
-#companyline1 {
-  animation: show 2s linear forwards;
-  stroke-dasharray: 150%;
-}
-#companyline2 {
-  animation: show 2s 0.5s linear forwards;
-  stroke-dasharray: 150%;
-}
-#companyline3 {
-  animation: show 2s 1s linear forwards;
-  stroke-dasharray: 150%;
-}
-#companyline4 {
-  animation: show 2s 1.5s linear forwards;
-  stroke-dasharray: 150%;
-  transform: rotate(180deg);
-  transform-box: fill-box;
-  transform-origin: center;
-}
 
-@keyframes show {
+@keyframes teststart {
   0% {
-    stroke: #1d232e;
-    stroke-opacity: 0;
-    stroke-dasharray: 150%;
-  }
-  50% {
-    stroke: #1d232e;
-    stroke-opacity: 0;
-    stroke-dasharray: 80%;
+    transform: translateY(-100%);
   }
   100% {
-    stroke: $red;
-    stroke-opacity: 1;
-    stroke-dasharray: 5px;
+    transform: translateY(110%);
   }
 }
