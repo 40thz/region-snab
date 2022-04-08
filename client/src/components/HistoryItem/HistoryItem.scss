@@ -61,3 +61,46 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .historyitem {
+    &-year {
+      font-size: 25px;
+    }
+    &-image {
+      left: 50%;
+      img {
+        width: 155px;
+        height: auto;
+      }
+    }
+    .chronology-event {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .historyitem {
+    &-year {
+      font-size: 16px;
+    }
+    &-image {
+      left: 50%;
+      transform: translate(-75%, -25%);
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+    .chronology-event {
+      font-size: 10px;
+      &::before {
+        width: 6px;
+        height: 6px;
+        left: -15%;
+        top: 5px;
+      }
+    }
+  }
+}

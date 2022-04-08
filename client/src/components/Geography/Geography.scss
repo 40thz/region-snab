@@ -63,5 +63,46 @@ section#geography {
   width: 50%;
 }
 
-#krskRegion {
+@media (max-width: $tablet-width) {
+}
+
+@media (max-width: 869px) {
+  section#geography {
+    margin-top: -160%;
+  }
+  .geography__inside {
+    flex-direction: column;
+  }
+  .galleryBg {
+    height: 50%;
+    height: 50%;
+    bottom: 0;
+    top: inherit;
+  }
+  .geography__adress,
+  .geography__map {
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 1;
+    svg {
+      width: 400px;
+      height: 322px;
+    }
+  }
+  .geography__map {
+    padding: 0;
+  }
+  .geography__adress {
+    padding: 120px 0 0 0;
+  }
+  .geography__title {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .geography__location-title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: $mobile-width) {
 }

@@ -49,3 +49,23 @@
   color: $white;
   @include g400;
 }
+
+@media (max-width: $tablet-width) {
+  section#advantageslider .vacancy__slider-footer {
+    padding: 0 0 40px 0;
+  }
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .vacancy__slider-footer-counter,
+  .vacancy__slider-readmore {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 869px) {
+}
+
+@media (max-width: $mobile-width) {
+}

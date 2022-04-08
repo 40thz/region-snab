@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import gangImg from "@images/gang.png";
@@ -46,18 +46,18 @@ const Footer = () => {
           <div className="colum">
             <div className="footer__title">Картка сайта</div>
             <ul>
-              <Link to="header" smooth duration={500}>
+              <Link to="/">
                 <li>Главная</li>
               </Link>
-              <Link to="about" smooth duration={1000}>
+              <Link to="/about">
                 <li>О компании</li>
               </Link>
-              <Link to="advantages" smooth duration={1000} offset={250}>
+              <Link to="/directions">
                 <li>Направления деятельности</li>
               </Link>
-              <a>
+              <Link to="/contacts">
                 <li>Контакты</li>
-              </a>
+              </Link>
             </ul>
             <div style={{ marginTop: "80px" }} className="footer__title">
               Время работы (отдел логистики и транспорта)

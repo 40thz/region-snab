@@ -1,4 +1,6 @@
 #about {
+  position: relative;
+  z-index: 9;
   background: $whiteBg;
   .button {
     background: $red;

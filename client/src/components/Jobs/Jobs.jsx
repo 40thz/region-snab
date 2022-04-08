@@ -52,7 +52,7 @@ const Jobs = () => {
               "loading"
             ) : (
               <Slider {...settings}>
-                {data.map((vacancy) => {
+                {/* {data.map((vacancy) => {
                   let string = vacancy.description.slice(0, 150);
                   return (
                     <VacancyItem
@@ -62,10 +62,44 @@ const Jobs = () => {
                       description={string}
                     />
                   );
-                })}
+                })} */}
+                <VacancyItem
+                  // key={vacancy._id}
+                  image={
+                    "624568a1cf532a3160356154/vacancy.f4e16492e4a378833443.png"
+                  }
+                  title={"Водитель категории  «Е» с ДОПОГ 1"}
+                  description={
+                    "Сменный график, описание вакансии описание вакансии описание ваканси 1"
+                  }
+                />
+                <VacancyItem
+                  // key={vacancy._id}
+                  image={
+                    "624568a1cf532a3160356154/vacancy.f4e16492e4a378833443.png"
+                  }
+                  title={"Водитель категории  «Е» с ДОПОГ 2"}
+                  description={
+                    "Сменный график, описание вакансии описание вакансии описание ваканси 2"
+                  }
+                />
+                <VacancyItem
+                  // key={vacancy._id}
+                  image={
+                    "624568a1cf532a3160356154/vacancy.f4e16492e4a378833443.png"
+                  }
+                  title={"Водитель категории  «Е» с ДОПОГ 3"}
+                  description={
+                    "Сменный график, описание вакансии описание вакансии описание ваканси 3"
+                  }
+                />
               </Slider>
             )}
-            <SliderFooter slider={slider} currentItemId={currentItemId} />
+            <SliderFooter
+              slider={slider}
+              currentItemId={currentItemId}
+              btnValue="Подробнее о вакансии"
+            />
           </div>
         </div>
       </div>

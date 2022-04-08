@@ -9,8 +9,10 @@
   .colum:first-child {
     padding: 100px 0px 0px 100px;
     box-sizing: border-box;
+    width: 60%;
   }
   .colum:last-child {
+    width: 40%;
     img {
       max-width: 100%;
       height: 100%;
@@ -28,5 +30,27 @@
   }
   .preview__text {
     color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .counter .colum:first-child {
+    padding: 100px 32px 0px 50px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 868px) {
+  .counter {
+    width: 96vw;
+    flex-direction: column-reverse;
+    .colum:first-child,
+    .colum:last-child {
+      width: 100%;
+      padding: 0;
+    }
+    .colum:first-child {
+      padding: 45px 20px 75px 20px;
+    }
   }
 }

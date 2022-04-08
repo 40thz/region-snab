@@ -21,7 +21,10 @@ const Preloader = () => {
 
   return (
     <>
-      <div className={cn("preloader", { fadeOut: preloader.animation })}>
+      <div
+        style={{ background: "#1d232e" }}
+        className={cn("preloader", { fadeOut: preloader.animation })}
+      >
         <Logo className={cn({ gotop: preloader.animation })} />
         <Pattern />
       </div>

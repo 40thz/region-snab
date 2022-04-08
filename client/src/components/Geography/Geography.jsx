@@ -3,7 +3,7 @@ import PreviewText from "../PreviewText/PreviewText";
 import marker from "@images/Geography/map-marker.svg";
 import RussiaMap from "./RussiaMap";
 import ScrollTrggier from "react-scroll-trigger";
-
+import { useMobile } from "../../hooks/useMobile";
 import cn from "classnames";
 
 const Geography = ({ offsetY }) => {
@@ -28,6 +28,9 @@ const Geography = ({ offsetY }) => {
   const parallax = {
     map: { transform: `translateX(-${(offsetY * 1.5) / 20}px)` },
   };
+
+  const isMobile = useMobile();
+
   return (
     <ScrollTrggier onEnter={showMap}>
       <section id="geography">
@@ -81,7 +84,7 @@ const Geography = ({ offsetY }) => {
             </div>
             <div className="geography__map">
               <RussiaMap
-                style={parallax.map}
+                style={isMobile ? {} : parallax.map}
                 regions={regions}
                 showRegion={showRegion}
                 showMap={showMap}

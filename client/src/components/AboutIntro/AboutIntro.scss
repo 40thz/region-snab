@@ -40,3 +40,36 @@ section#aboutIntro {
     margin-right: 60px;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .aboutIntro__inside {
+    &-text {
+      font-size: 14px;
+    }
+    &-title {
+      font-size: 25px;
+    }
+  }
+}
+@media (max-width: 869px) {
+  section#aboutIntro {
+    padding-bottom: 200px;
+  }
+  .aboutIntro__inside {
+    flex-direction: column;
+    .colum {
+      width: 100%;
+    }
+    &-title {
+      font-size: 18px;
+    }
+    &-text {
+      font-size: 12px;
+      &-prev {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media (max-width: $mobile-width) {
+}

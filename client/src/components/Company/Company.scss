@@ -8,10 +8,12 @@ section#company {
     -webkit-text-fill-color: transparent;
   }
   .bgRs {
-    position: relative;
+    position: absolute;
     background: $red;
-    width: 100%;
+    width: 50%;
     height: 100%;
+    top: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +23,7 @@ section#company {
       top: 0;
       left: 0;
       transform: translateY(-100%);
-      animation: teststart 2s linear infinite;
+      animation: teststart 5s linear infinite;
     }
     .rs {
       position: relative;
@@ -30,6 +32,17 @@ section#company {
       right: 27px;
       bottom: 0;
     }
+    .badge {
+      transition: all 2s;
+      transition-delay: 1s;
+      position: absolute;
+      top: 35%;
+      right: -100%;
+      &.active {
+        top: 35%;
+        right: 0;
+      }
+    }
   }
 }
 
@@ -37,9 +50,9 @@ section#company {
   &__inside {
     display: flex;
     justify-content: space-between;
-    .colum:nth-child(1),
-    .colum:nth-child(2) {
-      width: 50%;
+    position: relative;
+    .colum:nth-child(1) {
+      width: 100%;
     }
   }
   &__title {
@@ -48,10 +61,57 @@ section#company {
     font-size: 20px;
     line-height: 140%;
     text-transform: uppercase;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
     span {
       color: $red;
     }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-top: 1px solid #e2e3e4;
+    border-left: 1px solid #e2e3e4;
+    width: 100%;
+    z-index: 99;
+    &-item {
+      transition: all 0.5s;
+      width: 100%;
+      height: 295px;
+      background: $whiteBg;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #e2e3e4;
+      border-bottom: 1px solid #e2e3e4;
+      box-sizing: border-box;
+      box-shadow: 0px 0px 3px 0px rgba(34, 60, 80, 0.2);
+      &:hover {
+        animation: normal;
+        transform: scale(1.1);
+        z-index: 1;
+      }
+    }
+  }
+  &1 {
+    animation: scaleComapnyAnim 2s infinite;
+  }
+  &2 {
+    animation: scaleComapnyAnim 1.3s infinite;
+  }
+  &3 {
+    animation: scaleComapnyAnim 1s infinite;
+  }
+  &4 {
+    animation: scaleComapnyAnim 1.6s infinite;
+  }
+  &5 {
+    animation: scaleComapnyAnim 1.2s infinite;
+  }
+  &6 {
+    animation: scaleComapnyAnim 1.7s infinite;
+  }
+  &7 {
+    animation: scaleComapnyAnim 1.5s infinite;
   }
 }
 
@@ -76,18 +136,6 @@ section#company {
     font-size: 16px;
     margin-top: 30px;
   }
-  .badge {
-    transition: all 2s;
-    transition-delay: 1s;
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    z-index: 3;
-    &.active {
-      top: 0;
-      right: 0;
-    }
-  }
 }
 
 @keyframes teststart {
@@ -96,5 +144,37 @@ section#company {
   }
   100% {
     transform: translateY(110%);
+  }
+}
+
+@keyframes scaleComapnyAnim {
+  0%,
+  100% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 869px) {
+  section#company {
+    .bgRs {
+      display: none;
+    }
+    .company__call {
+      padding: 60px 50px;
+    }
+  }
+  .company {
+    &__title {
+      font-size: 14px;
+    }
+    &-list {
+      grid-template-columns: 1fr 1fr;
+      &-item {
+        height: 140px;
+      }
+    }
   }
 }

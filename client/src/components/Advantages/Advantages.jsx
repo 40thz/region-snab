@@ -17,11 +17,19 @@ import { useMobile } from "../../hooks/useMobile";
 const Advantages = ({ offsetY }) => {
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
+  const sections = document.querySelector("#about")?.scrollHeight;
+
+  let sectionY = offsetY;
+  if (sectionY >= sections) {
+    sectionY = sectionY === sections;
+  } else {
+    sectionY = offsetY;
+  }
 
   const parallax = {
     carDefault: { left: `${offsetY - 2400 / 2}px` },
     carMobile: { left: `${offsetY * 2 - 2400 / 2}px` },
-    section: { transform: `translateY(-${offsetY * 1.3}px)` },
+    section: { marginTop: `-${sectionY}px` },
   };
 
   return (

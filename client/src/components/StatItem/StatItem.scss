@@ -1,6 +1,7 @@
 .about__inside-status {
   width: 50%;
   margin-bottom: 60px;
+
   &-title {
     @include h700;
     color: $red;
@@ -13,5 +14,29 @@
     color: $dark;
     font-size: 16px;
     padding-right: 35px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about__inside-status {
+    margin-bottom: 20px;
+    &-title {
+      font-size: 25px;
+    }
+    &-subTitle {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 868px) {
+  .about__inside-status {
+    margin-bottom: 20px;
+    &-title {
+      font-size: 16px;
+    }
+    &-subTitle {
+      font-size: 8px;
+    }
   }
 }

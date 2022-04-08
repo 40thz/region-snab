@@ -12,7 +12,7 @@ const About = ({ offsetY }) => {
   const isMobile = useMobile();
 
   return (
-    <section className="center" id="about">
+    <section id="about">
       <div className="container">
         <div className="about__call">
           <RS color="#f8f8f8" />

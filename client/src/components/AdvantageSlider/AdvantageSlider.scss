@@ -31,6 +31,10 @@ section#advantageslider {
         width: 200%;
       }
     }
+    .vacancy__slider-footer {
+      z-index: 20;
+      background: transparent;
+    }
   }
 }
 
@@ -39,4 +43,38 @@ section#advantageslider {
   img {
     width: 100%;
   }
+}
+
+@media (max-width: $tablet-width) {
+  .advantageslider {
+    &-content {
+      padding: 100px 80px 0px 80px;
+    }
+  }
+}
+
+@media (max-width: 869px) {
+  section#advantageslider {
+    flex-direction: column;
+  }
+  .advantageslider-bg,
+  .advantageslider-content {
+    width: 100%;
+  }
+  .advantageslider-content {
+    transform: translateY(-6px);
+    padding: 45px 45px 0px 20px;
+  }
+  .vacancy__slider-footer {
+    flex-direction: row;
+    .vacancy__slider-readmore {
+      margin: 0;
+    }
+  }
+  .advantageSlideContent-subtitle {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: $mobile-width) {
 }

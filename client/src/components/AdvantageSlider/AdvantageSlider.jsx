@@ -107,6 +107,7 @@ const AdvantageSlider = () => {
           slider={contentSlider}
           currentSlider={currentSlider}
           counter={true}
+          btnValue="Позвонить"
         />
         <Pattern />
       </div>
