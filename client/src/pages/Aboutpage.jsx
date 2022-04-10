@@ -12,7 +12,7 @@ const About = () => {
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   React.useEffect(() => {
-    document.body.style.background = "#f8f8f8";
+
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);

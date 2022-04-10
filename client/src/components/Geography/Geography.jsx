@@ -30,7 +30,6 @@ const Geography = ({ offsetY }) => {
   };
 
   const isMobile = useMobile();
-
   return (
     <ScrollTrggier onEnter={showMap}>
       <section id="geography">

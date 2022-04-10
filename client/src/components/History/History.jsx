@@ -3,8 +3,17 @@ import HistoryItem from "../HistoryItem/HistoryItem";
 import PreviewText from "../PreviewText/PreviewText";
 
 const History = ({ offsetY }) => {
+  const sections = document.querySelector("#history")?.scrollHeight;
+
+  let sectionY = offsetY;
+  if (sectionY >= sections) {
+    sectionY = sectionY === sections;
+  } else {
+    sectionY = offsetY /2
+  }
+
   const parallax = {
-    history: { transform: `translateY(-${offsetY / 2}px)` },
+    history: { marginTop: `-${sectionY}px` },
   };
   return (
     <section style={parallax.history} id="history">
