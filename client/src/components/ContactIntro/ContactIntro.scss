@@ -1,0 +1,41 @@
+section#contactIntro {
+  .pattern {
+    position: absolute;
+    top: 40%;
+    z-index: -1;
+  }
+}
+
+.contact {
+  &__title {
+    @include h700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $white;
+    max-width: 1000px;
+    margin: 100px 0 115px 0;
+    span {
+      color: $red;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  &__cart {
+    background: #262c36;
+    height: 244px;
+    box-sizing: border-box;
+    padding: 60px;
+    @include s400;
+    &-icon {
+      margin-bottom: 42px;
+    }
+    &-title {
+      margin-bottom: 15px;
+      color: $dark-blue;
+    }
+  }
+}

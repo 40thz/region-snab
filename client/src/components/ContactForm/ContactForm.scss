@@ -1,0 +1,74 @@
+section#contactform {
+  position: relative;
+  background: $whiteBg;
+  padding: 120px 0;
+  overflow: hidden;
+  .block__info {
+    width: 460px;
+  }
+  .block__info-title {
+    color: $red;
+    span {
+      color: $dark;
+    }
+  }
+  .block__info-subtitle {
+    width: 316px;
+  }
+  .pattern {
+    position: absolute;
+    bottom: -30%;
+    left: -60%;
+    width: 100%;
+    svg path {
+      fill: #f8f8f8;
+      stroke: #1d232e;
+    }
+  }
+}
+.contactform {
+  display: flex;
+  justify-content: space-between;
+  .colum {
+    width: 50%;
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    .colum:first-child {
+      width: 60%;
+    }
+    .colum:last-child {
+      width: 70%;
+    }
+    &-polytic {
+      color: $dark-blue;
+      @include s400;
+      font-size: 14px;
+      line-height: 150%;
+      a {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+  input,
+  textarea {
+    @include g400;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 25px 40px 25px 40px;
+    color: $dark;
+    border: 2px solid $gray;
+    margin-bottom: 30px;
+    resize: none;
+    &::placeholder {
+      color: $dark;
+    }
+  }
+  textarea {
+    height: 170px;
+  }
+}

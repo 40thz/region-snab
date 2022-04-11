@@ -3,6 +3,7 @@ footer {
   box-sizing: border-box;
   position: relative;
   background: $dark;
+  z-index: 1;
   .logo {
     margin-bottom: 50px;
     &_title {

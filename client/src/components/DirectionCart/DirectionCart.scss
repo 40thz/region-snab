@@ -1,0 +1,72 @@
+.direction__cart {
+  background: $gray;
+  box-sizing: border-box;
+  padding: 70px 100px 70px 70px;
+  margin-bottom: 30px;
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include h700;
+    font-size: 20px;
+  }
+  &-image {
+    max-width: 202px;
+    img {
+      max-width: 100%;
+    }
+  }
+  &-number {
+    color: $red;
+    width: 20%;
+    text-align: center;
+  }
+  &-title {
+    width: 50%;
+  }
+  &-showbtn {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      transform: rotate(90deg);
+      &.active {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &-inside {
+    @include s400;
+    margin-top: 60px;
+    &__list {
+      display: flex;
+      flex-direction: column;
+
+      &-title {
+        @include s400;
+        font-weight: bold;
+        margin: 30px 0px 15px 0px;
+        line-height: 150%;
+      }
+      &-item {
+        position: relative;
+        left: 2%;
+        margin-bottom: 5px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 35%;
+          left: -2%;
+          width: 8px;
+          height: 8px;
+          background: $red;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}

@@ -5,8 +5,11 @@ import Layout from "./Layout";
 import Aboutpage from "./pages/Aboutpage";
 import NotFound from "./components/NotFound/NotFound";
 import Preloader from "./components/Preloader/Preloader";
+import Directionspage from "./pages/Directionspage";
 
 import { useAction } from "./hooks/useActions";
+import ContactsPage from "./pages/ContactsPage";
+import Vacancypage from "./pages/Vacancypage";
 
 export const useRoutes = () => {
   const { animateLoader } = useAction();
@@ -25,6 +28,9 @@ export const useRoutes = () => {
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Homepage />} />
           <Route path="about" element={<Aboutpage />} />
+          <Route path="directions" element={<Directionspage />} />
+          <Route path="contacts" element={<ContactsPage />} />
+          <Route path="vacancy/:id" element={<Vacancypage />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

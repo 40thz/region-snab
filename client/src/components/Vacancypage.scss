@@ -1,0 +1,96 @@
+section#vacancypage {
+  height: 100vh;
+}
+
+.vacancypageBg {
+  position: relative;
+  width: 100vw;
+  height: 70%;
+  transform: translateY(-20%);
+  img {
+    width: 110vw;
+    height: 130vh;
+  }
+}
+
+.vacancyOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: $dark;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.vacancy__inside {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 0;
+  z-index: 12;
+  .colum {
+    width: 50%;
+  }
+  img {
+    width: 659px;
+    height: 600px;
+  }
+}
+.test {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+.vacansy__leftside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 83%;
+}
+
+.test2 {
+  height: 100%;
+  overflow: hidden;
+}
+
+.vacancy__rightside {
+  display: flex;
+  flex-direction: column;
+  @include s400;
+  &-title {
+    @include h700;
+    color: $white;
+    font-size: 30px;
+    text-transform: uppercase;
+    max-width: 442px;
+  }
+  &-back {
+    color: $dark-blue;
+    position: relative;
+    cursor: pointer;
+    margin: 75px 0 45px 0;
+    svg {
+      transform: rotate(-180deg);
+      margin-right: 15px;
+    }
+  }
+}
+
+.vacancy__about {
+  @include s400;
+  display: flex;
+  z-index: 99;
+  gap: 100px;
+  color: $dark;
+  .colum:first-child {
+    width: 100%;
+    background: $whiteBg;
+    padding: 70px;
+    box-sizing: border-box;
+  }
+  &-title {
+    margin-bottom: 30px;
+  }
+}
