@@ -12,7 +12,7 @@ const Intro = () => {
       <div className="container">
         <AdvantageItem
           icon={virifyIcon}
-          value={<>Берем на себя полную ответственность за доверенный груз</>}
+          value={"Компания, которой можно доверять"}
           intro
         />
         <div className="intro">

@@ -2,18 +2,6 @@ section#directions {
   position: relative;
   background: $whiteBg;
   z-index: 1;
-  .about__call {
-    transform: translate(0);
-    overflow: initial;
-    margin: 100px 0;
-    .rs {
-      right: -20px;
-      bottom: 5px;
-    }
-  }
-  .about__title {
-    max-width: 500px;
-  }
 }
 .bgDirection {
   position: absolute;
@@ -41,4 +29,47 @@ section#directions {
       color: $red;
     }
   }
+  .about__call {
+    transform: translate(0);
+    overflow: initial;
+    margin: 100px 0;
+    .rs {
+      right: -20px;
+      bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .direction {
+    &-title {
+      font-size: 25px;
+    }
+    .about__call {
+      .rs {
+        font-size: 250px;
+        right: -11px;
+        bottom: -29px;
+      }
+    }
+  }
+}
+
+@media (max-width: 869px) {
+  .direction {
+    &-title {
+      font-size: 18px;
+    }
+    .about__call {
+      .rs {
+        font-size: 200px;
+        right: 50%;
+        bottom: -45px;
+        transform: translateX(50%);
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
 }

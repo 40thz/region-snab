@@ -73,19 +73,11 @@
 }
 
 @media (max-width: $tablet-width) {
-  .about__call {
-    .rs {
-      font-size: 166px;
-      bottom: -19%;
-    }
-  }
-  .about__inside-statistics {
-    .about__inside-status {
-      &-title {
-        font-size: 25px;
-      }
-      &-subTitle {
-        font-size: 12px;
+  #about {
+    .about__call {
+      .rs {
+        font-size: 166px;
+        bottom: -19%;
       }
     }
   }
@@ -96,40 +88,28 @@
     flex-direction: column;
     padding-bottom: 70px;
   }
-  .about__inside-statistics {
-    padding: 0;
-  }
 }
 
 @media (max-width: $mobile-width) {
-  .about__call {
-    padding: 0;
-    height: 350px;
-    padding: 30px;
-    transform: translateY(-25%);
-    .rs {
-      font-size: 160px;
-      bottom: -18%;
-      left: 47%;
-      transform: translateX(-50%);
-    }
-  }
-  .about__title {
-    font-size: 18px;
-  }
-  .about__inside {
-    flex-direction: column;
-    padding-bottom: 70px;
-  }
-  .about__inside-statistics {
-    .about__inside-status {
-      &-title {
-        font-size: 18px;
-      }
-      &-subTitle {
-        font-size: 9px;
+  #about {
+    .about__call {
+      padding: 0;
+      height: 350px;
+      padding: 30px;
+      transform: translateY(-25%);
+      .rs {
+        font-size: 160px;
+        bottom: -18%;
+        left: 47%;
+        transform: translateX(-50%);
       }
     }
-    padding: 0;
+    .about__title {
+      font-size: 18px;
+    }
+    .about__inside {
+      flex-direction: column;
+      padding-bottom: 70px;
+    }
   }
 }

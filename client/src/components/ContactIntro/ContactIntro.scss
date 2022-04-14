@@ -39,3 +39,48 @@ section#contactIntro {
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .contact {
+    &__title {
+      font-size: 25px;
+      max-width: 700px;
+      margin: 100px 0 44px 0;
+    }
+    &__cart {
+      padding: 40px;
+      height: 172px;
+      &-icon {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 30px;
+        img {
+          width: 100%;
+        }
+      }
+      &-title {
+        margin-bottom: 10px;
+      }
+      &-title,
+      &-subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 869px) {
+  .contact {
+    &__title {
+      font-size: 18px;
+      max-width: 215px;
+      margin: 100px 0 44px 0;
+    }
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+}

@@ -1,10 +1,13 @@
 import React from "react";
+
 import DirectionCart from "../components/DirectionCart/DirectionCart";
 import Header from "../components/Header/Header";
+import AboutCall from "../components/AboutCall/AboutCall";
+
+import helmetImg from "@images/Directions/helmet.png";
 import imgage1 from "@images/Directions/direction1.png";
 import imgage3 from "@images/Directions/direction2.png";
 import imgage2 from "@images/Directions/direction3.png";
-import AboutCall from "../components/AboutCall/AboutCall";
 
 const Directionspage = () => {
   return (
@@ -54,7 +57,7 @@ const Directionspage = () => {
               "с доставкой речным транспортом в районы Крайнего севера",
             ]}
           />
-          <AboutCall />
+          <AboutCall value="Мы знаем про нефтепродукты все!" src={helmetImg} />
         </div>
       </div>
     </section>

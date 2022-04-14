@@ -14,8 +14,6 @@ const Map = () => {
     <YMaps>
       <div>
         <div className="container">
-          {" "}
-          controls: ['default', 'routeButtonControl']
           <div className="map__inside">
             <div className={cn("map__cart", { active: cordinate === 0 })}>
               <div className="map__cart-title">

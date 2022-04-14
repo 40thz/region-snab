@@ -1,90 +1,94 @@
 import React from "react";
 import Header from "../components/Header/Header";
-
-import bgImg from "@images/Jobs/bg.png";
-import vacancyImg from "@images/Jobs/vacancy.png";
+import AboutCall from "../components/AboutCall/AboutCall";
 import Button from "../components/Button/Button";
 
+import { useNavigate, useParams } from "react-router-dom";
+import { useGetVacancyByIdQuery } from "../store";
+
+import vacancyImg from "@images/Jobs/vacancy.png";
+import callImg from "@images/Jobs/callimg.png";
+
 const Vacancypage = () => {
+  const navigate = useNavigate();
+  const params = useParams();
+
+  const { data, isLoding } = useGetVacancyByIdQuery(params.id);
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  });
   return (
     <section id="vacancypage">
-      <Header />
-      <div className="vacancypageBg">
-        <div className="test">
-          <img src={bgImg} alt="bg" />
-        </div>
+      <div className="vacancypage__header">
         <div className="vacancyOverlay"></div>
-        <div className="vacancy__inside">
-          <div className="container">
-            <div className="vacancy__rightside">
-              <div className="vacancy__rightside-back">
-                <svg
-                  width="9"
-                  height="13"
-                  viewBox="0 0 9 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 12.02L7 6.52002L0.999999 1.02002"
-                    stroke="#6A7487"
-                    strokeWidth="2"
-                  />
-                </svg>
-                Назад
-              </div>
-              <div className="vacancy__rightside-title">
-                Водитель категории «Е» с ДОПОГ
-              </div>
+        <Header />
+        <div className="vacancypage__header-image">
+          <img
+            src={`https://region-snab.s3.amazonaws.com/${data?.uploadedFile.path}`}
+            alt=""
+          />
+        </div>
 
+        <div className="container">
+          <div className="vacancy__rightside">
+            <div
+              onClick={() => navigate(-1)}
+              className="vacancy__rightside-back"
+            >
+              <svg
+                width="9"
+                height="13"
+                viewBox="0 0 9 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 12.02L7 6.52002L0.999999 1.02002"
+                  stroke="#6A7487"
+                  strokeWidth="2"
+                />
+              </svg>
+              Назад
+            </div>
+            <div className="vacancy__rightside-title">{data?.name}</div>
+
+            {isLoding ? (
+              "load"
+            ) : (
               <div className="vacancy__about">
                 <div className="colum">
-                  <div className="vacancy__about-title">
-                    Компания «РегионСнаб» развивается настолько динамично, что
-                    на настоящий момент возникла необходимость в наборе
-                    водителей категории «Е» с ДОПОГ на автомобили MAN, Scania,
-                    Mersedes.
-                    <br /> <br />
-                    Мы ценим опыт и добросовестное отношение к работе. Готовы к
-                    сотрудничеству с молодыми специалистами, имеющими опыт
-                    работы водителем категории «Е» от 6 месяцев, ДОПОГ.
-                  </div>
+                  <div
+                    className="vacancy__about-title"
+                    dangerouslySetInnerHTML={{ __html: data?.description }}
+                  />
                   <div className="vacancy__about-conditions">
                     <div className="vacancy__about-conditions-title">
                       Условия работы:
                     </div>
                     <div className="vacancy__about-conditions-list">
-                      <div className="vacancy__about-condition">
-                        Сменный график
-                      </div>
-                      <div className="vacancy__about-condition">
-                        Официальное трудоустройство
-                      </div>
-                      <div className="vacancy__about-condition">
-                        Высокая заработная плата
-                      </div>
-                      <div className="vacancy__about-condition">
-                        Своевременная выплата
-                      </div>
+                      {data?.conditions.map((item) => (
+                        <div className="vacancy__about-condition">{item}</div>
+                      ))}
                     </div>
-                    <div className="vacancy__about-conditions-call">
+                    <div className="vacancy__about-conditions-title">
                       По всем вопросам можете обращаться в отдел персонала по
                       телефону 208-94-40.
                     </div>
                   </div>
                 </div>
                 <div className="colum">
-                  <Button />
+                  <Button value="Все вакансии" />
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="vacansy__leftside">
-            <div className="test2">
-              <img src={bgImg} alt="" />
-            </div>
+            )}
           </div>
         </div>
+      </div>
+      <div className="container">
+        <AboutCall
+          value="В нашей команде профессионалов не хватает именно Вас"
+          src={callImg}
+        />
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ const VacancySchema = new Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   date: { type: Date, required: true },
+  conditions: [{ type: String }],
 });
 
 module.exports = model("Vacancy", VacancySchema);

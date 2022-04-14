@@ -1,9 +1,11 @@
 import React from "react";
 import cn from "classnames";
+import { useParallax } from "../../hooks/useParallax";
 
 const DirectionCart = ({ image, index, title, aboutTitle, list }) => {
   const [showContent, setShowContent] = React.useState(false);
-
+  const parallax = useParallax();
+  console.log(parallax);
   return (
     <div className="direction__cart">
       <div className="direction__cart-top">

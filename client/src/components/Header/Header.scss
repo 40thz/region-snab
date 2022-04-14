@@ -54,6 +54,18 @@ header {
     }
   }
   border-bottom: 1px solid rgba(29, 35, 46, 0.1);
+  .menu__btn-burger {
+    background: $red;
+    &::before,
+    &::after {
+      background: $red;
+    }
+  }
+  .callBtn {
+    path {
+      fill: $red;
+    }
+  }
 }
 @media (max-width: $tablet-width) {
   header {

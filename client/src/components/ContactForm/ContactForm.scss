@@ -58,7 +58,7 @@ section#contactform {
     @include g400;
     border: 0;
     outline: 0;
-    width: 100%;
+    width: -webkit-fill-available;
     padding: 25px 40px 25px 40px;
     color: $dark;
     border: 2px solid $gray;
@@ -71,4 +71,42 @@ section#contactform {
   textarea {
     height: 170px;
   }
+}
+
+@media (max-width: $tablet-width) {
+  section#contactform {
+    padding: 90px 0;
+  }
+  input,
+  textarea {
+    font-size: 12px;
+  }
+  .contactform-footer-polytic {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 869px) {
+  #contactform {
+    .pattern {
+      display: none;
+    }
+  }
+  .contactform {
+    flex-direction: column;
+    .colum {
+      width: 100%;
+    }
+    &-footer {
+      flex-direction: column;
+      .colum:first-child,
+      .colum:last-child {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
 }
