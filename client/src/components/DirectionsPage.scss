@@ -37,6 +37,12 @@ section#directions {
       right: -20px;
       bottom: 5px;
     }
+    .about__title {
+      max-width: 400px;
+    }
+    &-image {
+      animation: soaring 10s ease-in-out infinite;
+    }
   }
 }
 

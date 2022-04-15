@@ -6,7 +6,7 @@ import AboutText from "./AboutText/AboutText";
 import AboutPreviewText from "./AboutPreviewText/AboutPreviewText";
 import Button from "../Button/Button";
 import buttonIcon from "@images/button-icon.png";
-import RS from "../RS";
+import AboutCall from "../AboutCall/AboutCall";
 
 const About = ({ offsetY }) => {
   const isMobile = useMobile();
@@ -14,22 +14,17 @@ const About = ({ offsetY }) => {
   return (
     <section id="about">
       <div className="container">
-        <div className="about__call">
-          <RS color="#f8f8f8" />
-          <div className="about__title">
+        <AboutCall
+          value={
             <div>
               готовы к сотрудничеству?
               <br />
               <span>Позвоните</span>
             </div>
-            <div>
-              <div className="about-btn">
-                <img src={buttonIcon} alt="Кнопка" />
-                Позвонить
-              </div>
-            </div>
-          </div>
-        </div>
+          }
+          rsColor="#fff"
+          rsAnim={false}
+        />
         <div className="about__inside">
           <div className="colum">
             <PreviewText value="Основные направления деятельности" />

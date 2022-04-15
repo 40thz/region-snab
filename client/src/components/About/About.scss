@@ -8,6 +8,13 @@
       background: $dark;
     }
   }
+  .rs {
+    background: none;
+    -webkit-text-fill-color: #fff;
+    path {
+      fill: #fff;
+    }
+  }
 }
 .about__call,
 .company__call {
@@ -34,21 +41,7 @@
     width: 100px;
   }
 }
-.about-btn {
-  cursor: pointer;
-  font-size: 16px;
-  @include g400;
-  text-transform: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 140px;
-  margin-top: 60px;
-  img {
-    width: 30px;
-    height: 30px;
-  }
-}
+
 .about__inside {
   display: flex;
   justify-content: space-between;

@@ -124,6 +124,22 @@ img {
     background-position: 0% 50%;
   }
 }
+@keyframes soaring {
+  0%,
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+  30% {
+    transform: translateX(20px) translateY(-25px);
+  }
+  60% {
+    transform: translateX(-10px) translateY(5px);
+  }
+
+  80% {
+    transform: translateX(10px) translateY(20px);
+  }
+}
 @media (max-width: $tablet-width) {
   .container {
     padding: 0 20px;

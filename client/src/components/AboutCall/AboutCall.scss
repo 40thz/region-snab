@@ -1,14 +1,70 @@
-.about__call-image {
-  position: absolute;
-  top: -20%;
-  right: 8%;
-  z-index: 1;
-  img {
-    max-width: 100%;
+.about__call,
+.company__call {
+  &-image {
+    position: absolute;
+    top: -20%;
+    right: 8%;
+    z-index: 1;
+    img {
+      max-width: 100%;
+    }
   }
-}
-.about__title {
-  max-width: 500px;
+  .rs {
+    background: linear-gradient(-60deg, #a83f3f, #bc4949, #bc4949, #bc4949);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .about__title {
+    max-width: 500px;
+  }
+  .about-btn {
+    transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    @include g400;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin-top: 60px;
+    &::before {
+      transition: all 2s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 180px;
+      height: 100%;
+      background: #fff;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    &-main {
+      transition: all 0.5s;
+      img {
+        margin-right: 20px;
+      }
+    }
+    &-hide {
+      transition: all 0.5s;
+      position: absolute;
+      left: 0%;
+    }
+    &:hover {
+      &-hide {
+        left: 0;
+      }
+      &::before {
+        left: 100%;
+      }
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {

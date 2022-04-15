@@ -17,13 +17,17 @@ section#contactform {
   }
   .pattern {
     position: absolute;
-    bottom: -30%;
-    left: -60%;
-    width: 100%;
+    bottom: 0%;
+    left: -34%;
+    width: 70%;
     svg path {
       fill: #f8f8f8;
       stroke: #1d232e;
     }
+  }
+  .about__call {
+    transform: translate(0);
+    z-index: 10;
   }
 }
 .contactform {
@@ -66,10 +70,27 @@ section#contactform {
     resize: none;
     &::placeholder {
       color: $dark;
+      opacity: 0.3;
     }
   }
   textarea {
     height: 170px;
+  }
+  &__call {
+    background: $whiteBg;
+    padding-bottom: 115px;
+    .about__call {
+      overflow: initial;
+      transform: translate(0);
+      .rs {
+        right: -20px;
+        bottom: 5px;
+      }
+      &-image {
+        right: 0;
+        top: -26%;
+      }
+    }
   }
 }
 
