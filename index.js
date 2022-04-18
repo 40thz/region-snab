@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 
 // ==== Routes ====
-const { buildAdminRouter, vacancyRouter } = require("./routes");
+const { buildAdminRouter, vacancyRouter, mailRouter } = require("./routes");
 
 // ==== Admin options ====
 const admin = new AdminJS(options);
@@ -23,6 +23,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // ==== API ====
 app.use(admin.options.rootPath, adminRouter);
 app.use("/api/vacancy", vacancyRouter);
+app.use("/api/mail", mailRouter);
 
 // ==== App Start On Production ====
 if (process.env.NODE_ENV === "production") {

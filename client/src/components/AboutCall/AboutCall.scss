@@ -19,7 +19,6 @@
     max-width: 500px;
   }
   .about-btn {
-    transition: all 0.5s;
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -31,37 +30,54 @@
     justify-content: space-between;
     width: 180px;
     margin-top: 60px;
-    &::before {
-      transition: all 2s;
+    &::before,
+    &::after {
       content: "";
       position: absolute;
+      background: #fff;
+    }
+    &::before {
+      transition: all 2s;
       top: 0;
       left: -100%;
       width: 180px;
       height: 100%;
-      background: #fff;
+    }
+    &::after {
+      transition: all 2s;
+      width: 60%;
+      height: 1px;
+      bottom: 0;
+      left: -100%;
     }
     img {
       width: 30px;
       height: 30px;
     }
     &-main {
-      transition: all 0.5s;
+      transition: all 0.5s 0.5s;
       img {
         margin-right: 20px;
       }
     }
     &-hide {
-      transition: all 0.5s;
+      transition: all 0.5s 0.5s;
+
       position: absolute;
-      left: 0%;
+      opacity: 0;
     }
     &:hover {
-      &-hide {
-        left: 0;
+      .about-btn-hide {
+        opacity: 1;
+      }
+      .about-btn-main {
+        opacity: 0;
       }
       &::before {
-        left: 100%;
+        left: 90%;
+      }
+      &::after {
+        left: 0;
       }
     }
   }

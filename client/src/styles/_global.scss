@@ -33,6 +33,10 @@ a {
     outline-offset: 0;
   }
 }
+button {
+  outline: none;
+  border: none;
+}
 ul,
 li {
   margin: 0;

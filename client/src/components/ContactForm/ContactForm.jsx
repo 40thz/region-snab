@@ -5,9 +5,28 @@ import BlockInfo from "../BlockInfo/BlockInfo";
 import Button from "../Button/Button";
 import AboutCall from "../AboutCall/AboutCall";
 
+import axios from "axios";
+
 import callImg from "@images/Jobs/callimg.png";
 
+import { useForm } from "react-hook-form";
+
 const ContactForm = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:5000/api/mail", {
+        name: data.firstName,
+        email: data.email,
+        phone: data.phone,
+        text: data.message,
+      })
+      .then(function (response) {
+        console.log(response);
+      });
+  };
+
   return (
     <>
       <section id="contactform">
@@ -24,21 +43,39 @@ const ContactForm = () => {
               />
             </div>
             <div className="colum">
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="contactform-name">
-                  <input type="text" name="name" placeholder="Ваше имя" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    {...register("firstName")}
+                    required
+                  />
                 </div>
                 <div className="contactform-email">
-                  <input type="text" name="email" placeholder="E-mail" />
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="E-mail"
+                    {...register("email")}
+                    required
+                  />
                 </div>
                 <div className="contactform-phone">
-                  <input type="text" name="phone" placeholder="Телефон" />
+                  <input
+                    type="text"
+                    name="phone"
+                    placeholder="Телефон"
+                    {...register("phone")}
+                  />
                 </div>
                 <div className="contactform-message">
                   <textarea
                     type="text"
                     name="message"
                     placeholder="Сообщение"
+                    {...register("message")}
                   />
                 </div>
                 <div className="contactform-footer">
