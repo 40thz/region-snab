@@ -215,7 +215,8 @@ const options = {
           properties: {
             uploadedFile: "Изображение",
             name: "Имя",
-            description: "Описание",
+            sliderDescription: "Краткое описание вакансии",
+            description: "Подробное описание вакансии",
             date: "Дата",
           },
         },

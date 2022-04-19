@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import AboutCall from "../components/AboutCall/AboutCall";
-import Button from "../components/Button/Button";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetVacancyByIdQuery } from "../store";
 
-import vacancyImg from "@images/Jobs/vacancy.png";
+import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
 
 const Vacancypage = () => {
@@ -17,6 +16,7 @@ const Vacancypage = () => {
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
   });
+
   return (
     <section id="vacancypage">
       <div className="vacancypage__header">
@@ -51,38 +51,11 @@ const Vacancypage = () => {
               Назад
             </div>
             <div className="vacancy__rightside-title">{data?.name}</div>
-
-            {isLoding ? (
-              "load"
-            ) : (
-              <div className="vacancy__about">
-                <div className="colum">
-                  <div
-                    className="vacancy__about-title"
-                    dangerouslySetInnerHTML={{ __html: data?.description }}
-                  />
-                  <div className="vacancy__about-conditions">
-                    <div className="vacancy__about-conditions-title">
-                      Условия работы:
-                    </div>
-                    <div className="vacancy__about-conditions-list">
-                      {data?.conditions.map((item) => (
-                        <div className="vacancy__about-condition">{item}</div>
-                      ))}
-                    </div>
-                    <div className="vacancy__about-conditions-title">
-                      По всем вопросам можете обращаться в отдел персонала по
-                      телефону 208-94-40.
-                    </div>
-                  </div>
-                </div>
-                <div className="colum">
-                  <Button value="Все вакансии" />
-                </div>
-              </div>
-            )}
           </div>
         </div>
+      </div>
+      <div className="container">
+        {isLoding ? "load" : <VacancyAbout data={data} />}
       </div>
       <div className="container">
         <AboutCall

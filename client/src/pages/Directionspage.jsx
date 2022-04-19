@@ -8,8 +8,22 @@ import helmetImg from "@images/Directions/helmet.png";
 import imgage1 from "@images/Directions/direction1.png";
 import imgage3 from "@images/Directions/direction2.png";
 import imgage2 from "@images/Directions/direction3.png";
+import { useParallax } from "../hooks/useParallax";
 
 const Directionspage = () => {
+  const parallax = useParallax();
+
+  const parallaxAnim = {
+    title: { transform: `translateX(${parallax / 10}px)` },
+    subTitle: { transform: `translateX(-${parallax / 20}px)` },
+    secondSrction: { transform: `translateX(-${parallax / 30}px)` },
+    threeSrction: { transform: `translateY(-${parallax / 50}px)` },
+    callSection: {
+      transform: `translateY(-${parallax / 10}px) translateX(${
+        parallax / 30
+      }px)`,
+    },
+  };
   return (
     <section id="directions">
       <div className="bgDirection"></div>
@@ -17,11 +31,11 @@ const Directionspage = () => {
       <div className="container">
         <div className="direction">
           <div className="direction-title">
-            <span>направления</span>
-            <br />
-            деятельности
+            <span style={parallaxAnim.title}>направления</span>
+            <span style={parallaxAnim.subTitle}>деятельности</span>
           </div>
           <DirectionCart
+            style={parallaxAnim.title}
             image={imgage1}
             index={1}
             title="Реализация нефтепродуктов "
@@ -34,6 +48,7 @@ const Directionspage = () => {
             ]}
           />
           <DirectionCart
+            style={parallaxAnim.secondSrction}
             image={imgage2}
             index={2}
             title="Перевозка нефтепродуктов автотранспортом"
@@ -46,6 +61,7 @@ const Directionspage = () => {
             ]}
           />
           <DirectionCart
+            style={parallaxAnim.threeSrction}
             image={imgage3}
             index={3}
             title="Перевалка нефтепродуктов на собственной нефтебазе"
@@ -57,7 +73,12 @@ const Directionspage = () => {
               "с доставкой речным транспортом в районы Крайнего севера",
             ]}
           />
-          <AboutCall value="Мы знаем про нефтепродукты все!" src={helmetImg} />
+          <div style={parallaxAnim.callSection}>
+            <AboutCall
+              value="Мы знаем про нефтепродукты все!"
+              src={helmetImg}
+            />
+          </div>
         </div>
       </div>
     </section>

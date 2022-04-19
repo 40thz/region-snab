@@ -4,8 +4,22 @@ const features = require("../features");
 
 /** @type {AdminJS.ResourceOptions} */
 const options = {
-  listProperties: ["uploadedFile", "name", "description", "conditions", "date"],
-  editProperties: ["uploadedFile", "name", "description", "conditions", "date"],
+  listProperties: [
+    "uploadedFile",
+    "name",
+    "sliderDescription",
+    "description",
+    "conditions",
+    "date",
+  ],
+  editProperties: [
+    "uploadedFile",
+    "name",
+    "sliderDescription",
+    "description",
+    "conditions",
+    "date",
+  ],
   navigation: {
     icon: "UserCertification",
   },

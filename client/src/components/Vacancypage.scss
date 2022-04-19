@@ -9,7 +9,7 @@ section#vacancypage {
   .about__call {
     transform: translate(0);
     overflow: initial;
-    margin-top: 25%;
+
     .rs {
       right: -20px;
       bottom: 5px;
@@ -30,7 +30,7 @@ section#vacancypage {
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
-  max-height: 700px;
+  height: 700px;
   &-image {
     position: absolute;
     top: 137px;
@@ -85,6 +85,9 @@ section#vacancypage {
   z-index: 99;
   justify-content: space-between;
   color: $dark;
+  margin-top: -10%;
+  position: relative;
+  z-index: 99;
   .colum:first-child {
     width: 70%;
     background: $whiteBg;

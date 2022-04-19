@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const vacancyApi = createApi({
   reducerPath: "vacancyApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    baseUrl: "http://134.0.116.38/",
   }),
   endpoints: (build) => ({
     getVacancy: build.query({

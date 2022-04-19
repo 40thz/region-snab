@@ -53,7 +53,7 @@ const Jobs = () => {
             ) : (
               <Slider {...settings}>
                 {data.map((vacancy) => {
-                  let string = vacancy.description.slice(0, 150);
+                  let string = vacancy.sliderDescription.slice(0, 150);
                   return (
                     <VacancyItem
                       key={vacancy._id}

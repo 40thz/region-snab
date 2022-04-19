@@ -2,12 +2,12 @@ import React from "react";
 import cn from "classnames";
 import { useParallax } from "../../hooks/useParallax";
 
-const DirectionCart = ({ image, index, title, aboutTitle, list }) => {
+const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
   const [showContent, setShowContent] = React.useState(false);
   const parallax = useParallax();
-  console.log(parallax);
+
   return (
-    <div className="direction__cart">
+    <div style={style} className="direction__cart">
       <div className="direction__cart-top">
         <div className="direction__cart-image">
           <img src={image} alt="рг" />
@@ -36,7 +36,12 @@ const DirectionCart = ({ image, index, title, aboutTitle, list }) => {
       </div>
       {showContent && (
         <div className="direction__cart-inside">
-          <div className="direction__cart-inside-title">{aboutTitle}</div>
+          <div
+            style={{ transform: `translateX(${parallax / 50}px)` }}
+            className="direction__cart-inside-title"
+          >
+            {aboutTitle}
+          </div>
           <div className="direction__cart-inside__list">
             <div className="direction__cart-inside__list-title">
               Оптовые поставки нефтепродуктов осуществляются:
