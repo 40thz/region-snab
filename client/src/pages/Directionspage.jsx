@@ -16,8 +16,9 @@ const Directionspage = () => {
   const parallaxAnim = {
     title: { transform: `translateX(${parallax / 10}px)` },
     subTitle: { transform: `translateX(-${parallax / 20}px)` },
-    secondSrction: { transform: `translateX(-${parallax / 30}px)` },
-    threeSrction: { transform: `translateY(-${parallax / 50}px)` },
+    firstSection: { transform: `translateX(${parallax / 40}px)` },
+    secondSection: { transform: `translateX(-${parallax / 30}px)` },
+    threeSection: { transform: `translateY(-${parallax / 50}px)` },
     callSection: {
       transform: `translateY(-${parallax / 10}px) translateX(${
         parallax / 30
@@ -35,7 +36,7 @@ const Directionspage = () => {
             <span style={parallaxAnim.subTitle}>деятельности</span>
           </div>
           <DirectionCart
-            style={parallaxAnim.title}
+            style={parallaxAnim.firstSection}
             image={imgage1}
             index={1}
             title="Реализация нефтепродуктов "
@@ -48,7 +49,7 @@ const Directionspage = () => {
             ]}
           />
           <DirectionCart
-            style={parallaxAnim.secondSrction}
+            style={parallaxAnim.secondSection}
             image={imgage2}
             index={2}
             title="Перевозка нефтепродуктов автотранспортом"
@@ -61,7 +62,7 @@ const Directionspage = () => {
             ]}
           />
           <DirectionCart
-            style={parallaxAnim.threeSrction}
+            style={parallaxAnim.threeSection}
             image={imgage3}
             index={3}
             title="Перевалка нефтепродуктов на собственной нефтебазе"

@@ -100,6 +100,8 @@ const ContactForm = () => {
           <AboutCall
             value="узнавайте всю актуальная информация о ценах на нашем телеграмм-канале!"
             src={callImg}
+            btnName="Подписаться"
+            btnSubname="@telegram"
           />
         </div>
       </div>
