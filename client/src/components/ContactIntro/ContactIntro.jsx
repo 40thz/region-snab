@@ -5,15 +5,26 @@ import Pattern from "../Pattern/Pattern";
 import phoneIcon from "@images/Contacts/phone.svg";
 import boxIcon from "@images/Contacts/box.svg";
 import mailIcon from "@images/Contacts/mail.svg";
+import { useParallax } from "../../hooks/useParallax";
 
 const ContactIntro = () => {
+  const parallax = useParallax();
+
+  const parallaxAnim = {
+    title: { transform: `translateX(${parallax / 10}px)` },
+    subTitle: { transform: `translateX(-${parallax / 20}px)` },
+  };
+
   return (
     <section id="contactIntro">
       <Header />
       <Pattern />
       <div className="container">
         <div className="contact__title">
-          поставщик нефтепродуктов регионснаб <span>всегда на связи</span>
+          <span style={parallaxAnim.title}>
+            поставщик нефтепродуктов регионснаб
+          </span>
+          <span style={parallaxAnim.subTitle}>всегда на связи</span>
         </div>
         <div className="contact__list">
           <div className="contact__cart">

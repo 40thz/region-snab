@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "@pages/Homepage";
 import Layout from "./Layout";
 import Aboutpage from "./pages/Aboutpage";
@@ -13,6 +13,11 @@ import Vacancypage from "./pages/Vacancypage";
 
 export const useRoutes = () => {
   const { animateLoader } = useAction();
+
+  const location = useLocation();
+  React.useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   React.useEffect(() => {
     window.addEventListener("load", () => {

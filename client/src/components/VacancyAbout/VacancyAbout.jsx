@@ -7,7 +7,7 @@ const VacancyAbout = ({ data }) => {
 
   const parallaxAnim = {
     section: {
-      transform: `translateY(-${parallax / 5}px)`,
+      transform: `translateY(-${parallax / 10}px)`,
     },
   };
   return (

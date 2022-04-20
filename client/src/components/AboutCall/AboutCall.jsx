@@ -10,10 +10,11 @@ const AboutCall = ({
   rsAnim = true,
   btnName = "Позвонить",
   btnSubname = "+7 (391) 219-15-97",
+  styleIcon = {},
 }) => {
   return (
     <div className="about__call">
-      <div className="about__call-image">
+      <div style={styleIcon} className="about__call-image">
         <img src={src} alt="" />
       </div>
       <RS color={rsColor} animateText={rsAnim} />

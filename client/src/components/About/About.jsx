@@ -14,17 +14,23 @@ const About = ({ offsetY }) => {
   return (
     <section id="about">
       <div className="container">
-        <AboutCall
-          value={
-            <div>
-              готовы к сотрудничеству?
-              <br />
-              <span>Позвоните</span>
-            </div>
-          }
-          rsColor="#fff"
-          rsAnim={false}
-        />
+        <div
+          style={{
+            transform: `translateY(-${offsetY / 10}px)`,
+          }}
+        >
+          <AboutCall
+            value={
+              <div>
+                готовы к сотрудничеству?
+                <br />
+                <span>Позвоните</span>
+              </div>
+            }
+            rsColor="#fff"
+            rsAnim={false}
+          />
+        </div>
         <div className="about__inside">
           <div className="colum">
             <PreviewText value="Основные направления деятельности" />

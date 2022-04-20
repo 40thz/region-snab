@@ -8,13 +8,15 @@ section#contactIntro {
 
 .contact {
   &__title {
+    display: flex;
+    flex-direction: column;
     @include h700;
     font-size: 36px;
     text-transform: uppercase;
     color: $white;
     max-width: 1000px;
     margin: 100px 0 115px 0;
-    span {
+    span:last-child {
       color: $red;
     }
   }

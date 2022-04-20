@@ -1,12 +1,14 @@
 .map__inside {
   position: absolute;
-  transform: translateY(-10%);
+  margin-top: -20px;
   z-index: 1;
   display: flex;
   gap: 30px;
 }
 
 .map__cart {
+  cursor: pointer;
+  transition: all 0.5s;
   width: 370px;
   height: 329px;
   background: $gray;
@@ -19,16 +21,19 @@
     color: $red;
   }
   &-title {
+    transition: all 0.5s;
     margin-bottom: 20px;
     font-size: 20px;
     text-transform: uppercase;
   }
   &-subtitle {
+    transition: all 0.5s;
     margin-bottom: 54px;
     height: 80px;
     @include s400;
   }
   &-btn {
+    transition: all 0.5s;
     text-decoration: underline;
     cursor: pointer;
     color: $red;
@@ -39,6 +44,19 @@
     span,
     .map__cart-btn {
       color: $white;
+    }
+  }
+  &:hover {
+    transform: translate(-15px, -10px);
+    box-shadow: 11px 16px 21px 0px rgba(34, 60, 80, 0.2);
+    .map__cart-title {
+      transform: translateX(20px) scale(1.05);
+    }
+    .map__cart-btn {
+      transform: translateX(-20px) scale(1.05);
+    }
+    .map__cart-subtitle {
+      transform: translateY(10px);
     }
   }
 }

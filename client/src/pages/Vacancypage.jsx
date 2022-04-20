@@ -7,16 +7,28 @@ import { useGetVacancyByIdQuery } from "../store";
 
 import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
+import { useParallax } from "../hooks/useParallax";
 
 const Vacancypage = () => {
   const navigate = useNavigate();
+  const parallax = useParallax();
+
   const params = useParams();
 
   const { data, isLoding } = useGetVacancyByIdQuery(params.id);
-  React.useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "auto" });
-  });
 
+  const parallaxAnim = {
+    callSection: {
+      transform: `translateX(${parallax / 10}px) translateY(-${
+        parallax / 8
+      }px)`,
+    },
+    callIcon: {
+      transform: `translateY(${parallax / 10}px) translateX(-${
+        parallax / 10
+      }px)`,
+    },
+  };
   return (
     <section id="vacancypage">
       <div className="vacancypage__header">
@@ -57,10 +69,11 @@ const Vacancypage = () => {
       <div className="container">
         {isLoding ? "load" : <VacancyAbout data={data} />}
       </div>
-      <div className="container">
+      <div style={parallaxAnim.callSection} className="container">
         <AboutCall
           value="В нашей команде профессионалов не хватает именно Вас"
           src={callImg}
+          styleIcon={parallaxAnim.callIcon}
         />
       </div>
     </section>

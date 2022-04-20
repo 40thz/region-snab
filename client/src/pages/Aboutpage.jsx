@@ -12,7 +12,6 @@ const About = () => {
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
   React.useEffect(() => {
-
     document.addEventListener("scroll", handleScroll);
     return () => document.removeEventListener("scroll", handleScroll);
   }, []);

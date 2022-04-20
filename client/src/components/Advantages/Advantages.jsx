@@ -18,6 +18,7 @@ const Advantages = ({ offsetY }) => {
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
   const sections = document.querySelector("#about")?.scrollHeight;
+  const carColum = document.querySelector("#carcolum")?.scrollWidth + 400;
 
   let sectionY = offsetY;
   if (sectionY >= sections) {
@@ -26,15 +27,21 @@ const Advantages = ({ offsetY }) => {
     sectionY = offsetY;
   }
 
+  let sectionCar = offsetY;
+  if (sectionCar >= carColum) {
+    sectionCar = sectionCar === carColum;
+  } else {
+    sectionCar = offsetY - 2700 / 2;
+  }
   const parallax = {
-    carDefault: { left: `${offsetY - 2400 / 2}px` },
+    carDefault: { left: `${sectionCar}px` },
     carMobile: { left: `${offsetY * 2 - 2400 / 2}px` },
     section: { marginTop: `-${sectionY}px` },
   };
 
   return (
     <div style={parallax.section} id="advantages" className="container">
-      <div className="colum half">
+      <div id="carcolum" className="colum half">
         <AdvantageTitle />
         <div
           style={isMobile ? parallax.carMobile : parallax.carDefault}
