@@ -27,12 +27,25 @@ section#contactIntro {
     margin-bottom: 100px;
   }
   &__cart {
+    transition: all 0.5s;
     position: relative;
     background: #262c36;
     height: 244px;
     box-sizing: border-box;
     padding: 60px;
     @include s400;
+    &:nth-child(1) {
+      position: relative;
+      z-index: 1;
+    }
+    &:nth-child(2) {
+      position: relative;
+      z-index: 2;
+    }
+    &:nth-child(3) {
+      position: relative;
+      z-index: 3;
+    }
     &-car {
       transition: all 1s;
       position: absolute;
@@ -43,6 +56,12 @@ section#contactIntro {
       opacity: 0;
       img {
         width: 200px;
+      }
+    }
+    &-subtitle {
+      transition: all 0.5s;
+      a {
+        transition: all 0.5s;
       }
     }
     &::before,
@@ -76,12 +95,22 @@ section#contactIntro {
       color: $dark-blue;
     }
     &:hover {
+      transform: scale(0.95);
       .contact__cart-icon {
         transform: translateY(-0px);
       }
       .contact__cart-car {
         right: 0;
         opacity: 1;
+      }
+      .contact__cart-icon {
+        transform: scale(1.9) translateX(20%);
+      }
+      .contact__cart-subtitle {
+        transform: translateX(10px);
+        a {
+          color: $red;
+        }
       }
       &::before {
         left: -30px;
