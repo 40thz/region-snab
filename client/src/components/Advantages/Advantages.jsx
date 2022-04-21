@@ -50,39 +50,41 @@ const Advantages = ({ offsetY }) => {
           <img src={carImage} alt="car" />
         </div>
       </div>
-      <div className="colum half">
+      <div className="colum half ">
         <ScrollTrigger onEnter={() => setAnimate(true)}>
           <AnimateGroup play={animate}>
-            <AdvantageItem
-              icon={portfolioIcon}
-              value="Обладает огромным опытом оптовой реализации нефтепродуктов"
-              index={0}
-            />
-            <AdvantageItem
-              icon={fileIcon}
-              value="Работает с крупнейшими производителями нефтепродуктов напрямую"
-              index={1}
-            />
-            <AdvantageItem
-              icon={proIcon}
-              value="Зарекомендовала себя как исключительно стабильный, надежный и профессиональный поставщик"
-              index={2}
-            />
-            <AdvantageItem
-              icon={virifyIcon}
-              value="Гарантирует своевременную и безопасную доставку любого вида топлива по Красноярскому краю и ближайшим регионам"
-              index={3}
-            />
-            <AdvantageItem
-              icon={gearIcon}
-              value="Обладает всей необходимой инфраструктурой и финансовыми средствами для выполнения своих обязательств и полного соответствия ожиданиям потребителей"
-              index={4}
-            />
-            <AdvantageItem
-              icon={locationIcon}
-              value="Является крупнейшим «независимым» поставщиком (без государственного участия) на рынке нефтепродуктов  Красноярского края "
-              index={5}
-            />
+            <div className="columgap">
+              <AdvantageItem
+                icon={portfolioIcon}
+                value="Обладает огромным опытом оптовой реализации нефтепродуктов"
+                index={0}
+              />
+              <AdvantageItem
+                icon={fileIcon}
+                value="Работает с крупнейшими производителями нефтепродуктов напрямую"
+                index={1}
+              />
+              <AdvantageItem
+                icon={proIcon}
+                value="Зарекомендовала себя как исключительно стабильный, надежный и профессиональный поставщик"
+                index={2}
+              />
+              <AdvantageItem
+                icon={virifyIcon}
+                value="Гарантирует своевременную и безопасную доставку любого вида топлива по Красноярскому краю и ближайшим регионам"
+                index={3}
+              />
+              <AdvantageItem
+                icon={gearIcon}
+                value="Обладает всей необходимой инфраструктурой и финансовыми средствами для выполнения своих обязательств и полного соответствия ожиданиям потребителей"
+                index={4}
+              />
+              <AdvantageItem
+                icon={locationIcon}
+                value="Является крупнейшим «независимым» поставщиком (без государственного участия) на рынке нефтепродуктов  Красноярского края "
+                index={5}
+              />
+            </div>
           </AnimateGroup>
         </ScrollTrigger>
       </div>

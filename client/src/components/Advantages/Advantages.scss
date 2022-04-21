@@ -5,6 +5,11 @@
   padding-top: 150px;
   z-index: 4;
   margin-bottom: 15%;
+  .columgap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
 }
 .advantages__car {
   position: absolute;

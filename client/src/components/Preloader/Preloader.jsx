@@ -13,10 +13,11 @@ const Preloader = () => {
   const preloader = useSelector((state) => state.preloader);
 
   React.useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       removeLoader();
-      document.body.style.overflowY = "auto";
     }, 4000);
+    document.body.style.overflowY = "auto";
+    return clearTimeout(timer);
   }, [preloader]);
 
   return (

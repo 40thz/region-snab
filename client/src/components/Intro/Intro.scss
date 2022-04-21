@@ -5,6 +5,13 @@ main {
   .button {
     background: #353a44;
   }
+  .advantage__item {
+    gap: 25px;
+    &-icon {
+      min-width: 44px;
+      min-height: 44px;
+    }
+  }
 }
 .intro {
   display: flex;

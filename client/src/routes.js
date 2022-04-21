@@ -23,7 +23,6 @@ export const useRoutes = () => {
     window.addEventListener("load", () => {
       animateLoader();
     });
-    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   return (
