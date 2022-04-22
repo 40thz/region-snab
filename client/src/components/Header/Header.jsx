@@ -67,7 +67,7 @@ const Header = ({ dark }) => {
           </nav>
         </div>
       </header>
-      <FullsizeMenu active={menuActive} />
+      <FullsizeMenu active={menuActive} onClick={showMenu} />
     </>
   );
 };
