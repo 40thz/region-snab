@@ -6,7 +6,6 @@
   padding-top: 50px;
   text-transform: uppercase;
   width: 783px;
-  max-width: 783px;
   margin-left: -100px;
   span {
     color: $red;
@@ -23,5 +22,8 @@
   .about__inside-prevText {
     font-size: 14px;
     padding: 0;
+    max-width: 783px;
+    width: auto;
+    margin: 0;
   }
 }

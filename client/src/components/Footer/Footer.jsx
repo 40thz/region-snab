@@ -36,7 +36,7 @@ const Footer = () => {
             </ul>
 
             <div style={{ marginTop: "80px" }} className="footer__title">
-              Время работы
+              Время работы (офис)
             </div>
             <ul>
               <li>Пн-Пт</li>
@@ -46,9 +46,9 @@ const Footer = () => {
           <div className="colum">
             <div className="footer__title">Картка сайта</div>
             <ul>
-              <Link to="/">
+              <a href="#">
                 <li>Главная</li>
-              </Link>
+              </a>
               <Link to="/about">
                 <li>О компании</li>
               </Link>
@@ -60,11 +60,43 @@ const Footer = () => {
               </Link>
             </ul>
             <div style={{ marginTop: "80px" }} className="footer__title">
-              Время работы (отдел логистики и транспорта)
+              Время работы (склад ГСМ, отдел логистики и транспорта)
             </div>
-            <ul>
-              <li>Пн-Вс</li>
-              <li>0:00 - 24:00</li>
+            <ul className="footer_schedule">
+              <div className="footer_schedule-time">
+                <li>Пн-Вс</li>
+                <li>0:00 - 24:00</li>
+              </div>
+              <a href="#" className="footer_schedule-tg">
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="tg-icon"
+                >
+                  <path
+                    d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
+                    fill="#B63A3A"
+                  />
+                </svg>
+                <svg
+                  width="50"
+                  height="50"
+                  viewBox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="tg-icon-border"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
+                    fill="#B63A3A"
+                  />
+                </svg>
+              </a>
             </ul>
           </div>
         </div>

@@ -1,15 +1,17 @@
 import React from "react";
+import { useMobile } from "../../hooks/useMobile";
 import HistoryItem from "../HistoryItem/HistoryItem";
 import PreviewText from "../PreviewText/PreviewText";
 
 const History = ({ offsetY }) => {
   const sections = document.querySelector("#history")?.scrollHeight;
+  const isMobile = useMobile();
 
   let sectionY = offsetY;
   if (sectionY >= sections) {
     sectionY = sectionY === sections;
   } else {
-    sectionY = offsetY /2
+    sectionY = offsetY / 2;
   }
 
   const parallax = {

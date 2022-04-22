@@ -9,7 +9,7 @@ header {
   ul {
     display: flex;
     padding-inline-start: 0px;
-    gap: 60px;
+    gap: 30px;
   }
 }
 
@@ -36,6 +36,41 @@ header {
   &-contacts {
     display: flex;
     align-items: center;
+  }
+  li {
+    position: relative;
+    overflow: hidden;
+    height: 30px;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      background: $red;
+    }
+    &::before {
+      width: 70%;
+      left: 0;
+      bottom: 3px;
+      transform: translateX(-100%);
+    }
+    &::after {
+      width: 60%;
+      right: 0;
+      bottom: 8px;
+      transform: translateX(100%);
+    }
+  }
+  .lactive-class {
+    color: $red;
+    li {
+      &::before {
+        transform: translateX(0%);
+      }
+      &::after {
+        transform: translateX(0%);
+      }
+    }
   }
 }
 .dark {

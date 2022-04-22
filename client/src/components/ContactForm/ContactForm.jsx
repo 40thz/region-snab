@@ -102,6 +102,7 @@ const ContactForm = () => {
             src={callImg}
             btnName="Подписаться"
             btnSubname="@telegram"
+            to="https://web.telegram.org/z/"
           />
         </div>
       </div>

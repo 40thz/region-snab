@@ -88,7 +88,7 @@
       padding: 0;
       height: 350px;
       padding: 30px;
-      transform: translateY(-25%);
+      transform: translateY(10%);
       .rs {
         font-size: 160px;
         bottom: -18%;
@@ -102,6 +102,15 @@
     .about__inside {
       flex-direction: column;
       padding-bottom: 70px;
+      .colum:nth-child(1) {
+        width: 100%;
+      }
+      .colum:nth-child(2) {
+        width: 100%;
+      }
+      &-content {
+        padding: 0;
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import AboutPreviewText from "./AboutPreviewText/AboutPreviewText";
 import Button from "../Button/Button";
 import buttonIcon from "@images/button-icon.png";
 import AboutCall from "../AboutCall/AboutCall";
+import { Link } from "react-router-dom";
 
 const About = ({ offsetY }) => {
   const isMobile = useMobile();
@@ -33,6 +34,7 @@ const About = ({ offsetY }) => {
         </div>
         <div className="about__inside">
           <div className="colum">
+            {isMobile && <AboutPreviewText />}
             <PreviewText value="Основные направления деятельности" />
             <div className="about__inside-logo">
               <img src={aboutImg} alt="" />
@@ -43,7 +45,9 @@ const About = ({ offsetY }) => {
             {!isMobile && <AboutPreviewText offsetY={offsetY} />}
             <div className="about__inside-content">
               <AboutText />
-              <Button value="Подробнее о видах деятельности" />
+              <Link to="/directions">
+                <Button value="Подробнее о видах деятельности" />
+              </Link>
             </div>
           </div>
         </div>

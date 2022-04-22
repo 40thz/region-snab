@@ -63,13 +63,13 @@ const Company = () => {
                     профессионалам. Доверьтесь и Вы!
                   </div>
                   <div>
-                    <div className="about-btn">
+                    <a href="tel:+73912191597" className="about-btn">
                       <div className="about-btn-main">
                         <img src={buttonIcon} alt="Кнопка" />
                         Позвонить
                       </div>
                       <div className="about-btn-hide">+7 (391) 219-15-97</div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>

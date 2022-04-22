@@ -108,6 +108,7 @@ const AdvantageSlider = () => {
           currentSlider={currentSlider}
           counter={true}
           btnValue="Позвонить"
+          to="tel:+73912191597"
         />
         <Pattern />
       </div>

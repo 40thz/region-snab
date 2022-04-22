@@ -7,6 +7,7 @@ const SliderFooter = ({
   currentSlider,
   counter,
   btnValue,
+  to = "",
 }) => {
   return (
     <div className="vacancy__slider-footer">
@@ -47,7 +48,7 @@ const SliderFooter = ({
           </div>
         )}
       </div>
-      <Link to={`vacancy/${currentItemId}`}>
+      <Link to={currentItemId ? `vacancy/${currentItemId}` : to}>
         <div className="vacancy__slider-readmore">{btnValue}</div>
       </Link>
     </div>

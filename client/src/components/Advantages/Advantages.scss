@@ -23,6 +23,9 @@
   #advantages {
     flex-direction: column;
     overflow: hidden;
+    .columgap {
+      gap: 0;
+    }
   }
   .advantages__car {
     position: relative;

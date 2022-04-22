@@ -11,6 +11,7 @@ const AboutCall = ({
   btnName = "Позвонить",
   btnSubname = "+7 (391) 219-15-97",
   styleIcon = {},
+  to,
 }) => {
   return (
     <div className="about__call">
@@ -21,13 +22,13 @@ const AboutCall = ({
       <div className="about__title">
         <div>{value}</div>
         <div>
-          <div className="about-btn">
+          <a href={to ? to : "tel:+73912191597"} className="about-btn">
             <div className="about-btn-main">
               <img src={buttonIcon} alt="Кнопка" />
               {btnName}
             </div>
             <div className="about-btn-hide">{btnSubname}</div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

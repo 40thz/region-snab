@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../Button/Button";
 import { useParallax } from "../../hooks/useParallax";
+import { useNavigate } from "react-router-dom";
 
 const VacancyAbout = ({ data }) => {
   const parallax = useParallax();
-
+  const navigate = useNavigate();
   const parallaxAnim = {
     section: {
       transform: `translateY(-${parallax / 10}px)`,
@@ -31,7 +32,9 @@ const VacancyAbout = ({ data }) => {
         </div>
       </div>
       <div className="colum">
-        <Button value="Все вакансии" />
+        <div onClick={() => navigate(-1)}>
+          <Button value="Все вакансии" />
+        </div>
       </div>
     </div>
   );

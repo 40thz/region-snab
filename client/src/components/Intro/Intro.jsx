@@ -3,8 +3,7 @@ import Pattern from "../Pattern/Pattern";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
 import AdvantageItem from "../AdvantageItem/AdvantageItem";
 import Button from "../Button/Button";
-
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -21,7 +20,7 @@ const Intro = () => {
             <span>надежный поставщик&nbsp;</span>
             нефтепродуктов
           </div>
-          <Link to="about" smooth duration={1000} offset={250}>
+          <Link to="about">
             <Button value="Узнать подробнее" />
           </Link>
         </div>

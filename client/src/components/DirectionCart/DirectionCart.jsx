@@ -42,14 +42,16 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
           >
             {aboutTitle}
           </div>
-          <div className="direction__cart-inside__list">
-            <div className="direction__cart-inside__list-title">
-              Оптовые поставки нефтепродуктов осуществляются:
+          {list && (
+            <div className="direction__cart-inside__list">
+              <div className="direction__cart-inside__list-title">
+                Оптовые поставки нефтепродуктов осуществляются:
+              </div>
+              {list.map((item) => (
+                <div className="direction__cart-inside__list-item">{item}</div>
+              ))}
             </div>
-            {list.map((item) => (
-              <div className="direction__cart-inside__list-item">{item}</div>
-            ))}
-          </div>
+          )}
         </div>
       )}
     </div>

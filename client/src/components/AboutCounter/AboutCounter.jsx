@@ -4,16 +4,23 @@ import StatItem from "../StatItem/StatItem";
 import countImg from "@images/AboutIntro/countimg.jpg";
 
 import ScrollTrigger from "react-scroll-trigger";
+import { useMobile } from "../../hooks/useMobile";
 
 const AboutCounter = ({ offsetY }) => {
   const [startCounter, setStartCounter] = React.useState(false);
+  const isMobile = useMobile();
 
   const parallax = {
     counter: { transform: `translateY(-${offsetY / 3}px)` },
+    counterMobile: { transform: `translateY(-${offsetY / 10}px)` },
   };
+
   return (
-    <section id="aboutcounter" >
-      <div style={parallax.counter} className="counter">
+    <section id="aboutcounter">
+      <div
+        style={isMobile ? parallax.counterMobile : parallax.counter}
+        className="counter"
+      >
         <div className="colum">
           <PreviewText value="О нас в цифрах" />
           <ScrollTrigger onEnter={() => setStartCounter(true)}>
@@ -59,7 +66,7 @@ const AboutCounter = ({ offsetY }) => {
           <img src={countImg} alt="регион снаб" />
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import FullsizeMenu from "../FullsizeMenu/FullsizeMenu";
 import { useMobile } from "../../hooks/useMobile";
@@ -25,15 +25,30 @@ const Header = ({ dark }) => {
           <nav className="header__menu">
             {isMobile && <CallBtn />}
             <ul className="header__menu-navigation">
-              <Link to="/about">
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "lactive-class" : "")}
+              >
+                <li>Главная</li>
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "lactive-class" : "")}
+              >
                 <li>О компании</li>
-              </Link>
-              <Link to="/directions">
-                <li>Направления</li>
-              </Link>
-              <Link to="/contacts">
+              </NavLink>
+              <NavLink
+                to="/directions"
+                className={({ isActive }) => (isActive ? "lactive-class" : "")}
+              >
+                <li>Деятельность</li>
+              </NavLink>
+              <NavLink
+                to="/contacts"
+                className={({ isActive }) => (isActive ? "lactive-class" : "")}
+              >
                 <li>Контакты</li>
-              </Link>
+              </NavLink>
             </ul>
             <Link to="/">
               <Logo />

@@ -6,7 +6,7 @@ import Mapinside from "./Mapinside/Mapinside";
 const Map = () => {
   const cords = [
     [56.05675004995326, 92.93955225033177],
-    [56.0649023840175, 93.11883060450744],
+    [56.058586376744714, 93.12641529045462],
   ];
   const [cordinate, setCordinate] = React.useState(0);
 
