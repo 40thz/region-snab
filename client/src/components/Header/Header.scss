@@ -63,6 +63,7 @@ header {
   }
   .lactive-class {
     color: $red;
+    font-weight: bold;
     li {
       &::before {
         transform: translateX(0%);
