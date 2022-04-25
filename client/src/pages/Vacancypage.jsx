@@ -36,7 +36,7 @@ const Vacancypage = () => {
         <Header />
         <div className="vacancypage__header-image">
           <img
-            src={`https://region-snab.s3.amazonaws.com/${data?.uploadedFile.path}`}
+            src={`https://region-snab.s3.amazonaws.com/${data?.uploadedFile?.path}`}
             alt=""
           />
         </div>

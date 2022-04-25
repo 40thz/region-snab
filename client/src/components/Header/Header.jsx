@@ -54,8 +54,8 @@ const Header = ({ dark }) => {
               <Logo />
             </Link>
             <ul className="header__menu-contacts">
-              <a href="mailto:regionsnab24@mail.ru">
-                <li>regionsnab24@mail.ru</li>
+              <a href="mailto:info@regionsnab24.ru ">
+                <li>info@regionsnab24.ru </li>
               </a>
               <a href="tel:+73912191597">
                 <li>+7 (391) 219-15-97</li>

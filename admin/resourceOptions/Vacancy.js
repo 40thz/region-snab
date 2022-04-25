@@ -28,6 +28,9 @@ const options = {
     description: {
       type: "richtext",
     },
+    sliderDescription: {
+      type: "richtext",
+    },
   },
 };
 

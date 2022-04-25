@@ -15,7 +15,7 @@ const Jobs = () => {
   const [currentItemId, setCurrentItemId] = React.useState();
 
   React.useEffect(() => {
-    !isLoading && setCurrentItemId(data[0]._id);
+    !isLoading && setCurrentItemId(data[0]?._id);
   }, [data]);
 
   const settings = {
@@ -57,7 +57,7 @@ const Jobs = () => {
                   return (
                     <VacancyItem
                       key={vacancy._id}
-                      image={vacancy.uploadedFile.path}
+                      image={vacancy.uploadedFile?.path}
                       title={vacancy.name}
                       description={string}
                     />

@@ -29,8 +29,8 @@ const Footer = () => {
               <a href="tel:83912191597">
                 <li>8 391 219-15-97 (отдел кадров)</li>
               </a>
-              <a href="mailto:regionsnab24@mail.ru">
-                <li>regionsnab24@mail.ru</li>
+              <a href="mailto:info@regionsnab24.ru ">
+                <li>info@regionsnab24.ru </li>
               </a>
               <li>Красноярск, Краснодарская, 40Д</li>
             </ul>
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
         <div className="footer__bottom">
           <p>Все права защищены</p>
-          <a href="#" target="_blank">
+          <a href="/uploads/Политика конфиденциальности.pdf" target="_blank">
             <p>Политика конфиденциальности</p>
           </a>
           <div className="developers">

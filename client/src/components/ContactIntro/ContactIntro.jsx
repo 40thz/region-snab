@@ -59,7 +59,7 @@ const ContactIntro = () => {
             </div>
             <div className="contact__cart-title">Email</div>
             <div className="contact__cart-subtitle">
-              <a href="mailto:regionsnab24@mail.ru">regionsnab24@mail.ru</a>
+              <a href="mailto:info@regionsnab24.ru ">info@regionsnab24.ru </a>
             </div>
             <div className="contact__cart-car">
               <img src={carImage} alt="Регионснаб машина" />

@@ -16,9 +16,14 @@ const Directionspage = () => {
   const parallaxAnim = {
     title: { transform: `translateX(${parallax / 10}px)` },
     subTitle: { transform: `translateX(-${parallax / 20}px)` },
-    firstSection: { transform: `translateX(${parallax / 40}px)` },
-    secondSection: { transform: `translateX(-${parallax / 30}px)` },
-    threeSection: { transform: `translateY(-${parallax / 50}px)` },
+    firstSection: {
+      left: `${parallax / 10}px`,
+    },
+    secondSection: { left: `-${parallax / 20}px` },
+    threeSection: {
+      top: `-${parallax / 20}px`,
+      left: `${parallax / 10}px`,
+    },
     callSection: {
       transform: `translateY(-${parallax / 10}px) translateX(${
         parallax / 30

@@ -1,7 +1,7 @@
 .direction__cart {
   background: $gray;
   box-sizing: border-box;
-  padding: 70px 100px 70px 70px;
+  padding: 0px 100px 0px 0px;
   margin-bottom: 30px;
   &-top {
     display: flex;
@@ -11,11 +11,11 @@
     font-size: 20px;
   }
   &-image {
-    max-width: 202px;
+    width: 300px;
     overflow: hidden;
     img {
       transition: all 0.5s;
-      max-width: 100%;
+      width: 300px;
     }
   }
   &-number {
@@ -47,7 +47,10 @@
   }
   &-inside {
     @include s400;
-    margin-top: 60px;
+    padding: 0px 0px 0px 100px;
+    overflow: hidden;
+    height: 0;
+    transition: all 1s cubic-bezier(0.73, -0.02, 0.55, 0.87);
     &__list {
       display: flex;
       flex-direction: column;
@@ -73,6 +76,9 @@
           border-radius: 100%;
         }
       }
+    }
+    .hidecontent {
+      padding: 40px 0;
     }
   }
   &:hover {

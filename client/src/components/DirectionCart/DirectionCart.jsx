@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import cn from "classnames";
 import { useParallax } from "../../hooks/useParallax";
 
 const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
   const [showContent, setShowContent] = React.useState(false);
   const parallax = useParallax();
-
+  const ref = useRef();
+  console.log(ref);
   return (
     <div style={style} className="direction__cart">
       <div className="direction__cart-top">
-        <div className="direction__cart-image">
+        <div
+          style={{
+            transform: `translateX(-${parallax / 50}px) translateY(-${
+              parallax / 35
+            }px)`,
+          }}
+          className="direction__cart-image"
+        >
           <img src={image} alt="рг" />
         </div>
         <div className="direction__cart-number">0{index}</div>
@@ -34,8 +42,11 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
           </svg>
         </div>
       </div>
-      {showContent && (
-        <div className="direction__cart-inside">
+      <div
+        style={{ height: showContent && ref.current.clientHeight }}
+        className="direction__cart-inside"
+      >
+        <div ref={ref} className="hidecontent">
           <div
             style={{ transform: `translateX(${parallax / 50}px)` }}
             className="direction__cart-inside-title"
@@ -53,7 +64,7 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
             </div>
           )}
         </div>
-      )}
+      </div>
     </div>
   );
 };

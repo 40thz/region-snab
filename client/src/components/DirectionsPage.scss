@@ -19,6 +19,19 @@ section#directions {
 .direction {
   display: flex;
   flex-direction: column;
+  &__cart {
+    position: relative;
+    box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.2);
+  }
+  &__cart:nth-child(2) {
+    animation: turnRight 2s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
+  }
+  &__cart:nth-child(3) {
+    animation: turnLeft 2.5s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
+  }
+  &__cart:nth-child(4) {
+    animation: turnRight 2s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
+  }
   &-title {
     @include h700;
     font-size: 36px;
@@ -86,4 +99,22 @@ section#directions {
 }
 
 @media (max-width: $mobile-width) {
+}
+
+@keyframes turnRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes turnLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

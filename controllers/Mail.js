@@ -30,7 +30,7 @@ class Mail {
 
     let mailOption = {
       from: `<regionsnab.gang@yandex.ru>`,
-      to: "regionsnab.gang@yandex.ru",
+      to: "info@regionsnab24.ru",
       subject: "ООО РегионСнаб",
       html: data,
     };

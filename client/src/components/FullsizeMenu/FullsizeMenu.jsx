@@ -20,7 +20,7 @@ const FullsizeMenu = ({ active, onClick }) => {
         </Link>
       </ul>
       <ul className="fullsize__navigation-contacts">
-        <li>regionsnab24@mail.ru</li>
+        <li>info@regionsnab24.ru </li>
         <li>+7 (391) 219-15-97</li>
       </ul>
       <Pattern active={active} />

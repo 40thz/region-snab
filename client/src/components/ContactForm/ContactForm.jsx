@@ -10,20 +10,23 @@ import axios from "axios";
 import callImg from "@images/Jobs/callimg.png";
 
 import { useForm } from "react-hook-form";
+import Modal from "../Modal/Modal";
 
 const ContactForm = () => {
+  const [modalActive, setModalActive] = React.useState(false);
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/api/mail", {
+      .post("https://regionsnab24.ru/api/mail", {
         name: data.firstName,
         email: data.email,
         phone: data.phone,
         text: data.message,
       })
       .then(function (response) {
-        console.log(response);
+        response.data.message === "ok" && setModalActive(true);
+        document.body.style.overflowY = "hidden";
       });
   };
 
@@ -106,6 +109,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
+      <Modal active={modalActive} setActive={setModalActive} />
     </>
   );
 };
