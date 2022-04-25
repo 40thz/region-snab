@@ -12,7 +12,7 @@ const AboutCounter = ({ offsetY }) => {
 
   const parallax = {
     counter: { transform: `translateY(-${offsetY / 3}px)` },
-    counterMobile: { transform: `translateY(-${offsetY / 10}px)` },
+    counterMobile: { transform: `translateY(-${offsetY / 70}px)` },
   };
 
   return (

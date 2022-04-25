@@ -9,25 +9,30 @@ import imgage1 from "@images/Directions/direction1.png";
 import imgage3 from "@images/Directions/direction2.png";
 import imgage2 from "@images/Directions/direction3.png";
 import { useParallax } from "../hooks/useParallax";
+import { useMobile } from "../hooks/useMobile";
 
 const Directionspage = () => {
   const parallax = useParallax();
+  const isMobile = useMobile();
 
   const parallaxAnim = {
-    title: { transform: `translateX(${parallax / 10}px)` },
-    subTitle: { transform: `translateX(-${parallax / 20}px)` },
+    title: { transform: !isMobile && `translateX(${parallax / 10}px)` },
+    subTitle: { transform: !isMobile && `translateX(-${parallax / 20}px)` },
     firstSection: {
-      left: `${parallax / 10}px`,
+      left: !isMobile && `${parallax / 10}px`,
     },
-    secondSection: { left: `-${parallax / 20}px`, top: `-${parallax / 20}px` },
+    secondSection: {
+      left: !isMobile && `-${parallax / 20}px`,
+      top: !isMobile && `-${parallax / 20}px`,
+    },
     threeSection: {
-      top: `-${parallax / 10}px`,
-      left: `${parallax / 10}px`,
+      top: !isMobile && `-${parallax / 10}px`,
+      left: !isMobile && `${parallax / 10}px`,
     },
     callSection: {
-      transform: `translateY(-${parallax / 10}px) translateX(${
-        parallax / 30
-      }px)`,
+      transform:
+        !isMobile &&
+        `translateY(-${parallax / 10}px) translateX(${parallax / 30}px)`,
     },
   };
   return (

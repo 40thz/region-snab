@@ -2,7 +2,7 @@ import React from "react";
 
 const CallBtn = () => {
   return (
-    <div className="callBtn">
+    <a href="tel:+73912191597" className="callBtn">
       <svg
         width="26"
         height="27"
@@ -19,7 +19,7 @@ const CallBtn = () => {
           fill="white"
         />
       </svg>
-    </div>
+    </a>
   );
 };
 

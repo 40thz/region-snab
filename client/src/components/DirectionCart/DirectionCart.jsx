@@ -1,20 +1,22 @@
 import React, { useRef } from "react";
 import cn from "classnames";
 import { useParallax } from "../../hooks/useParallax";
+import { useMobile } from "../../hooks/useMobile";
 
 const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
   const [showContent, setShowContent] = React.useState(false);
   const parallax = useParallax();
+  const isMobile = useMobile();
   const ref = useRef();
-  console.log(ref);
+
   return (
     <div style={style} className="direction__cart">
       <div className="direction__cart-top">
         <div
           style={{
-            transform: `translateX(-${parallax / 50}px) translateY(-${
-              parallax / 35
-            }px)`,
+            transform:
+              !isMobile &&
+              `translateX(-${parallax / 50}px) translateY(-${parallax / 35}px)`,
           }}
           className="direction__cart-image"
         >
@@ -48,7 +50,7 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
       >
         <div ref={ref} className="hidecontent">
           <div
-            style={{ transform: `translateX(${parallax / 50}px)` }}
+            style={{ transform: !isMobile && `translateX(${parallax / 50}px)` }}
             className="direction__cart-inside-title"
           >
             {aboutTitle}

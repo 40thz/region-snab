@@ -43,3 +43,17 @@
     }
   }
 }
+
+@media (max-width: 869px) {
+  .vacancy__about {
+    .colum:first-child {
+      width: 100%;
+    }
+    &-conditions {
+      &-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+  }
+}

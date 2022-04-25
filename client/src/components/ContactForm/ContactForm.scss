@@ -127,6 +127,23 @@ section#contactform {
       }
     }
   }
+  .contactform__call {
+    .about__call-image {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      top: 50%;
+    }
+    .about__call {
+      .rs,
+      .about__call-image {
+        font-size: 200px;
+        right: 50%;
+        bottom: -45px;
+        transform: translateX(50%);
+      }
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {

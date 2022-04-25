@@ -5,3 +5,9 @@ section#history {
   position: relative;
   z-index: 1;
 }
+
+@media (max-width: 869px) {
+  section#history {
+    padding-top: 50px;
+  }
+}

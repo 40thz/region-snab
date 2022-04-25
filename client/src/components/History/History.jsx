@@ -15,7 +15,7 @@ const History = ({ offsetY }) => {
   }
 
   const parallax = {
-    history: { marginTop: `-${sectionY}px` },
+    history: { marginTop: !isMobile && `-${sectionY}px` },
   };
   return (
     <section style={parallax.history} id="history">

@@ -8,25 +8,26 @@ import { useGetVacancyByIdQuery } from "../store";
 import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
 import { useParallax } from "../hooks/useParallax";
+import { useMobile } from "../hooks/useMobile";
 
 const Vacancypage = () => {
   const navigate = useNavigate();
   const parallax = useParallax();
-
+  const isMobile = useMobile();
   const params = useParams();
 
   const { data, isLoding } = useGetVacancyByIdQuery(params.id);
 
   const parallaxAnim = {
     callSection: {
-      transform: `translateX(${parallax / 10}px) translateY(-${
-        parallax / 8
-      }px)`,
+      transform:
+        !isMobile &&
+        `translateX(${parallax / 10}px) translateY(-${parallax / 8}px)`,
     },
     callIcon: {
-      transform: `translateY(${parallax / 10}px) translateX(-${
-        parallax / 10
-      }px)`,
+      transform:
+        !isMobile &&
+        `translateY(${parallax / 10}px) translateX(-${parallax / 10}px)`,
     },
   };
   return (

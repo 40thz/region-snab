@@ -24,12 +24,15 @@ section#directions {
     box-shadow: 0px 0px 26px 0px rgba(34, 60, 80, 0.2);
   }
   &__cart:nth-child(2) {
+    transform: translateX(-100%);
     animation: turnRight 2s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
   }
   &__cart:nth-child(3) {
+    transform: translateX(100%);
     animation: turnLeft 2.5s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
   }
   &__cart:nth-child(4) {
+    transform: translateX(-100%);
     animation: turnRight 2s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
   }
   &-title {
@@ -93,6 +96,17 @@ section#directions {
         right: 50%;
         bottom: -45px;
         transform: translateX(50%);
+      }
+    }
+    &-title {
+      span {
+        &:first-child {
+          color: $red;
+          margin-left: 0px;
+        }
+        &:last-child {
+          color: $dark;
+        }
       }
     }
   }

@@ -2,13 +2,16 @@ import React from "react";
 import Button from "../Button/Button";
 import { useParallax } from "../../hooks/useParallax";
 import { useNavigate } from "react-router-dom";
+import { useMobile } from "../../hooks/useMobile";
 
 const VacancyAbout = ({ data }) => {
   const parallax = useParallax();
   const navigate = useNavigate();
+  const isMobile = useMobile();
+
   const parallaxAnim = {
     section: {
-      transform: `translateY(-${parallax / 10}px)`,
+      transform: !isMobile && `translateY(-${parallax / 10}px)`,
     },
   };
   return (
