@@ -19,9 +19,9 @@ const Directionspage = () => {
     firstSection: {
       left: `${parallax / 10}px`,
     },
-    secondSection: { left: `-${parallax / 20}px` },
+    secondSection: { left: `-${parallax / 20}px`, top: `-${parallax / 20}px` },
     threeSection: {
-      top: `-${parallax / 20}px`,
+      top: `-${parallax / 10}px`,
       left: `${parallax / 10}px`,
     },
     callSection: {
