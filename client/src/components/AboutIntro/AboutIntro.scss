@@ -53,7 +53,7 @@ section#aboutIntro {
 }
 @media (max-width: 869px) {
   section#aboutIntro {
-    padding-bottom: 200px;
+    height: auto;
   }
   .aboutIntro__inside {
     flex-direction: column;

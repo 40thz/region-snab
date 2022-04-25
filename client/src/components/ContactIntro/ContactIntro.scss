@@ -153,6 +153,9 @@ section#contactIntro {
 }
 
 @media (max-width: 869px) {
+  #contactIntro {
+    overflow: hidden;
+  }
   .contact {
     &__title {
       font-size: 18px;
