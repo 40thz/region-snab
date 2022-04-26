@@ -67,7 +67,11 @@ const Footer = () => {
                 <li>Пн-Вс</li>
                 <li>0:00 - 24:00</li>
               </div>
-              <a href="#" className="footer_schedule-tg">
+              <a
+                target="_blank"
+                href="https://t.me/regionsnab24"
+                className="footer_schedule-tg"
+              >
                 <svg
                   width="50"
                   height="50"
@@ -102,7 +106,7 @@ const Footer = () => {
         </div>
         <div className="footer__bottom">
           <p>Все права защищены</p>
-          <a href="/uploads/Политика конфиденциальности.pdf" target="_blank">
+          <a target="_blank" href="/uploads/Политика конфиденциальности.pdf">
             <p>Политика конфиденциальности</p>
           </a>
           <div className="developers">

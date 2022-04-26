@@ -88,7 +88,10 @@ const ContactForm = () => {
                   <div className="colum">
                     <div className="contactform-footer-polytic">
                       Нажимая кнопку «Отправить» вы принимаете условия{" "}
-                      <a href="uploads/Политика%20конфиденциальности.pdf">
+                      <a
+                        target="_blank"
+                        href="uploads/Политика%20конфиденциальности.pdf"
+                      >
                         Политики конфиденциальности и Обработки персональных
                         данных
                       </a>
@@ -106,8 +109,8 @@ const ContactForm = () => {
             value="узнавайте всю актуальная информация о ценах на нашем телеграмм-канале!"
             src={callImg}
             btnName="Подписаться"
-            btnSubname="@telegram"
-            to="https://web.telegram.org/z/"
+            btnSubname="@regionsnab24"
+            to="https://t.me/regionsnab24"
           />
         </div>
       </div>
