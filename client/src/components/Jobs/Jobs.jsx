@@ -6,6 +6,8 @@ import PreviewText from "../PreviewText/PreviewText";
 import VacancyItem from "./VacancyItem/VacancyItem";
 import SliderFooter from "../SliderFooter/SliderFooter";
 
+import vacncyImg from "@images/Jobs/vacancy.png";
+
 import { useGetVacancyQuery } from "../../store";
 
 const Jobs = () => {
@@ -57,7 +59,7 @@ const Jobs = () => {
                   return (
                     <VacancyItem
                       key={vacancy._id}
-                      image={vacancy.uploadedFile?.path}
+                      image={vacncyImg}
                       title={vacancy.name}
                       description={string}
                     />

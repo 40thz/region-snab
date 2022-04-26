@@ -16,13 +16,15 @@ const Intro = () => {
         />
         <div className="intro">
           <div className="intro__title">
-            Ваш&nbsp;
-            <span>надежный поставщик&nbsp;</span>
+            Ваш
+            <span>надежный поставщик</span>
             нефтепродуктов
           </div>
-          <Link to="about">
-            <Button value="Узнать подробнее" />
-          </Link>
+          <div className="readmore-btn">
+            <Link to="about">
+              <Button value="Узнать подробнее" />
+            </Link>
+          </div>
         </div>
       </div>
       <Pattern active />

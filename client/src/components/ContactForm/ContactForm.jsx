@@ -58,7 +58,7 @@ const ContactForm = () => {
                 </div>
                 <div className="contactform-email">
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="E-mail"
                     {...register("email")}
@@ -67,7 +67,7 @@ const ContactForm = () => {
                 </div>
                 <div className="contactform-phone">
                   <input
-                    type="text"
+                    type="tel"
                     name="phone"
                     placeholder="Телефон"
                     {...register("phone")}

@@ -11,9 +11,13 @@ const Header = ({ dark }) => {
   const isMobile = useMobile();
   const [menuActive, setMenuActive] = React.useState(false);
 
-  const showMenu = () => {
+  const showMenu = (logo) => {
     setMenuActive(!menuActive);
     document.body.style.overflow = menuActive ? "auto" : "hidden";
+  };
+  const closeMenu = () => {
+    setMenuActive(false);
+    document.body.style.overflowY = "auto";
   };
   return (
     <>
@@ -50,7 +54,7 @@ const Header = ({ dark }) => {
                 <li>Контакты</li>
               </NavLink>
             </ul>
-            <Link to="/">
+            <Link onClick={closeMenu} to="/">
               <Logo />
             </Link>
             <ul className="header__menu-contacts">

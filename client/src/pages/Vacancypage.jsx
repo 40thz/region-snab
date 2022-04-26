@@ -7,6 +7,8 @@ import { useGetVacancyByIdQuery } from "../store";
 
 import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
+import vacncyImg from "@images/Jobs/vacancy.png";
+
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";
 
@@ -36,10 +38,7 @@ const Vacancypage = () => {
         <div className="vacancyOverlay"></div>
         <Header />
         <div className="vacancypage__header-image">
-          <img
-            src={`https://region-snab.s3.amazonaws.com/${data?.uploadedFile?.path}`}
-            alt=""
-          />
+          <img src={vacncyImg} alt="" />
         </div>
 
         <div className="container">
