@@ -106,7 +106,7 @@ const ContactForm = () => {
       <div className="contactform__call">
         <div className="container">
           <AboutCall
-            value="узнавайте всю актуальная информация о ценах на нашем телеграмм-канале!"
+            value="узнавайте всю актуальную информацию о ценах на нашем телеграмм-канале!"
             src={callImg}
             btnName="Подписаться"
             btnSubname="@regionsnab24"

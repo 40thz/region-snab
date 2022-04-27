@@ -79,6 +79,7 @@
     }
     .hidecontent {
       padding: 40px 0;
+      line-height: 27px;
     }
   }
   &:hover {
@@ -138,8 +139,6 @@
     &-inside {
       margin-top: 30px;
       padding: 0;
-      &-title {
-      }
       &__list {
         &-item {
           left: 5%;

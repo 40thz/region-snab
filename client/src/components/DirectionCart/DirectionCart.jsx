@@ -12,14 +12,7 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
   return (
     <div style={style} className="direction__cart">
       <div className="direction__cart-top">
-        <div
-          style={{
-            transform:
-              !isMobile &&
-              `translateX(-${parallax / 50}px) translateY(-${parallax / 35}px)`,
-          }}
-          className="direction__cart-image"
-        >
+        <div className="direction__cart-image">
           <img src={image} alt="рг" />
         </div>
         <div className="direction__cart-number">0{index}</div>
@@ -49,12 +42,7 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
         className="direction__cart-inside"
       >
         <div ref={ref} className="hidecontent">
-          <div
-            style={{ transform: !isMobile && `translateX(${parallax / 50}px)` }}
-            className="direction__cart-inside-title"
-          >
-            {aboutTitle}
-          </div>
+          <div className="direction__cart-inside-title">{aboutTitle}</div>
           {list && (
             <div className="direction__cart-inside__list">
               <div className="direction__cart-inside__list-title">

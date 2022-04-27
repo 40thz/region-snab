@@ -6,7 +6,11 @@ import gangImg from "@images/gang.png";
 
 import RS from "../RS";
 
+import { useMobile } from "../../hooks/useMobile";
+
 const Footer = () => {
+  const isMobile = useMobile();
+
   return (
     <footer id="footer">
       <div className="container">
@@ -67,42 +71,88 @@ const Footer = () => {
                 <li>Пн-Вс</li>
                 <li>0:00 - 24:00</li>
               </div>
-              <a
-                target="_blank"
-                href="https://t.me/regionsnab24"
-                className="footer_schedule-tg"
-              >
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="tg-icon"
-                >
-                  <path
-                    d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
-                    fill="#B63A3A"
-                  />
-                </svg>
-                <svg
-                  width="50"
-                  height="50"
-                  viewBox="0 0 50 50"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="tg-icon-border"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
-                    fill="#B63A3A"
-                  />
-                </svg>
-              </a>
+              <div className="footer_tg-row">
+                <div className="footer__title">Telegram канал</div>
+                {!isMobile && (
+                  <a
+                    target="_blank"
+                    href="https://t.me/regionsnab24"
+                    className="footer_schedule-tg"
+                  >
+                    <svg
+                      width="50"
+                      height="50"
+                      viewBox="0 0 50 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="tg-icon"
+                    >
+                      <path
+                        d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
+                        fill="#B63A3A"
+                      />
+                    </svg>
+                    <svg
+                      width="50"
+                      height="50"
+                      viewBox="0 0 50 50"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="tg-icon-border"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
+                        fill="#B63A3A"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
             </ul>
           </div>
+          {isMobile && (
+            <div className="colum">
+              <div className="footer_tg-row">
+                <div className="footer__title">Telegram канал</div>
+                <a
+                  target="_blank"
+                  href="https://t.me/regionsnab24"
+                  className="footer_schedule-tg"
+                >
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="tg-icon"
+                  >
+                    <path
+                      d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
+                      fill="#B63A3A"
+                    />
+                  </svg>
+                  <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="tg-icon-border"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
+                      fill="#B63A3A"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          )}
         </div>
         <div className="footer__bottom">
           <p>Все права защищены</p>

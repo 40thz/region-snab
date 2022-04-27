@@ -33,7 +33,7 @@ const Mapinside = ({ setCordinate, cordinate }) => {
       <div style={parallaxAnim.secondCart}>
         <div className={cn("map__cart", { active: cordinate === 1 })}>
           <div className="map__cart-title">
-            адрес нефтебазы ООО <span>"регионснаб"</span>
+            адрес склада гсм <span>"регионснаб"</span>
           </div>
           <div className="map__cart-subtitle">
             Россия, Красноярский край Емельяновкий район, площадка Восточная
