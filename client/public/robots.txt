@@ -1,3 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /offers/
+Disallow: /news/
+Disallow: /*?*
+Host: https://costabella.ru
+Sitemap: https://costabella.ru/sitemap.xml

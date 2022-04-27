@@ -12,6 +12,8 @@ import vacncyImg from "@images/Jobs/vacancy.png";
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";
 
+import { Helmet } from "react-helmet";
+
 const Vacancypage = () => {
   const navigate = useNavigate();
   const parallax = useParallax();
@@ -33,50 +35,63 @@ const Vacancypage = () => {
     },
   };
   return (
-    <section id="vacancypage">
-      <div className="vacancypage__header">
-        <div className="vacancyOverlay"></div>
-        <Header />
-        <div className="vacancypage__header-image">
-          <img src={vacncyImg} alt="" />
-        </div>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+          {`${isLoding ? "load" : `ООО РегионСнаб - Вакансия ${data?.name}`}`}
+        </title>
 
-        <div className="container">
-          <div className="vacancy__rightside">
-            <div
-              onClick={() => navigate(-1)}
-              className="vacancy__rightside-back"
-            >
-              <svg
-                width="9"
-                height="13"
-                viewBox="0 0 9 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+        <link
+          rel="canonical"
+          href={`https://regionsnab24.ru/vacancy/${params.id}`}
+        />
+      </Helmet>
+      <section id="vacancypage">
+        <div className="vacancypage__header">
+          <div className="vacancyOverlay"></div>
+          <Header />
+          <div className="vacancypage__header-image">
+            <img src={vacncyImg} alt="" />
+          </div>
+
+          <div className="container">
+            <div className="vacancy__rightside">
+              <div
+                onClick={() => navigate(-1)}
+                className="vacancy__rightside-back"
               >
-                <path
-                  d="M1 12.02L7 6.52002L0.999999 1.02002"
-                  stroke="#6A7487"
-                  strokeWidth="2"
-                />
-              </svg>
-              Назад
+                <svg
+                  width="9"
+                  height="13"
+                  viewBox="0 0 9 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 12.02L7 6.52002L0.999999 1.02002"
+                    stroke="#6A7487"
+                    strokeWidth="2"
+                  />
+                </svg>
+                Назад
+              </div>
+              <div className="vacancy__rightside-title">{data?.name}</div>
             </div>
-            <div className="vacancy__rightside-title">{data?.name}</div>
           </div>
         </div>
-      </div>
-      <div className="container">
-        {isLoding ? "load" : <VacancyAbout data={data} />}
-      </div>
-      <div style={parallaxAnim.callSection} className="container">
-        <AboutCall
-          value="В нашей команде профессионалов не хватает именно Вас"
-          src={callImg}
-          styleIcon={parallaxAnim.callIcon}
-        />
-      </div>
-    </section>
+        <div className="container">
+          {isLoding ? "load" : <VacancyAbout data={data} />}
+        </div>
+        <div style={parallaxAnim.callSection} className="container">
+          <AboutCall
+            value="В нашей команде профессионалов не хватает именно Вас"
+            src={callImg}
+            styleIcon={parallaxAnim.callIcon}
+          />
+        </div>
+      </section>
+    </>
   );
 };
 
