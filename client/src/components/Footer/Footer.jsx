@@ -30,8 +30,8 @@ const Footer = () => {
               <a href="tel:83912191597">
                 <li>8 391 219-15-97 (отдел продаж)</li>
               </a>
-              <a href="tel:83912191597">
-                <li>8 391 219-15-97 (отдел кадров)</li>
+              <a href="tel:83912089440">
+                <li>8 391 208-94-40 (отдел кадров)</li>
               </a>
               <a href="mailto:info@regionsnab24.ru ">
                 <li>info@regionsnab24.ru </li>
