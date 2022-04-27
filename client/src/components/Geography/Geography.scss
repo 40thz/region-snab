@@ -1,6 +1,7 @@
 section#geography {
   position: relative;
   background: $white;
+  overflow: hidden;
   .krsk:hover ~ .geography__map {
     opacity: 0;
   }
