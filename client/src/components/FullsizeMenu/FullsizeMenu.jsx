@@ -13,7 +13,7 @@ const FullsizeMenu = ({ active, onClick }) => {
           <li onClick={onClick}>О компании</li>
         </Link>
         <Link to="/directions">
-          <li onClick={onClick}>Направления</li>
+          <li onClick={onClick}>Деятельность</li>
         </Link>
         <Link to="/contacts">
           <li onClick={onClick}>Контакты</li>

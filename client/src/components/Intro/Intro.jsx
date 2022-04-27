@@ -16,8 +16,7 @@ const Intro = () => {
         />
         <div className="intro">
           <div className="intro__title">
-            Ваш
-            <span>надежный поставщик</span>
+            Ваш&nbsp;<span>надежный поставщик&nbsp;</span>
             нефтепродуктов
           </div>
           <div className="readmore-btn">

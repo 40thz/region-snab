@@ -50,14 +50,14 @@ const Footer = () => {
           <div className="colum">
             <div className="footer__title">Картка сайта</div>
             <ul>
-              <a href="#">
+              <Link to="/">
                 <li>Главная</li>
-              </a>
+              </Link>
               <Link to="/about">
                 <li>О компании</li>
               </Link>
               <Link to="/directions">
-                <li>Направления деятельности</li>
+                <li>Деятельность</li>
               </Link>
               <Link to="/contacts">
                 <li>Контакты</li>
