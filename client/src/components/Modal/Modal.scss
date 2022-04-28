@@ -99,3 +99,26 @@
     pointer-events: all;
   }
 }
+
+@media (max-width: 869px) {
+  .modal__content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    &-left,
+    &-right {
+      width: 100%;
+    }
+    &-right-inside {
+      z-index: 12;
+      right: 12px;
+      top: -100px;
+      height: auto;
+      padding: 20px 10px 50px 10px;
+      .button {
+        bottom: -10%;
+      }
+    }
+  }
+}

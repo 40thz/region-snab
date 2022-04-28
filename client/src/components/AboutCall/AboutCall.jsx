@@ -22,11 +22,7 @@ const AboutCall = ({
       <div className="about__title">
         <div>{value}</div>
         <div>
-          <a
-            target="_blank"
-            href={to ? to : "tel:+73912191597"}
-            className="about-btn"
-          >
+          <a href={to ? to : "tel:+73912191597"} className="about-btn">
             <div className="about-btn-main">
               <img src={buttonIcon} alt="Кнопка" />
               {btnName}

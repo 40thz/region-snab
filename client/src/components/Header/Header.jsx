@@ -23,7 +23,11 @@ const Header = ({ dark }) => {
     <>
       <header
         id="header"
-        className={cn({ delay: !menuActive, bgRed: menuActive, dark: dark })}
+        className={cn({
+          delay: !menuActive,
+          bgRed: menuActive,
+          dark: dark && !menuActive,
+        })}
       >
         <div className="container">
           <nav className="header__menu">
