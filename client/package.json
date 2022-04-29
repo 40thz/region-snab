@@ -34,8 +34,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject",
-    "postbuild": "react-snap"
+    "eject": "craco eject"
   },
   "eslintConfig": {
     "extends": [
