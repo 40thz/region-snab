@@ -31,11 +31,12 @@ const options = {
     sliderDescription: {
       type: "richtext",
     },
+    uploadedFile: {},
   },
 };
 
 module.exports = {
   resource: VacancyModel,
   options,
-  features,
+  // features,
 };

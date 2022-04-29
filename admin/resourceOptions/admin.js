@@ -1,23 +1,23 @@
-const AdminJS = require('adminjs')
-const { Admin } = require('../../models/Admin')
+const AdminJS = require("adminjs");
+const { Admin } = require("../../models/Admin");
 
 const {
   before: passwordBeforeHook,
   after: passwordAfterHook,
-} = require('../actions/password.hook')
+} = require("../actions/password.hook");
 
 /** @type {AdminJS.ResourceOtions} */
 const options = {
   parent: {
-    name: 'Администрирование',
-    icon: 'UserAdmin',
+    name: "Администрирование",
+    icon: "UserAdmin",
   },
   properties: {
     encryptedPassword: {
       isVisible: false,
     },
     password: {
-      type: 'password',
+      type: "password",
     },
   },
   actions: {
@@ -30,9 +30,9 @@ const options = {
       after: passwordAfterHook,
     },
   },
-}
+};
 
 module.exports = {
   options,
   resource: Admin,
-}
+};

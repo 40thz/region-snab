@@ -1,7 +1,7 @@
 const { model, Schema } = require("mongoose");
 
 const VacancySchema = new Schema({
-  uploadedFile: JSON,
+  uploadedFile: { type: String },
   name: { type: String, required: true },
   sliderDescription: { type: String, required: true },
   description: { type: String, required: true },
