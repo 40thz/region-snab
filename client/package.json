@@ -25,6 +25,7 @@
     "react-scroll-trigger": "^0.6.13",
     "react-simple-animate": "^3.3.12",
     "react-slick": "^0.28.1",
+    "react-snap": "^1.23.0",
     "react-yandex-maps": "^4.6.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
@@ -33,7 +34,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [

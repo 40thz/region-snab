@@ -24,8 +24,10 @@ const VacancyAbout = ({ data }) => {
         <div className="vacancy__about-conditions">
           <div className="vacancy__about-conditions-title">Условия работы:</div>
           <div className="vacancy__about-conditions-list">
-            {data?.conditions.map((item) => (
-              <div className="vacancy__about-condition">{item}</div>
+            {data?.conditions.map((item, i) => (
+              <div key={i} className="vacancy__about-condition">
+                {item}
+              </div>
             ))}
           </div>
           <div className="vacancy__about-conditions-title">

@@ -24,7 +24,7 @@ const Homepage = () => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>ООО РегионСнаб - Главная</title>
+        <title>ООО РегионСнаб - Поставка нефтепродуктов</title>
         <link rel="canonical" href="https://regionsnab24.ru/" />
         <meta
           name="keywords"

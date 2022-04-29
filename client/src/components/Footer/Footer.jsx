@@ -101,8 +101,8 @@ const Footer = () => {
                       id="tg-icon-border"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
                         fill="#B63A3A"
                       />
@@ -143,8 +143,8 @@ const Footer = () => {
                     id="tg-icon-border"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
                       fill="#B63A3A"
                     />

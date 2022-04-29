@@ -48,8 +48,10 @@ const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
               <div className="direction__cart-inside__list-title">
                 Оптовые поставки нефтепродуктов осуществляются:
               </div>
-              {list.map((item) => (
-                <div className="direction__cart-inside__list-item">{item}</div>
+              {list.map((item, i) => (
+                <div key={i} className="direction__cart-inside__list-item">
+                  {item}
+                </div>
               ))}
             </div>
           )}
