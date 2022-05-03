@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 Host: https://regionsnab24.ru/
-Sitemap: https://regionsnab24.ru/uploads/sitemap.xml
+Sitemap: https://regionsnab24.ru/sitemap.xml
