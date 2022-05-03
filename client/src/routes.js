@@ -17,6 +17,7 @@ export const useRoutes = () => {
   const location = useLocation();
   React.useLayoutEffect(() => {
     window.scrollTo(0, 0);
+    window.ym('88656818', 'hit', window.location.href)
   }, [location.pathname]);
 
   React.useEffect(() => {
