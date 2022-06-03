@@ -1,8 +1,13 @@
 import React from "react";
-
-const Pattern = ({ active }) => {
+import cn from "classnames";
+const Pattern = ({ active, isLoad }) => {
   return (
-    <div className={`pattern ${active && "active"}`}>
+    <div
+      className={cn("pattern", {
+        active: active,
+        gobottom: isLoad,
+      })}
+    >
       <svg
         viewBox="0 0 1868 655"
         fill="none"

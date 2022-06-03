@@ -13,11 +13,9 @@ const Preloader = () => {
   const preloader = useSelector((state) => state.preloader);
 
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      removeLoader();
+    setTimeout(() => {
+      document.body.style.overflowY = "auto";
     }, 4000);
-    document.body.style.overflowY = "auto";
-    return clearTimeout(timer);
   }, [preloader]);
 
   return (
@@ -27,7 +25,7 @@ const Preloader = () => {
         className={cn("preloader", { fadeOut: preloader.animation })}
       >
         <Logo className={cn({ gotop: preloader.animation })} />
-        <Pattern />
+        <Pattern isLoad={preloader.animation} />
       </div>
     </>
   );
