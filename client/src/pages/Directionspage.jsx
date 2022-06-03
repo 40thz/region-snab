@@ -5,9 +5,9 @@ import Header from "../components/Header/Header";
 import AboutCall from "../components/AboutCall/AboutCall";
 
 import helmetImg from "@images/Directions/helmet.png";
-import imgage1 from "@images/Directions/direction1.png";
-import imgage3 from "@images/Directions/direction2.png";
-import imgage2 from "@images/Directions/direction3.png";
+import imgage1 from "@images/Directions/direction1.jpg";
+import imgage3 from "@images/Directions/direction2.jpg";
+import imgage2 from "@images/Directions/direction3.jpg";
 
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";

@@ -6,11 +6,12 @@ import PreviewText from "../PreviewText/PreviewText";
 import AdvantageSliderItem from "./AdvantageSliderItem/AdvantageSliderItem";
 import caseImg from "@images/AdvantageItem/case.svg";
 
-import gallery1 from "@images/Gallery/1.png";
-import gallery2 from "@images/Gallery/2.png";
-import gallery3 from "@images/Gallery/3.png";
-import gallery4 from "@images/Gallery/4.png";
-import gallery5 from "@images/Gallery/6.png";
+import gallery1 from "@images/AdvantageSlider/1.jpg";
+import gallery2 from "@images/AdvantageSlider/2.jpg";
+import gallery3 from "@images/AdvantageSlider/3.jpg";
+import gallery4 from "@images/AdvantageSlider/4.jpg";
+import gallery5 from "@images/AdvantageSlider/5.jpg";
+import gallery6 from "@images/AdvantageSlider/6.jpg";
 
 const AdvantageSlider = () => {
   const [bgSlider, setbgSlider] = React.useState();
@@ -64,6 +65,9 @@ const AdvantageSlider = () => {
           </div>
           <div className="advantageSliderBg">
             <img src={gallery5} alt="Регион снаб" />
+          </div>
+          <div className="advantageSliderBg">
+            <img src={gallery6} alt="Регион снаб" />
           </div>
         </Slider>
       </div>

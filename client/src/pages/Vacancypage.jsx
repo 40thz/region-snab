@@ -7,7 +7,7 @@ import { useGetVacancyByIdQuery } from "../store";
 
 import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
-import vacncyImg from "@images/Jobs/vacancy.png";
+import vacncyImg from "@images/vacancy.jpg";
 
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";
@@ -48,11 +48,14 @@ const Vacancypage = () => {
         />
       </Helmet>
       <section id="vacancypage">
-        <div className="vacancypage__header">
+        <div
+          style={{ background: `url(${data?.uploadedFile}) no-repeat ` }}
+          className="vacancypage__header"
+        >
           <div className="vacancyOverlay"></div>
           <Header />
           <div className="vacancypage__header-image">
-            <img src={vacncyImg} alt="" />
+            <img src={data?.uploadedFile} alt="" />
           </div>
 
           <div className="container">

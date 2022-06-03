@@ -1,12 +1,8 @@
 import React, { useRef } from "react";
 import cn from "classnames";
-import { useParallax } from "../../hooks/useParallax";
-import { useMobile } from "../../hooks/useMobile";
 
 const DirectionCart = ({ image, index, title, aboutTitle, list, style }) => {
   const [showContent, setShowContent] = React.useState(false);
-  const parallax = useParallax();
-  const isMobile = useMobile();
   const ref = useRef();
 
   return (

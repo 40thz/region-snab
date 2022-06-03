@@ -1,9 +1,9 @@
 .vacancy {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   color: $white;
+  gap: 40px;
   &-icon {
-    width: 454px;
     img {
       max-width: 100%;
     }

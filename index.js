@@ -20,6 +20,7 @@ const adminRouter = buildAdminRouter(admin);
 app.use(cors());
 app.use(express.json({ extended: true }));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
 // ==== API ====
 app.use(admin.options.rootPath, adminRouter);
 app.use("/api/vacancy", vacancyRouter);

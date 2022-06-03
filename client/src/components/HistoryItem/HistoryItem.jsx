@@ -1,12 +1,15 @@
 import React from "react";
-import historyImg from "@images/Gallery/4.png";
 
-const HistoryItem = ({ year, items }) => {
+const HistoryItem = ({ image, year, items }) => {
   return (
     <div className="historyitem">
       <div className="historyitem-year">{year}</div>
       <div className="historyitem-image">
-        <img src={historyImg} alt="Регионснаб" />
+        <img
+          style={{ transform: `rotate(${image.rotate}deg)` }}
+          src={image.src}
+          alt="Регионснаб"
+        />
       </div>
       <div className="historyitem-chronology">
         {items.map((item, i) => (

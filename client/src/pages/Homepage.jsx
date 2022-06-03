@@ -6,12 +6,13 @@ import Intro from "../components/Intro/Intro";
 import Jobs from "../components/Jobs/Jobs";
 import ArrowUp from "../components/ArrowUp/ArrowUp";
 import Header from "../components/Header/Header";
-
+import Showreal from "../components/Showreal/Showreal";
 import { Helmet } from "react-helmet";
 
 const Homepage = () => {
   const [offsetY, setOffsetY] = React.useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
+  const videoSize = document.querySelector("video")?.clientHeight;
 
   React.useEffect(() => {
     document.body.style.background = "#1d232e";
@@ -35,8 +36,9 @@ const Homepage = () => {
           content="ООО “РегионСнаб” - Ваш надежный поставщик нефтепродуктов в Красноярском крае и близлежащих регионах. Опыт оптовой реализации с 2011 г. Гарантируем своевременную и безопасную доставку любого вида топлива"
         />
       </Helmet>
-      <div className="bgHome"></div>
-      <div className="overlay"></div>
+      <Showreal />
+      {/* <div className="bgHome"></div> */}
+      <div style={{ height: `${videoSize}px` }} className="overlay"></div>
       <ArrowUp show={offsetY >= 500} />
       <Header />
       <Intro />

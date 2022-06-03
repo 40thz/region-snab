@@ -4,13 +4,16 @@ import cn from "classnames";
 import BlockInfo from "../BlockInfo/BlockInfo";
 import PreviewText from "../PreviewText/PreviewText";
 
-import gallery1 from "@images/Gallery/1.png";
-import gallery2 from "@images/Gallery/2.png";
-import gallery3 from "@images/Gallery/3.png";
-import gallery4 from "@images/Gallery/4.png";
-import gallery5 from "@images/Gallery/5.png";
-import gallery6 from "@images/Gallery/6.png";
-
+import gallery1 from "@images/Gallery/1.jpg";
+import gallery2 from "@images/Gallery/2.jpg";
+import gallery3 from "@images/Gallery/3.jpg";
+import gallery4 from "@images/Gallery/4.jpg";
+import gallery5 from "@images/Gallery/5.jpg";
+import gallery6 from "@images/Gallery/6.jpg";
+import gallery7 from "@images/Gallery/7.jpg";
+import gallery8 from "@images/Gallery/8.jpg";
+import gallery9 from "@images/Gallery/9.jpg";
+import gallery10 from "@images/Gallery/10.jpg";
 const Gallery = () => {
   const [showGallery, setShowGallery] = React.useState(false);
 
@@ -55,6 +58,18 @@ const Gallery = () => {
                   </div>
                   <div className="gallery__inside-item">
                     <img src={gallery6} alt="Картинка" />
+                  </div>
+                  <div className="gallery__inside-item">
+                    <img src={gallery7} alt="Картинка" />
+                  </div>
+                  <div className="gallery__inside-item">
+                    <img src={gallery8} alt="Картинка" />
+                  </div>
+                  <div className="gallery__inside-item">
+                    <img src={gallery9} alt="Картинка" />
+                  </div>
+                  <div className="gallery__inside-item">
+                    <img src={gallery10} alt="Картинка" />
                   </div>
                 </>
               )}
