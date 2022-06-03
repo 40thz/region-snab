@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7c755dde.css",
-    "main.js": "/static/js/main.9795697a.js",
+    "main.css": "/static/css/main.0f05998a.css",
+    "main.js": "/static/js/main.ab31e74d.js",
     "static/media/vacancy.jpg": "/static/media/vacancy.81f6a9daa55db9b314f9.jpg",
     "static/media/bg.png": "/static/media/bg.8bb3729d15032b8338b3.png",
     "static/media/bg.jpg": "/static/media/bg.9223e3bacd5eeae9b6e9.jpg",
@@ -50,11 +50,11 @@
     "static/media/file.svg": "/static/media/file.71933aa52fcdc8cdcb90f2e6999906ac.svg",
     "static/media/map-marker.svg": "/static/media/map-marker.dd3314eb0cf1b5211d44695407ea6fb5.svg",
     "static/media/location.svg": "/static/media/location.66f020be16a124982eebfb181308acd5.svg",
-    "main.7c755dde.css.map": "/static/css/main.7c755dde.css.map",
-    "main.9795697a.js.map": "/static/js/main.9795697a.js.map"
+    "main.0f05998a.css.map": "/static/css/main.0f05998a.css.map",
+    "main.ab31e74d.js.map": "/static/js/main.ab31e74d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7c755dde.css",
-    "static/js/main.9795697a.js"
+    "static/css/main.0f05998a.css",
+    "static/js/main.ab31e74d.js"
   ]
 }
