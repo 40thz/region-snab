@@ -4,6 +4,8 @@
   left: 0;
   width: 100%;
   z-index: -1;
+  max-width: 100vw;
+  max-height: 100vh;
   video {
     object-fit: cover;
     width: 100vw;

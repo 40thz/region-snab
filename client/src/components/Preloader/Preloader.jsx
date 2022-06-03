@@ -3,13 +3,10 @@ import Logo from "../Logo/Logo";
 import Pattern from "../Pattern/Pattern";
 
 import { useSelector } from "react-redux";
-import { useAction } from "../../hooks/useActions";
 
 import cn from "classnames";
 
 const Preloader = () => {
-  const { removeLoader } = useAction();
-
   const preloader = useSelector((state) => state.preloader);
 
   React.useEffect(() => {
