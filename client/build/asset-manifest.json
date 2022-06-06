@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.c0f6cbe2.css",
-    "main.js": "/static/js/main.39a6e9b3.js",
+    "main.js": "/static/js/main.5de85d5d.js",
     "static/media/showreal.mp4": "/static/media/showreal.630d8c84b78bd42caaee.mp4",
-    "static/media/6.jpg": "/static/media/6.1354f8225b1b6c0f0e1e.jpg",
-    "static/media/2.jpg": "/static/media/2.f83bae2d920615fcc574.jpg",
     "static/media/vacancy.jpg": "/static/media/vacancy.81f6a9daa55db9b314f9.jpg",
     "static/media/bg.png": "/static/media/bg.8bb3729d15032b8338b3.png",
-    "static/media/1.jpg": "/static/media/1.9541c3bec3ba8699bfde.jpg",
+    "static/media/4.jpg": "/static/media/4.d12b885b84cf6791a9ef.jpg",
     "static/media/bg.jpg": "/static/media/bg.9223e3bacd5eeae9b6e9.jpg",
     "static/media/5.jpg": "/static/media/5.50bdc2ba32aca63aaa7d.jpg",
+    "static/media/1.jpg": "/static/media/1.9541c3bec3ba8699bfde.jpg",
     "static/media/3.jpg": "/static/media/3.9882c262e003af5df22d.jpg",
     "static/media/staticPattern.png": "/static/media/staticPattern.6d50b50a1495795b95c4.png",
     "static/media/countimg.jpg": "/static/media/countimg.e5669ece7361a59bb192.jpg",
     "static/media/about-image.jpg": "/static/media/about-image.199c762977b4581f4978.jpg",
-    "static/media/4.jpg": "/static/media/4.efd340e257503f4886a6.jpg",
     "static/media/9.jpg": "/static/media/9.165bb1a4e9097373c4ae.jpg",
+    "static/media/2.jpg": "/static/media/2.f83bae2d920615fcc574.jpg",
     "static/media/8.jpg": "/static/media/8.e1e0789029eb67e6406c.jpg",
     "static/media/carsmall.png": "/static/media/carsmall.123f64fa5c839ba3bf27.png",
     "static/media/car.png": "/static/media/car.3bcaabf3fb33b6bc3ff2.png",
     "static/media/badge.png": "/static/media/badge.e499aa6e0e189f6ba82d.png",
     "static/media/direction1.jpg": "/static/media/direction1.1f1f47cc2da462e572d2.jpg",
+    "static/media/6.jpg": "/static/media/6.1354f8225b1b6c0f0e1e.jpg",
     "static/media/bgGeography.jpg": "/static/media/bgGeography.32434f6f271575dfc3b1.jpg",
     "static/media/10.jpg": "/static/media/10.4a13f8ea20ec227e529d.jpg",
     "static/media/callimg.png": "/static/media/callimg.fa7aba727755636a504c.png",
@@ -52,10 +52,10 @@
     "static/media/map-marker.svg": "/static/media/map-marker.dd3314eb0cf1b5211d44695407ea6fb5.svg",
     "static/media/location.svg": "/static/media/location.66f020be16a124982eebfb181308acd5.svg",
     "main.c0f6cbe2.css.map": "/static/css/main.c0f6cbe2.css.map",
-    "main.39a6e9b3.js.map": "/static/js/main.39a6e9b3.js.map"
+    "main.5de85d5d.js.map": "/static/js/main.5de85d5d.js.map"
   },
   "entrypoints": [
     "static/css/main.c0f6cbe2.css",
-    "static/js/main.39a6e9b3.js"
+    "static/js/main.5de85d5d.js"
   ]
 }
