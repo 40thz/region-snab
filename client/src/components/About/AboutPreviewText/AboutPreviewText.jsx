@@ -1,7 +1,12 @@
-const AboutPreviewText = ({ offsetY }) => {
+import { useParallax } from "@hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
+
+const AboutPreviewText = () => {
+  const isMobile = useMobile();
+  const offsetY = useParallax();
   return (
     <div
-      style={{ transform: `translateX(-${offsetY / 18}px)` }}
+      style={{ transform: !isMobile && `translateX(-${offsetY / 18}px)` }}
       className="about__inside-prevText"
     >
       <span>ООО “РегионСнаб” </span> с 2011 года ежегодно увеличивает свое

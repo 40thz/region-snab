@@ -5,10 +5,13 @@ import countImg from "@images/AboutIntro/countimg.jpg";
 
 import ScrollTrigger from "react-scroll-trigger";
 import { useMobile } from "../../hooks/useMobile";
+import { useParallax } from "../../hooks/useParallax";
 
-const AboutCounter = ({ offsetY }) => {
-  const [startCounter, setStartCounter] = React.useState(false);
+const AboutCounter = () => {
   const isMobile = useMobile();
+  const offsetY = useParallax();
+
+  const [startCounter, setStartCounter] = React.useState(false);
 
   const parallax = {
     counter: { transform: `translateY(-${offsetY / 3}px)` },
@@ -63,7 +66,9 @@ const AboutCounter = ({ offsetY }) => {
           </ScrollTrigger>
         </div>
         <div className="colum">
-          <img src={countImg} alt="регион снаб" />
+          <div className="aboutCounter-img">
+            <img src={countImg} alt="регион снаб" />
+          </div>
         </div>
       </div>
     </section>

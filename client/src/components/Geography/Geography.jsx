@@ -1,12 +1,18 @@
 import React from "react";
-import PreviewText from "../PreviewText/PreviewText";
-import marker from "@images/Geography/map-marker.svg";
-import RussiaMap from "./RussiaMap";
+
 import ScrollTrggier from "react-scroll-trigger";
-import { useMobile } from "../../hooks/useMobile";
 import cn from "classnames";
 
-const Geography = ({ offsetY }) => {
+import { useMobile } from "@hooks/useMobile";
+import { useParallax } from "@hooks/useParallax";
+
+import marker from "@images/Geography/map-marker.svg";
+
+import RussiaMap from "@components/Geography/RussiaMap";
+import PreviewText from "@components/PreviewText/PreviewText";
+
+const Geography = () => {
+  const offsetY = useParallax();
   const [regions, setRegion] = React.useState({
     krsk: false,
     irkutsk: false,

@@ -12,7 +12,7 @@ import imgage2 from "@images/Directions/direction3.jpg";
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";
 
-import { Helmet } from "react-helmet";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 
 const Directionspage = () => {
   const parallax = useParallax();
@@ -40,19 +40,21 @@ const Directionspage = () => {
   };
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>ООО РегионСнаб - Направление деятельности</title>
-        <link rel="canonical" href="https://regionsnab24.ru/directions" />
-        <meta
-          name="keywords"
-          content="РегионСнаб, нефтепродукты, хранение, склад, поставщики, Красноярск, доставка, поставки, нефть, красноярский край, перевозка, склад ГСМ, ГСМ, перевалка, купить нефтепродукты, топливо"
-        />
-        <meta
-          name="description"
-          content="ООО «РегионСнаб» осуществляет реализацию нефтепродуктов, перевозку автотранспортом, перевалку на собственной нефтебазе. Опыт работы с 2011 г."
-        />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>ООО РегионСнаб - Направление деятельности</title>
+          <link rel="canonical" href="https://regionsnab24.ru/directions" />
+          <meta
+            name="keywords"
+            content="РегионСнаб, нефтепродукты, хранение, склад, поставщики, Красноярск, доставка, поставки, нефть, красноярский край, перевозка, склад ГСМ, ГСМ, перевалка, купить нефтепродукты, топливо"
+          />
+          <meta
+            name="description"
+            content="ООО «РегионСнаб» осуществляет реализацию нефтепродуктов, перевозку автотранспортом, перевалку на собственной нефтебазе. Опыт работы с 2011 г."
+          />
+        </Helmet>
+      </HelmetProvider>
       <section id="directions">
         <div className="bgDirection"></div>
         <Header dark />

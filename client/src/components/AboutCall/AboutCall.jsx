@@ -1,6 +1,8 @@
 import React from "react";
 import buttonIcon from "@images/button-icon.png";
 
+import { useParallax } from "@hooks/useParallax";
+
 import RS from "../RS";
 
 const AboutCall = ({
@@ -12,9 +14,15 @@ const AboutCall = ({
   btnSubname = "+7 (391) 219-15-97",
   styleIcon = {},
   to,
+  parallax = false,
 }) => {
+  const offsetY = useParallax();
+
+  const styles = {
+    transform: parallax && `translateY(-${offsetY / 10}px)`,
+  };
   return (
-    <div className="about__call">
+    <div style={styles} className="about__call">
       <div style={styleIcon} className="about__call-image">
         <img src={src} alt="" />
       </div>

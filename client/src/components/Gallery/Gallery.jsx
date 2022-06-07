@@ -1,6 +1,8 @@
 import React from "react";
 import cn from "classnames";
 
+import { useMobile } from "@hooks/useMobile";
+
 import BlockInfo from "../BlockInfo/BlockInfo";
 import PreviewText from "../PreviewText/PreviewText";
 
@@ -14,9 +16,11 @@ import gallery7 from "@images/Gallery/7.jpg";
 import gallery8 from "@images/Gallery/8.jpg";
 import gallery9 from "@images/Gallery/9.jpg";
 import gallery10 from "@images/Gallery/10.jpg";
+import Button from "../Button/Button";
+
 const Gallery = () => {
   const [showGallery, setShowGallery] = React.useState(false);
-
+  const isMobile = useMobile();
   const option = {
     sticky: showGallery,
   };
@@ -34,6 +38,7 @@ const Gallery = () => {
                 title="у нас всегда есть"
                 titleRed="отличное предложение для вас"
                 subTitle="Наша команда профессионалов, современное безопасное оборудование и гарантия качества нефтепродуктов - Ваш повод сотрудничать с РегионСнаб"
+                btn={!isMobile}
               />
             </div>
           </div>
@@ -72,6 +77,12 @@ const Gallery = () => {
                     <img src={gallery10} alt="Картинка" />
                   </div>
                 </>
+              )}
+              {isMobile && (
+                <Button
+                  onClick={() => setShowGallery(!showGallery)}
+                  value="Все фото"
+                />
               )}
             </div>
           </div>

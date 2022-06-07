@@ -7,12 +7,11 @@ import { useGetVacancyByIdQuery } from "../store";
 
 import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
-import vacncyImg from "@images/vacancy.jpg";
 
 import { useParallax } from "../hooks/useParallax";
 import { useMobile } from "../hooks/useMobile";
 
-import { Helmet } from "react-helmet";
+import { HelmetProvider, Helmet } from "react-helmet-async";
 
 const Vacancypage = () => {
   const navigate = useNavigate();
@@ -36,17 +35,19 @@ const Vacancypage = () => {
   };
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>
-          {`${isLoding ? "load" : `ООО РегионСнаб - Вакансия ${data?.name}`}`}
-        </title>
+      <HelmetProvider>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>
+            {`${isLoding ? "load" : `ООО РегионСнаб - Вакансия ${data?.name}`}`}
+          </title>
 
-        <link
-          rel="canonical"
-          href={`https://regionsnab24.ru/vacancy/${params.id}`}
-        />
-      </Helmet>
+          <link
+            rel="canonical"
+            href={`https://regionsnab24.ru/vacancy/${params.id}`}
+          />
+        </Helmet>
+      </HelmetProvider>
       <section id="vacancypage">
         <div
           style={{ background: `url(${data?.uploadedFile}) no-repeat ` }}

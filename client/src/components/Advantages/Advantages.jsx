@@ -13,10 +13,12 @@ import virifyIcon from "@images/AdvantageItem/verify.svg";
 import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "../../hooks/useMobile";
+import { useParallax } from "../../hooks/useParallax";
 
-const Advantages = ({ offsetY }) => {
+const Advantages = () => {
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
+  const offsetY = useParallax();
   const sections = document.querySelector("#about")?.scrollHeight;
   const carColum = document.querySelector("#carcolum")?.scrollWidth + 400;
 

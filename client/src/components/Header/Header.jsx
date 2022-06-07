@@ -11,7 +11,7 @@ const Header = ({ dark }) => {
   const isMobile = useMobile();
   const [menuActive, setMenuActive] = React.useState(false);
 
-  const showMenu = (logo) => {
+  const showMenu = () => {
     setMenuActive(!menuActive);
     document.body.style.overflow = menuActive ? "auto" : "hidden";
   };

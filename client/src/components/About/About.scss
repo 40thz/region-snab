@@ -90,9 +90,9 @@
       padding: 30px;
       transform: translateY(10%);
       .rs {
-        font-size: 160px;
-        bottom: -18%;
-        left: 47%;
+        font-size: 230px;
+        bottom: -16%;
+        left: 44%;
         transform: translateX(-50%);
       }
     }
@@ -111,6 +111,9 @@
       &-content {
         padding: 0;
       }
+    }
+    .about__inside-logo {
+      margin: 0px 0px 35px 0;
     }
   }
 }

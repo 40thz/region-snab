@@ -1,7 +1,7 @@
 main {
   position: relative;
   z-index: 2;
-  padding-top: 15%;
+  padding-top: 22%;
   .button {
     background: #353a44;
   }
@@ -11,9 +11,6 @@ main {
       min-width: 44px;
       min-height: 44px;
     }
-  }
-  .pattern {
-    transform: translateY(10%);
   }
 }
 .intro {
@@ -36,13 +33,13 @@ main {
 
 @media (max-width: $tablet-width) {
   main {
-    padding-top: 35%;
+    padding-top: 40%;
   }
 }
 
 @media (max-width: 869px) {
   main {
-    padding-top: 10%;
+    padding-top: 25%;
   }
   .intro__title {
     font-size: 24px;

@@ -30,6 +30,9 @@
 }
 
 @media (max-width: $mobile-width) {
+  #jobs {
+    padding: 50px 0;
+  }
   .jobs__inside {
     display: flex;
     flex-direction: column;

@@ -39,9 +39,7 @@ const Footer = () => {
               <li>Красноярск, Краснодарская, 40Д</li>
             </ul>
 
-            <div style={{ marginTop: "80px" }} className="footer__title">
-              Время работы (офис)
-            </div>
+            <div className="footer__title mt-title">Время работы (офис)</div>
             <ul>
               <li>Пн-Пт</li>
               <li>9:00 - 18:00</li>
@@ -63,7 +61,7 @@ const Footer = () => {
                 <li>Контакты</li>
               </Link>
             </ul>
-            <div style={{ marginTop: "80px" }} className="footer__title">
+            <div className="footer__title mt-title">
               Время работы (склад ГСМ, отдел логистики и транспорта)
             </div>
             <ul className="footer_schedule">
@@ -72,42 +70,44 @@ const Footer = () => {
                 <li>0:00 - 24:00</li>
               </div>
               <div className="footer_tg-row">
-                <div className="footer__title">Telegram канал</div>
                 {!isMobile && (
-                  <a
-                    target="_blank"
-                    href="https://t.me/regionsnab24"
-                    className="footer_schedule-tg"
-                  >
-                    <svg
-                      width="50"
-                      height="50"
-                      viewBox="0 0 50 50"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="tg-icon"
+                  <>
+                    <div className="footer__title">Telegram канал</div>
+                    <a
+                      target="_blank"
+                      href="https://t.me/regionsnab24"
+                      className="footer_schedule-tg"
                     >
-                      <path
-                        d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
-                        fill="#B63A3A"
-                      />
-                    </svg>
-                    <svg
-                      width="50"
-                      height="50"
-                      viewBox="0 0 50 50"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      id="tg-icon-border"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
-                        fill="#B63A3A"
-                      />
-                    </svg>
-                  </a>
+                      <svg
+                        width="50"
+                        height="50"
+                        viewBox="0 0 50 50"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="tg-icon"
+                      >
+                        <path
+                          d="M34.1875 39L40 11L9 23.6667L17.3958 27.6667L34.1875 17L21.9167 29.6667L34.1875 39Z"
+                          fill="#B63A3A"
+                        />
+                      </svg>
+                      <svg
+                        width="50"
+                        height="50"
+                        viewBox="0 0 50 50"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        id="tg-icon-border"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M3.25646 3.25646H46.7435V46.7435H13.2038V50H46.7435H50V46.7435V3.25646V0H46.7435H3.25646H0V3.25646V39.9371H3.25646V3.25646Z"
+                          fill="#B63A3A"
+                        />
+                      </svg>
+                    </a>
+                  </>
                 )}
               </div>
             </ul>
