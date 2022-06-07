@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import SliderFooter from "../SliderFooter/SliderFooter";
-import Pattern from "../Pattern/Pattern";
-import PreviewText from "../PreviewText/PreviewText";
+import SliderFooter from "@components/SliderFooter/SliderFooter";
+import Pattern from "@components/Pattern/Pattern";
+import PreviewText from "@components/PreviewText/PreviewText";
 import AdvantageSliderItem from "./AdvantageSliderItem/AdvantageSliderItem";
 import caseImg from "@images/AdvantageItem/case.svg";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
-import PreviewText from "../PreviewText/PreviewText";
-import RS from "../RS";
+import PreviewText from "@components/PreviewText/PreviewText";
+import RS from "@components/RS";
 import buttonIcon from "@images/button-icon.png";
 
 import badgeImg from "@images/Company/badge.png";

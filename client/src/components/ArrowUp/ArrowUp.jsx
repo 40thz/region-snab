@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import { useParallax } from "../../hooks/useParallax";
+import { useParallax } from "@hooks/useParallax";
 
 const ArrowUp = () => {
   const offset = useParallax();

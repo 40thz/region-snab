@@ -1,15 +1,15 @@
 import React from "react";
-import Header from "../components/Header/Header";
-import AboutCall from "../components/AboutCall/AboutCall";
+import Header from "@components/Header/Header";
+import AboutCall from "@components/AboutCall/AboutCall";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetVacancyByIdQuery } from "../store";
 
-import VacancyAbout from "../components/VacancyAbout/VacancyAbout";
+import VacancyAbout from "@components/VacancyAbout/VacancyAbout";
 import callImg from "@images/Jobs/callimg.png";
 
-import { useParallax } from "../hooks/useParallax";
-import { useMobile } from "../hooks/useMobile";
+import { useParallax } from "@hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
 
 import { HelmetProvider, Helmet } from "react-helmet-async";
 

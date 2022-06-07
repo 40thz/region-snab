@@ -3,8 +3,9 @@ import cn from "classnames";
 
 import { useMobile } from "@hooks/useMobile";
 
-import BlockInfo from "../BlockInfo/BlockInfo";
-import PreviewText from "../PreviewText/PreviewText";
+import Button from "@components/Button/Button";
+import BlockInfo from "@components/BlockInfo/BlockInfo";
+import PreviewText from "@components/PreviewText/PreviewText";
 
 import gallery1 from "@images/Gallery/1.jpg";
 import gallery2 from "@images/Gallery/2.jpg";
@@ -16,7 +17,6 @@ import gallery7 from "@images/Gallery/7.jpg";
 import gallery8 from "@images/Gallery/8.jpg";
 import gallery9 from "@images/Gallery/9.jpg";
 import gallery10 from "@images/Gallery/10.jpg";
-import Button from "../Button/Button";
 
 const Gallery = () => {
   const [showGallery, setShowGallery] = React.useState(false);

@@ -1,16 +1,16 @@
 import React from "react";
-import Pattern from "../Pattern/Pattern";
-import PreviewText from "../PreviewText/PreviewText";
-import BlockInfo from "../BlockInfo/BlockInfo";
-import Button from "../Button/Button";
-import AboutCall from "../AboutCall/AboutCall";
+import Pattern from "@components/Pattern/Pattern";
+import PreviewText from "@components/PreviewText/PreviewText";
+import BlockInfo from "@components/BlockInfo/BlockInfo";
+import Button from "@components/Button/Button";
+import AboutCall from "@components/AboutCall/AboutCall";
 
 import axios from "axios";
 
 import callImg from "@images/Jobs/callimg.png";
 
 import { useForm } from "react-hook-form";
-import Modal from "../Modal/Modal";
+import Modal from "@components/Modal/Modal";
 
 const ContactForm = () => {
   const [modalActive, setModalActive] = React.useState(false);

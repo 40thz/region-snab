@@ -1,7 +1,8 @@
 import React from "react";
 import cn from "classnames";
-import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
+
+import Logo from "@components/Logo/Logo";
+import Button from "@components/Button/Button";
 
 const Modal = ({ active, setActive }) => {
   const modalClose = () => {

@@ -1,6 +1,7 @@
 import React from "react";
-import Logo from "../Logo/Logo";
-import Pattern from "../Pattern/Pattern";
+
+import Logo from "@components/Logo/Logo";
+import Pattern from "@components/Pattern/Pattern";
 
 import { useSelector } from "react-redux";
 

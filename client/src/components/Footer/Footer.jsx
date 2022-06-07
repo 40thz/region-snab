@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../Logo/Logo";
+import Logo from "@components/Logo/Logo";
 import gangImg from "@images/gang.png";
 
-import RS from "../RS";
+import RS from "@components/RS";
 
-import { useMobile } from "../../hooks/useMobile";
+import { useMobile } from "@hooks/useMobile";
 
 const Footer = () => {
   const isMobile = useMobile();

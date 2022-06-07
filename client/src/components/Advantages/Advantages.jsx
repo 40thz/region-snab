@@ -1,7 +1,7 @@
 import React from "react";
 import AdvantageTitle from "./AdvantageTitle/AdvantageTitle";
 import carImage from "@images/Advantage/car.png";
-import AdvantageItem from "../AdvantageItem/AdvantageItem";
+import AdvantageItem from "@components/AdvantageItem/AdvantageItem";
 import ScrollTrigger from "react-scroll-trigger";
 import { AnimateGroup } from "react-simple-animate";
 
@@ -12,8 +12,8 @@ import gearIcon from "@images/AdvantageItem/gear.svg";
 import virifyIcon from "@images/AdvantageItem/verify.svg";
 import locationIcon from "@images/AdvantageItem/location.svg";
 
-import { useMobile } from "../../hooks/useMobile";
-import { useParallax } from "../../hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
+import { useParallax } from "@hooks/useParallax";
 
 const Advantages = () => {
   const [animate, setAnimate] = React.useState(false);

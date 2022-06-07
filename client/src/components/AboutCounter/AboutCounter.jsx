@@ -1,11 +1,11 @@
 import React from "react";
-import PreviewText from "../PreviewText/PreviewText";
-import StatItem from "../StatItem/StatItem";
+import PreviewText from "@components/PreviewText/PreviewText";
+import StatItem from "@components/StatItem/StatItem";
 import countImg from "@images/AboutIntro/countimg.jpg";
 
 import ScrollTrigger from "react-scroll-trigger";
-import { useMobile } from "../../hooks/useMobile";
-import { useParallax } from "../../hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
+import { useParallax } from "@hooks/useParallax";
 
 const AboutCounter = () => {
   const isMobile = useMobile();

@@ -1,11 +1,13 @@
 import React from "react";
-import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../Logo/Logo";
-import FullsizeMenu from "../FullsizeMenu/FullsizeMenu";
-import { useMobile } from "../../hooks/useMobile";
-import CallBtn from "../CallBtn/CallBtn";
 import cn from "classnames";
+
+import { Link, NavLink } from "react-router-dom";
+import { useMobile } from "@hooks/useMobile";
+
+import Logo from "@components/Logo/Logo";
+import CallBtn from "@components/CallBtn/CallBtn";
+import HamburgerBtn from "@components/HamburgerBtn/HamburgerBtn";
+import FullsizeMenu from "@components/FullsizeMenu/FullsizeMenu";
 
 const Header = ({ dark }) => {
   const isMobile = useMobile();

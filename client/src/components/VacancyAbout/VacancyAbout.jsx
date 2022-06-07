@@ -1,8 +1,11 @@
 import React from "react";
-import Button from "../Button/Button";
-import { useParallax } from "../../hooks/useParallax";
+
 import { useNavigate } from "react-router-dom";
-import { useMobile } from "../../hooks/useMobile";
+
+import Button from "@components/Button/Button";
+
+import { useParallax } from "@hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
 
 const VacancyAbout = ({ data }) => {
   const parallax = useParallax();

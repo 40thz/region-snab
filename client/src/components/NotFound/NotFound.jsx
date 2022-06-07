@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../Header/Header";
-import Pattern from "../Pattern/Pattern";
-import Button from "../Button/Button";
+
+import Header from "@components/Header/Header";
+import Pattern from "@components/Pattern/Pattern";
+import Button from "@components/Button/Button";
 
 import car from "@images/Advantage/car.png";
 

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { useMobile } from "../../hooks/useMobile";
-import { useParallax } from "../../hooks/useParallax";
+import { useMobile } from "@hooks/useMobile";
+import { useParallax } from "@hooks/useParallax";
 
 import histroy1 from "@images/History/1.jpg";
 import histroy2 from "@images/History/2.jpg";
@@ -10,8 +10,8 @@ import histroy4 from "@images/History/4.jpg";
 import histroy5 from "@images/History/5.jpg";
 import histroy6 from "@images/History/6.jpg";
 
-import HistoryItem from "../HistoryItem/HistoryItem";
-import PreviewText from "../PreviewText/PreviewText";
+import HistoryItem from "@components/HistoryItem/HistoryItem";
+import PreviewText from "@components/PreviewText/PreviewText";
 
 const History = () => {
   const sections = document.querySelector("#history")?.scrollHeight;

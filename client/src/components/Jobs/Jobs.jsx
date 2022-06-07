@@ -1,12 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
-import BlockInfo from "../BlockInfo/BlockInfo";
-import PreviewText from "../PreviewText/PreviewText";
+
+import BlockInfo from "@components/BlockInfo/BlockInfo";
+import PreviewText from "@components/PreviewText/PreviewText";
 
 import VacancyItem from "./VacancyItem/VacancyItem";
-import SliderFooter from "../SliderFooter/SliderFooter";
-
-import vacncyImg from "@images/vacancy.jpg";
+import SliderFooter from "@components/SliderFooter/SliderFooter";
 
 import { useGetVacancyQuery } from "../../store";
 

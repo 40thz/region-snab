@@ -1,5 +1,6 @@
 import React from "react";
 import cn from "classnames";
+
 const Pattern = ({ active, isLoad }) => {
   return (
     <div

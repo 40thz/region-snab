@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../Header/Header";
-import Pattern from "../Pattern/Pattern";
+import Header from "@components/Header/Header";
+import Pattern from "@components/Pattern/Pattern";
 
 import phoneIcon from "@images/Contacts/phone.svg";
 import boxIcon from "@images/Contacts/box.svg";
 import mailIcon from "@images/Contacts/mail.svg";
 import carImage from "@images/carsmall.png";
 
-import { useParallax } from "../../hooks/useParallax";
+import { useParallax } from "@hooks/useParallax";
 
 const ContactIntro = () => {
   const parallax = useParallax();

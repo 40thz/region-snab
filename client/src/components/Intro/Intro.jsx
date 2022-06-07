@@ -1,8 +1,11 @@
 import React from "react";
-import Pattern from "../Pattern/Pattern";
+
+import Pattern from "@components/Pattern/Pattern";
+import Button from "@components/Button/Button";
+import AdvantageItem from "@components/AdvantageItem/AdvantageItem";
+
 import virifyIcon from "@images/AdvantageItem/verify.svg";
-import AdvantageItem from "../AdvantageItem/AdvantageItem";
-import Button from "../Button/Button";
+
 import { Link } from "react-router-dom";
 
 const Intro = () => {

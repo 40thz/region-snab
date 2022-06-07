@@ -1,12 +1,15 @@
 import React from "react";
-import About from "../components/About/About";
-import Advantages from "../components/Advantages/Advantages";
-import Gallery from "../components/Gallery/Gallery";
-import Intro from "../components/Intro/Intro";
-import Jobs from "../components/Jobs/Jobs";
-import Header from "../components/Header/Header";
-import Showreal from "../components/Showreal/Showreal";
+
+import About from "@components/About/About";
+import Advantages from "@components/Advantages/Advantages";
+import Gallery from "@components/Gallery/Gallery";
+import Intro from "@components/Intro/Intro";
+import Jobs from "@components/Jobs/Jobs";
+import Header from "@components/Header/Header";
+import Showreal from "@components/Showreal/Showreal";
+
 import { HelmetProvider, Helmet } from "react-helmet-async";
+
 import { useSelector } from "react-redux";
 
 const Homepage = () => {

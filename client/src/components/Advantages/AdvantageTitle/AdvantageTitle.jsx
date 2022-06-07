@@ -1,5 +1,5 @@
 import React from "react";
-import PreviewText from "../../PreviewText/PreviewText";
+import PreviewText from "@components/PreviewText/PreviewText";
 
 const AdvantageTitle = () => {
   return (

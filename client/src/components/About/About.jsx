@@ -2,12 +2,12 @@ import React from "react";
 import { useMobile } from "@hooks/useMobile";
 
 import aboutImg from "@images/About/about-image.jpg";
-import PreviewText from "../PreviewText/PreviewText";
+import PreviewText from "@components/PreviewText/PreviewText";
 import AboutText from "./AboutText/AboutText";
 import AboutPreviewText from "./AboutPreviewText/AboutPreviewText";
-import Button from "../Button/Button";
+import Button from "@components/Button/Button";
 
-import AboutCall from "../AboutCall/AboutCall";
+import AboutCall from "@components/AboutCall/AboutCall";
 import { Link } from "react-router-dom";
 
 const About = () => {

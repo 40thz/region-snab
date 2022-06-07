@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Pattern from "../Pattern/Pattern";
+import Pattern from "@components/Pattern/Pattern";
 
 const FullsizeMenu = ({ active, onClick }) => {
   return (

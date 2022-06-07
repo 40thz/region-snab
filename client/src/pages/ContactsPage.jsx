@@ -1,8 +1,8 @@
 import React from "react";
 
-import ContactForm from "../components/ContactForm/ContactForm";
-import ContactIntro from "../components/ContactIntro/ContactIntro";
-import Map from "../components/Map/Map";
+import ContactForm from "@components/ContactForm/ContactForm";
+import ContactIntro from "@components/ContactIntro/ContactIntro";
+import Map from "@components/Map/Map";
 
 import { HelmetProvider, Helmet } from "react-helmet-async";
 

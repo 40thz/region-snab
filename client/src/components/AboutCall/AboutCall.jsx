@@ -1,4 +1,5 @@
 import React from "react";
+
 import buttonIcon from "@images/button-icon.png";
 
 import { useParallax } from "@hooks/useParallax";
