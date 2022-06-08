@@ -36,7 +36,7 @@ const Advantages = () => {
   };
   const parallaxCar = useParallax({
     easing: "easeOutQuad",
-    translateX: [isMobile ? -100 : -20, 20],
+    translateX: [-20, 20],
   });
   return (
     <div style={parallax.section} id="advantages" className="container">

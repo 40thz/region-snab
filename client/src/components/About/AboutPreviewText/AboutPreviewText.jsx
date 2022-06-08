@@ -3,12 +3,10 @@ import { useMobile } from "@hooks/useMobile";
 
 const AboutPreviewText = () => {
   const isMobile = useMobile();
-  const parallax = useParallax(
-    !isMobile && {
-      easing: "easeOutQuad",
-      translateX: [0, -20],
-    }
-  );
+  const parallax = useParallax({
+    easing: "easeOutQuad",
+    translateX: [0, -20],
+  });
   return (
     <div ref={parallax.ref} className="about__inside-prevText">
       <span>ООО “РегионСнаб” </span> с 2011 года ежегодно увеличивает свое
