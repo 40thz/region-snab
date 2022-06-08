@@ -43,9 +43,9 @@ const Homepage = () => {
       <div style={{ height: `${videoSize}px` }} className="overlay"></div>
       <Header />
       <Intro />
-      <Advantages />
+      {/* <Advantages />
       <About />
-      <Gallery />
+      <Gallery /> */}
       <Jobs />
     </>
   );
