@@ -14,15 +14,12 @@ import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "@hooks/useMobile";
 import { useParallax as test } from "@hooks/useParallax";
-import { Parallax, useParallax } from "react-scroll-parallax";
 
 const Advantages = () => {
-  const [block, setBlock] = React.useState(false);
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
   const offsetY = test();
   const sections = document.querySelector("#about")?.scrollHeight;
-  const carColum = document.querySelector("#carcolum")?.scrollWidth + 400;
 
   let sectionY = offsetY;
   if (sectionY >= sections) {
@@ -39,9 +36,12 @@ const Advantages = () => {
     <div style={parallax.section} id="advantages" className="container">
       <div id="carcolum" className="colum half">
         <AdvantageTitle />
-        <Parallax translateX={[-20, 20]} className="advantages__car">
+        <div
+          // style={isMobile ? parallax.carMobile : parallax.carDefault}
+          className="advantages__car"
+        >
           <img src={carImage} alt="car" />
-        </Parallax>
+        </div>
       </div>
       <div className="colum half ">
         <ScrollTrigger onEnter={() => setAnimate(true)}>
