@@ -13,12 +13,13 @@ import virifyIcon from "@images/AdvantageItem/verify.svg";
 import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "@hooks/useMobile";
-import { useParallax as test } from "@hooks/useParallax";
+import { useParallax as parlax } from "@hooks/useParallax";
+import { useParallax } from "react-scroll-parallax";
 
 const Advantages = () => {
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
-  const offsetY = test();
+  const offsetY = parlax();
   const sections = document.querySelector("#about")?.scrollHeight;
 
   let sectionY = offsetY;
@@ -31,12 +32,16 @@ const Advantages = () => {
   const parallax = {
     section: { marginTop: `-${sectionY}px` },
   };
-
+  const parallaxCar = useParallax({
+    easing: "easeOutQuad",
+    translateX: [isMobile ? -100 : -20, 20],
+  });
   return (
     <div style={parallax.section} id="advantages" className="container">
       <div id="carcolum" className="colum half">
         <AdvantageTitle />
         <div
+          ref={parallaxCar.ref}
           // style={isMobile ? parallax.carMobile : parallax.carDefault}
           className="advantages__car"
         >

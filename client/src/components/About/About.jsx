@@ -9,6 +9,7 @@ import Button from "@components/Button/Button";
 
 import AboutCall from "@components/AboutCall/AboutCall";
 import { Link } from "react-router-dom";
+import { Parallax } from "react-scroll-parallax";
 
 const About = () => {
   const isMobile = useMobile();
@@ -16,18 +17,19 @@ const About = () => {
   return (
     <section id="about">
       <div className="container">
-        <AboutCall
-          value={
-            <div>
-              готовы к сотрудничеству?
-              <br />
-              <span>Позвоните</span>
-            </div>
-          }
-          rsColor="#fff"
-          rsAnim={false}
-        />
-
+        <Parallax speed={10}>
+          <AboutCall
+            value={
+              <div>
+                готовы к сотрудничеству?
+                <br />
+                <span>Позвоните</span>
+              </div>
+            }
+            rsColor="#fff"
+            rsAnim={false}
+          />
+        </Parallax>
         <div className="about__inside">
           <div className="colum">
             {isMobile && <AboutPreviewText />}
