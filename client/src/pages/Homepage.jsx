@@ -42,11 +42,11 @@ const Homepage = () => {
       {/* <div className="bgHome"></div> */}
       <div style={{ height: `${videoSize}px` }} className="overlay"></div>
       <Header />
-      <Intro />
-      {/* <Advantages />
+      {/* <Intro />
+      <Advantages />
       <About />
-      <Gallery /> */}
-      <Jobs />
+      <Gallery />
+      <Jobs /> */}
     </>
   );
 };
