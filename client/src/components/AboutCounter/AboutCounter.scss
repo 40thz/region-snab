@@ -1,4 +1,4 @@
-section#aboutcounter {
+#aboutcounter {
   background: $whiteBg;
 }
 .counter {
@@ -9,6 +9,7 @@ section#aboutcounter {
   background: $red;
   width: 80vw;
   height: 700px;
+  transform: translateY(-50%);
   .colum:first-child {
     padding: 100px 0px 0px 100px;
     box-sizing: border-box;

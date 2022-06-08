@@ -226,7 +226,7 @@ const options = {
   },
   resources: [Admin, Vacancy],
   branding: {
-    companyName: "Админ панель",
+    companyName: "Регион-снаб",
     logo: "",
     softwareBrothers: false,
   },

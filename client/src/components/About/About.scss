@@ -24,6 +24,7 @@
   padding: 80px 100px;
   overflow: hidden;
   box-sizing: border-box;
+  transform: translateY(-30%);
 }
 
 .about__title {
@@ -88,7 +89,7 @@
       padding: 0;
       height: 350px;
       padding: 30px;
-      transform: translateY(10%);
+      //transform: translateY(-30%);
       .rs {
         font-size: 230px;
         bottom: -16%;

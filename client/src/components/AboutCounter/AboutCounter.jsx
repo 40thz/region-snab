@@ -4,26 +4,19 @@ import StatItem from "@components/StatItem/StatItem";
 import countImg from "@images/AboutIntro/countimg.jpg";
 
 import ScrollTrigger from "react-scroll-trigger";
+
+import { Parallax } from "react-parallax";
 import { useMobile } from "@hooks/useMobile";
-import { useParallax } from "@hooks/useParallax";
+import { Parallax as ScrollParallax } from "react-scroll-parallax";
 
 const AboutCounter = () => {
   const isMobile = useMobile();
-  const offsetY = useParallax();
 
   const [startCounter, setStartCounter] = React.useState(false);
 
-  const parallax = {
-    counter: { transform: `translateY(-${offsetY / 3}px)` },
-    counterMobile: { transform: `translateY(-${offsetY / 70}px)` },
-  };
-
   return (
     <section id="aboutcounter">
-      <div
-        style={isMobile ? parallax.counterMobile : parallax.counter}
-        className="counter"
-      >
+      <ScrollParallax speed={isMobile ? 10 : 50} className="counter">
         <div className="colum">
           <PreviewText value="О нас в цифрах" />
           <ScrollTrigger onEnter={() => setStartCounter(true)}>
@@ -66,11 +59,15 @@ const AboutCounter = () => {
           </ScrollTrigger>
         </div>
         <div className="colum">
-          <div className="aboutCounter-img">
-            <img src={countImg} alt="регион снаб" />
-          </div>
+          <Parallax
+            bgImage={countImg}
+            strength={300}
+            className="aboutCounter-img"
+          >
+            {/* <img src={countImg} alt="регион снаб" /> */}
+          </Parallax>
         </div>
-      </div>
+      </ScrollParallax>
     </section>
   );
 };

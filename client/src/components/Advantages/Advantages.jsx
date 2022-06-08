@@ -13,12 +13,14 @@ import virifyIcon from "@images/AdvantageItem/verify.svg";
 import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "@hooks/useMobile";
-import { useParallax } from "@hooks/useParallax";
+import { useParallax as test } from "@hooks/useParallax";
+import { useParallax } from "react-scroll-parallax";
 
 const Advantages = () => {
+  const [block, setBlock] = React.useState(false);
   const [animate, setAnimate] = React.useState(false);
   const isMobile = useMobile();
-  const offsetY = useParallax();
+  const offsetY = test();
   const sections = document.querySelector("#about")?.scrollHeight;
   const carColum = document.querySelector("#carcolum")?.scrollWidth + 400;
 
@@ -29,24 +31,20 @@ const Advantages = () => {
     sectionY = offsetY;
   }
 
-  let sectionCar = offsetY;
-  if (sectionCar >= carColum) {
-    sectionCar = sectionCar === carColum;
-  } else {
-    sectionCar = offsetY - 2700 / 2;
-  }
   const parallax = {
-    carDefault: { left: `${sectionCar}px` },
-    carMobile: { left: `${offsetY * 2 - 2400 / 2}px` },
     section: { marginTop: `-${sectionY}px` },
   };
-
+  const parallaxCar = useParallax({
+    easing: "easeOutQuad",
+    translateX: [isMobile ? -100 : -20, 20],
+  });
   return (
     <div style={parallax.section} id="advantages" className="container">
       <div id="carcolum" className="colum half">
         <AdvantageTitle />
         <div
-          style={isMobile ? parallax.carMobile : parallax.carDefault}
+          ref={parallaxCar.ref}
+          // style={isMobile ? parallax.carMobile : parallax.carDefault}
           className="advantages__car"
         >
           <img src={carImage} alt="car" />

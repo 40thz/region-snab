@@ -3,16 +3,12 @@ import React from "react";
 import ScrollTrggier from "react-scroll-trigger";
 import cn from "classnames";
 
-import { useMobile } from "@hooks/useMobile";
-import { useParallax } from "@hooks/useParallax";
-
 import marker from "@images/Geography/map-marker.svg";
 
 import RussiaMap from "@components/Geography/RussiaMap";
 import PreviewText from "@components/PreviewText/PreviewText";
 
 const Geography = () => {
-  const offsetY = useParallax();
   const [regions, setRegion] = React.useState({
     krsk: false,
     irkutsk: false,
@@ -31,11 +27,6 @@ const Geography = () => {
       setRegion({ krsk: false, irkutsk: false, hakasia: false, tyva: true }),
   };
 
-  const parallax = {
-    map: { transform: `translateX(-${(offsetY * 1.5) / 20}px)` },
-  };
-
-  const isMobile = useMobile();
   return (
     <ScrollTrggier onEnter={showMap}>
       <section id="geography">
@@ -89,7 +80,6 @@ const Geography = () => {
             </div>
             <div className="geography__map">
               <RussiaMap
-                style={isMobile ? {} : parallax.map}
                 regions={regions}
                 showRegion={showRegion}
                 showMap={showMap}
