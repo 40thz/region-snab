@@ -48,7 +48,7 @@ const Advantages = () => {
           <img src={carImage} alt="car" />
         </div>
       </div>
-      {/* <div className="colum half ">
+      <div className="colum half ">
         <ScrollTrigger onEnter={() => setAnimate(true)}>
           <AnimateGroup play={animate}>
             <div className="columgap">
@@ -85,7 +85,7 @@ const Advantages = () => {
             </div>
           </AnimateGroup>
         </ScrollTrigger>
-      </div> */}
+      </div>
     </div>
   );
 };
