@@ -10,7 +10,6 @@ const options = {
     "sliderDescription",
     "description",
     "conditions",
-    "date",
   ],
   editProperties: [
     "uploadedFile",
@@ -18,7 +17,6 @@ const options = {
     "sliderDescription",
     "description",
     "conditions",
-    "date",
   ],
   navigation: {
     icon: "UserCertification",

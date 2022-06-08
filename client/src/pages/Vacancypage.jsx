@@ -50,13 +50,13 @@ const Vacancypage = () => {
       </HelmetProvider>
       <section id="vacancypage">
         <div
-          style={{ background: `url(${data?.uploadedFile}) no-repeat ` }}
+          style={{ background: `url(/${data?.uploadedFile}) no-repeat ` }}
           className="vacancypage__header"
         >
           <div className="vacancyOverlay"></div>
           <Header />
           <div className="vacancypage__header-image">
-            <img src={data?.uploadedFile} alt="" />
+            <img src={`/${data?.uploadedFile}`} alt="" />
           </div>
 
           <div className="container">

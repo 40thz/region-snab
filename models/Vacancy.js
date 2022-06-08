@@ -1,11 +1,13 @@
 const { model, Schema } = require("mongoose");
 
 const VacancySchema = new Schema({
-  uploadedFile: { type: String },
-  name: { type: String, required: true },
-  sliderDescription: { type: String, required: true },
-  description: { type: String, required: true },
-  date: { type: Date, required: true },
+  uploadedFile: {
+    type: String,
+    enum: ["Водитель", "Менеджер"],
+  },
+  name: { type: String },
+  sliderDescription: { type: String },
+  description: { type: String },
   conditions: [{ type: String }],
 });
 

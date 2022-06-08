@@ -99,6 +99,7 @@ const options = {
             title: "Заголовок",
             subtitle: "Подзаголовок",
             uploadedImage: "Изображение",
+
             text: "Текст",
             fileNames: "Названия файлов",
             uploadedFile: "Файлы",
@@ -213,11 +214,11 @@ const options = {
         },
         Vacancy: {
           properties: {
-            uploadedFile: "Изображение",
-            name: "Имя",
+            uploadedFile: "Тип вакансии",
+            name: "Наименование",
             sliderDescription: "Краткое описание вакансии",
             description: "Подробное описание вакансии",
-            date: "Дата",
+            conditions: "Условия работы",
           },
         },
       },
