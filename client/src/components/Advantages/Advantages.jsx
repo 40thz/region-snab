@@ -14,7 +14,7 @@ import locationIcon from "@images/AdvantageItem/location.svg";
 
 import { useMobile } from "@hooks/useMobile";
 import { useParallax as parlax } from "@hooks/useParallax";
-// import { useParallax } from "react-scroll-parallax";
+import { useParallax } from "react-scroll-parallax";
 
 const Advantages = () => {
   const [animate, setAnimate] = React.useState(false);
@@ -32,15 +32,16 @@ const Advantages = () => {
   const parallax = {
     section: { marginTop: `-${sectionY}px` },
   };
-  // const parallaxCar = useParallax({
-  //   easing: "easeOutQuad",
-  //   translateX: [isMobile ? -100 : -20, 20],
-  // });
+  const parallaxCar = useParallax({
+    easing: "easeOutQuad",
+    translateX: [isMobile ? -100 : -20, 20],
+  });
   return (
     <div style={parallax.section} id="advantages" className="container">
       <div id="carcolum" className="colum half">
         <AdvantageTitle />
         <div
+          ref={parallaxCar.ref}
           // style={isMobile ? parallax.carMobile : parallax.carDefault}
           className="advantages__car"
         >
