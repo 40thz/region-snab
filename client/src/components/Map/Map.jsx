@@ -5,6 +5,9 @@ import {
   Placemark,
   ZoomControl,
 } from "react-yandex-maps";
+
+import { useMobile } from "@hooks/useMobile";
+
 import logo from "@images/Contacts/marker.svg";
 import Mapinside from "./Mapinside/Mapinside";
 
@@ -14,6 +17,7 @@ const Map = () => {
     [56.058586376744714, 93.12641529045462],
   ];
   const [cordinate, setCordinate] = React.useState(0);
+  const isMobile = useMobile();
 
   return (
     <YMaps>
@@ -23,7 +27,11 @@ const Map = () => {
         </div>
         <MapTwo
           instanceRef={(ref) => {
-            ref && ref.behaviors.disable("scrollZoom");
+            if (ref) {
+              ref.behaviors.disable("scrollZoom");
+
+              isMobile && ref.behaviors.disable("drag");
+            }
           }}
           style={{ width: "100%", height: "766px" }}
           state={{
