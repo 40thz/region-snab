@@ -1,5 +1,10 @@
 import React from "react";
-import { YMaps, Map as MapTwo, Placemark } from "react-yandex-maps";
+import {
+  YMaps,
+  Map as MapTwo,
+  Placemark,
+  ZoomControl,
+} from "react-yandex-maps";
 import logo from "@images/Contacts/marker.svg";
 import Mapinside from "./Mapinside/Mapinside";
 
@@ -17,6 +22,9 @@ const Map = () => {
           <Mapinside setCordinate={setCordinate} cordinate={cordinate} />
         </div>
         <MapTwo
+          instanceRef={(ref) => {
+            ref && ref.behaviors.disable("scrollZoom");
+          }}
           style={{ width: "100%", height: "766px" }}
           state={{
             center: cords[cordinate],
@@ -32,6 +40,7 @@ const Map = () => {
               iconImageOffset: [-50, -60],
             }}
           />
+          <ZoomControl />
         </MapTwo>
       </div>
     </YMaps>
