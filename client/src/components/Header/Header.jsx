@@ -9,7 +9,7 @@ import CallBtn from "@components/CallBtn/CallBtn";
 import HamburgerBtn from "@components/HamburgerBtn/HamburgerBtn";
 import FullsizeMenu from "@components/FullsizeMenu/FullsizeMenu";
 
-const Header = ({ dark }) => {
+const Header = () => {
   const isMobile = useMobile();
   const [menuActive, setMenuActive] = React.useState(false);
 
@@ -28,7 +28,7 @@ const Header = ({ dark }) => {
         className={cn({
           delay: !menuActive,
           bgRed: menuActive,
-          dark: dark && !menuActive,
+          // dark: dark && !menuActive,
         })}
       >
         <div className="container">

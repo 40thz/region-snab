@@ -1,5 +1,5 @@
 .direction__cart {
-  background: $gray;
+  background: #262c36;
   box-sizing: border-box;
   padding: 0px 100px 0px 0px;
   margin-bottom: 30px;
@@ -26,6 +26,7 @@
   }
   &-title {
     width: 50%;
+    color: $white;
   }
   &-showbtn {
     transition: all 0.5s;
@@ -51,6 +52,7 @@
     padding: 0px 0px 0px 100px;
     overflow: hidden;
     height: 0;
+    color: $white;
     transition: all 1s cubic-bezier(0.73, -0.02, 0.55, 0.87);
     &__list {
       display: flex;

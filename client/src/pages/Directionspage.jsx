@@ -57,7 +57,7 @@ const Directionspage = () => {
       </HelmetProvider>
       <section id="directions">
         <div className="bgDirection"></div>
-        <Header dark />
+        <Header />
         <div className="container">
           <div className="direction">
             <div className="direction-title">
