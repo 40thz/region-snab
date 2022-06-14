@@ -160,6 +160,10 @@ const Directionspage = () => {
                 </div>
               }
             />
+          </div>
+        </div>
+        <section className="call">
+          <div className="container">
             <div style={parallaxAnim.callSection}>
               <AboutCall
                 value="Мы знаем про нефтепродукты все!"
@@ -167,7 +171,7 @@ const Directionspage = () => {
               />
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </>
   );

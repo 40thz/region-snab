@@ -16,7 +16,25 @@ section#directions {
   height: 100%;
   z-index: -1;
 }
-
+.call {
+  padding-top: 100px;
+  background: #fff;
+  .about__call {
+    transform: translateY(0);
+    overflow: initial;
+    margin: 100px 0;
+    .rs {
+      right: -20px;
+      bottom: 5px;
+    }
+    .about__title {
+      max-width: 400px;
+    }
+    &-image {
+      animation: soaring 10s ease-in-out infinite;
+    }
+  }
+}
 .direction {
   display: flex;
   flex-direction: column;
@@ -37,6 +55,7 @@ section#directions {
     transform: translateX(-100%);
     animation: turnRight 2s cubic-bezier(0.44, 0.47, 0.14, 1.07) forwards;
   }
+
   &-title {
     @include h700;
     font-size: 36px;
@@ -55,21 +74,6 @@ section#directions {
       }
     }
   }
-  .about__call {
-    transform: translate(0);
-    overflow: initial;
-    margin: 100px 0;
-    .rs {
-      right: -20px;
-      bottom: 5px;
-    }
-    .about__title {
-      max-width: 400px;
-    }
-    &-image {
-      animation: soaring 10s ease-in-out infinite;
-    }
-  }
 }
 
 @media (max-width: $tablet-width) {
@@ -77,6 +81,9 @@ section#directions {
     &-title {
       font-size: 25px;
     }
+  }
+  .call {
+    padding: 30px 0 30px;
     .about__call {
       .rs {
         font-size: 250px;
@@ -92,14 +99,6 @@ section#directions {
     &-title {
       font-size: 18px;
     }
-    .about__call {
-      .rs {
-        font-size: 200px;
-        right: 50%;
-        bottom: -45px;
-        transform: translateX(50%);
-      }
-    }
     &-title {
       span {
         &:first-child {
@@ -109,6 +108,16 @@ section#directions {
         &:last-child {
           color: $dark;
         }
+      }
+    }
+  }
+  .call {
+    .about__call {
+      .rs {
+        font-size: 200px;
+        right: 50%;
+        bottom: -45px;
+        transform: translateX(50%);
       }
     }
   }
