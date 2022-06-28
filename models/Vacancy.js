@@ -2,8 +2,7 @@ const { model, Schema } = require("mongoose");
 
 const VacancySchema = new Schema({
   uploadedFile: {
-    type: String,
-    enum: ["Водитель", "Менеджер"],
+    type: JSON,
   },
   name: { type: String },
   sliderDescription: { type: String },

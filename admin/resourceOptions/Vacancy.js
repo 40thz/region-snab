@@ -36,5 +36,5 @@ const options = {
 module.exports = {
   resource: VacancyModel,
   options,
-  // features,
+  features,
 };
